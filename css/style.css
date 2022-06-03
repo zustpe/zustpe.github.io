@@ -1,180 +1,113 @@
 *{
     margin: 0px;
-    padding: 0%;
+    padding: 0px;
 }
 
 .background{
-    height: 100vh;
-    background-image:   linear-gradient(354deg, rgba(4, 101, 160, 0.5) 32.43%, rgba(34, 252, 142, 0.3) 144.27%);
+     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-    
-}
-
-.zustpe{
-    font-size: 25px;
-    font-weight: 700;
-    color: rgba(21, 96, 136, 1);
-    font-family: 'Arial';
-    margin-top: 18px;
+    background-image: linear-gradient(354deg, rgba(4, 101, 160, 0.5) 32.43%, rgba(34, 252, 142, 0.3) 144.27%);
 }
 
 .logoimg{
-    width: 50px;
-    margin-left: 66px;
-    margin-top: 10px;
-
-}
-
-.career{
-    font-weight: 700;
-    color: rgba(21, 96, 136, 1);
-    font-family: 'Arial';
-    font-size: 22px;
-    line-height: 30px;
-    margin-top: 35px;
-
-}
-
-.career :hover{
-    
-    color: rgb(248, 227, 183) ;
-    display: inline-block;
-    position: relative;
-}
-
-li { 
-    display: table-cell; 
-    position: relative; 
-    padding: 15px 0;
-  }
-  a {
-    color: rgba(3, 56, 83, 7);
-    text-transform: uppercase;
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-  }
-  a:after {    
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    position: absolute;
-    background: #fff;
-    width: 0;
-  }
-  a:hover:after { 
-    width: 100%; 
-    left: 0; 
-  }
-
-
-.career:hover::after{
-        width: 100%; 
-        left: 0; 
-}
-
-.working{
-    width: 266px;
-    margin-top: 26px;
-    margin-left: 81px;
-
-}
-
-.topic1{
-    color: rgba(3, 60, 92, 1);
-    font-family: 'Segoe UI';
-    font-size: 25px;
-    font-weight: 700;
-    margin-top: 26px;
-     margin-left: 56px
-
-}
-
-.zustpey span {
-    color: #20680e;   
-    font-size: 24px; 
-}
-.zustpey  {
-    font-size: 23px; 
-    text-align: center;
-}
-.zustpey1{
-    font-size: 23px; 
-    text-align: center;
-}
-
-
-.para1{
-    margin-top: 45px;
-}
-.para2{
-    position: absolute;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 32px;
-    text-align: center;
     margin-top: 20px;
-
+    margin-left: 20px;
+    width: 33px;
 }
+.hover {
+    display: inline-block;
+    position: absolute;
+    /* color: #0087ca; */
+    color: rgba(3, 56, 83, 7);
+    font-size: larger;
+    font-family: 'Segoe UI';
+    font-weight: 700;
+    margin-top: 20px;
+    margin-left: 63px
 
-
-
-a.middle
-{
-    position: relative;
-}
-
-a.middle:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #FFF;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out;
-}
-a.middle:hover:before {
-    visibility: visible;
-    transform: scaleX(1);
   }
   
-@media (max-width: 1025px) {
-    .background {
-        background-image:   linear-gradient(354deg, rgba(4, 101, 160, 0.5) 32.43%, rgba(34, 252, 142, 0.3) 144.27%);
-         background-size: cover;
-         background-repeat: no-repeat;
-        height:100vh;
-       
-
-    }
-    .topic1{
-        margin-left: 25px
-
-    }
-
-    .working{
-        margin-left: 44px;
-    }
-    .career{
-        margin-left: 16px;
-        font-size: 25px;
-    }
-    .logoimg{
-        width: 50px;
-        margin-top: 19px;
-        margin-left: 23px;
-    }
-    .para2{
-        position: absolute;
-        font-weight: 600;
-        font-size: 43px;
-        line-height: 35px;
-        text-align: center;
-        margin-top: 33px;
-    }
+  .hover:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #b60d8c;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
   }
+  
+  .hover:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+.image1{
+    width: 200px;
+    margin: auto;
+    margin-top: 60px;
+}
+#center{
+    text-align: center;
+}
+.topic1{
+    text-align: center;
+    margin-top: 30px;
+    font-family: segoe UI;
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 30px;
+    color: rgba(3, 56, 83, 7);
+
+}
+.zustpey1{
+    color: #20680e; 
+    font-size: 24px;
+    margin-top: 30px;
+    
+}
+.zustpey{
+    font-size: 24px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 30px;
+
+
+}
+.para{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Segoe UI';
+    margin-top: 30px;
+
+}
+
+@media only screen and (min-width: 600px) {
+    .background{
+        height: 100vh;
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-image: linear-gradient(354deg, rgba(4, 101, 160, 0.5) 32.43%, rgba(34, 252, 142, 0.3) 144.27%);
+   }
+
+ 
+
+}
+
+@media only screen and (max-width:600px){
+   .background{
+    height: 1230px;
+   }
+   .hover{
+    margin-top: -33px;
+    margin-left: 279px;
+   }
+}
+@media only screen and (min-width: 768px) {
+
+
+}
