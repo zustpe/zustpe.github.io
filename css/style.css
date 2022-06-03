@@ -6,7 +6,7 @@
 .background{
     height: 100vh;
     background:   linear-gradient(354deg, rgba(4, 101, 160, 0.5) 32.43%, rgba(34, 252, 142, 0.3) 144.27%);
-    height: 625px;
+    
 }
 
 .zustpe{
@@ -144,7 +144,7 @@ a.middle:hover:before {
 @media (max-width: 1025px) {
     .background {
         background:   linear-gradient(354deg, rgba(4, 101, 160, 0.5) 32.43%, rgba(34, 252, 142, 0.3) 144.27%);
-        height: 1196px;
+        
         background-size: cover;
 
     }
