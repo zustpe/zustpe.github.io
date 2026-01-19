@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+ 
+    <meta http-equiv="Cache-Control" content="no-store" />
+ 
+    <script>
+        (function () {
+            const params = new URLSearchParams(window.location.search);
+ 
+            const code = params.get('code');
+            const state = params.get('state');
+ 
+            if (!code || !state) {
+                document.body.innerHTML = 'Invalid redirect parameters.';
+                return;
+            }
+            const targetUrl =
+                'http://localhost:3000/candidate/verifykyc' +
+                '?code=' + encodeURIComponent(code) +
+                '&state=' + encodeURIComponent(state);
+ 
+            window.location.replace(targetUrl);
+        })();
+    </script>
+</head>
+ 
+<body>
+    <p>Redirecting...</p>
+</body>
+ 
+</html>
