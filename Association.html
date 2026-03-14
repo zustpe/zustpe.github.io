@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>ZustPe | Empowering Success, Transforming Potential</title>
+    <link rel="icon" href="./images/Logo.png" type="image/png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Outf…
+    rel=" stylesheet" />
+
+
+
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: #000;
+            color: white;
+            font-family: 'Outfit', system-ui, sans-serif;
+        }
+
+
+
+        .bgimg2 {
+            background-color: #000000;
+
+        }
+
+
+
+        .header-wrapper2 {
+            width: 100%;
+            color: white;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+
+        .header {
+            position: relative;
+
+            width: 100%;
+            z-index: 1000;
+        }
+
+
+
+        .header-container {
+            /* display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto; */
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 10px;
+        }
+
+        .logo-img {
+            height: 58px;
+            width: auto;
+            margin-top: -22px;
+        }
+
+
+        .header-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1300px;
+            /* margin: 60px auto 0; */
+            margin: 32px auto 0;
+
+            padding: 0 1rem;
+            gap: 2rem;
+            margin-left: 12px;
+        }
+
+
+        .btn-get-started {
+            background: #dda0dd;
+            color: #000;
+            font-weight: 600;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            white-space: nowrap;
+        }
+
+        .btn-get-started:hover {
+            background: #c084c0;
+        }
+
+
+        .nav-item {
+            position: relative;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle,
+        .nav-item a {
+            display: block;
+            padding: 1rem 0.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .dropdown-toggle:hover,
+        .nav-item a:hover {
+            color: #dda0dd;
+
+        }
+
+        .dropdown-menu,
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #636161;
+            min-width: 220px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            border-radius: 6px;
+            padding: 8px 0;
+            z-index: 100;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .dropdown-menu li,
+        .submenu li {
+            padding: 0;
+        }
+
+        .dropdown-menu a,
+        .submenu a {
+            display: block;
+            padding: 0.8rem 1.5rem;
+            color: #fff;
+            white-space: nowrap;
+            transition: background-color 0.2s ease;
+        }
+
+        .dropdown-menu a:hover,
+        .submenu a:hover {
+            background-color: #fff;
+            color: #dda0dd;
+
+        }
+
+        .dropdown:hover>.dropdown-menu,
+        .dropdown-submenu:hover>.submenu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .submenu {
+            top: 0;
+            left: 100%;
+            margin-left: 4px;
+        }
+
+        .arrow {
+            display: inline-block;
+            margin-left: 0.5rem;
+            transition: transform 0.2s ease;
+            font-size: 0.8rem;
+        }
+
+        .dropdown-submenu:hover .arrow {
+            transform: rotate(90deg);
+        }
+
+
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 2.5rem;
+
+            cursor: pointer;
+            color: #fff;
+            padding: 1rem 1.5rem;
+
+            position: absolute;
+
+            top: 1rem;
+
+            right: 1rem;
+            z-index: 1001;
+
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .header-center {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                max-width: none;
+                margin: 0;
+                padding: 1.5rem 0;
+
+                gap: 0;
+                background-color: rgba(0, 0, 0, 0.95);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+                z-index: 1050;
+                backdrop-filter: blur(8px);
+
+            }
+
+            .header-center.active {
+                display: flex;
+            }
+
+            .nav-item {
+                width: 100%;
+                border-bottom: 1px solid #333;
+                text-align: center;
+
+            }
+
+            .nav-item a,
+            .dropdown-toggle {
+
+                padding: 1.1rem 1.5rem;
+
+                text-align: left;
+                width: 100%;
+                color: #fff;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+
+            }
+
+            .dropdown-menu,
+            .submenu {
+
+
+                display: none;
+                position: static !important;
+                width: 100%;
+                background: #1a1a1a;
+                box-shadow: none;
+                border-radius: 0;
+                margin: 0;
+                padding: 0;
+
+            }
+
+            .dropdown:hover>.dropdown-menu,
+            .dropdown-submenu:hover>.submenu {
+                display: block;
+                padding: 0 0 0 1rem;
+            }
+
+            .submenu {
+
+                padding-left: 1.5rem;
+                background: #222;
+
+            }
+
+            .submenu-toggle {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: 1.1rem 1.5rem;
+                color: white;
+                text-decoration: none;
+            }
+
+
+
+            .submenu[style*="display: block"],
+            .submenu.show {
+                display: block !important;
+            }
+
+
+            .arrow {
+                float: right;
+            }
+
+            .dropdown:hover>.dropdown-menu,
+            .dropdown-submenu:hover>.submenu {
+                display: none;
+            }
+
+
+            .dropdown-submenu:hover .arrow {
+                transform: rotate(90deg);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-center {
+                padding: 0.5rem;
+            }
+
+            .nav-item a,
+            .dropdown-toggle {
+                padding: 0.8rem;
+                font-size: 0.9rem;
+            }
+
+        }
+
+        /* 
+        @media screen and (min-width: 1920px) {
+            .header {
+                position: relative;
+                width: 77%;
+            }
+        } */
+
+
+
+        .brand-card {
+            flex: 0 0 auto;
+            width: 170px;
+            height: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.2rem;
+            background: rgba(30, 30, 35, 0.75);
+            border: 1px solid rgba(221, 160, 221, 0.2);
+            border-radius: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .brand-card:hover {
+            transform: scale(1.08);
+            border-color: rgba(221, 160, 221, 0.5);
+            box-shadow: 0 0 25px rgba(221, 160, 221, 0.15);
+        }
+
+        .marquee-wrapper {
+            /* overflow: hidden; */
+            width: 100%;
+        }
+
+        .marquee {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            white-space: nowrap;
+            animation: scroll-left 45s linear infinite;
+        }
+
+        @keyframes scroll-left {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-121%);
+            }
+        }
+
+        .marquee-wrapper:hover .marquee {
+            animation-play-state: paused;
+        }
+
+        @media (max-width: 640px) {
+            .brand-card {
+                width: 140px;
+                height: 95px;
+                padding: 1rem;
+            }
+
+            .marquee {
+                gap: 3rem;
+                animation-duration: 55s;
+            }
+        }
+
+        .content-container2 {
+            width: 100%;
+            margin-top: -30px;
+            background: transparent;
+            padding: 20px;
+            position: relative;
+            text-align: center;
+        }
+
+        .testSection {
+            z-index: 2;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="black">
+        <div class="fullpage" id="Homepage">
+            <div class="bgimg2">
+                <!-- Landing Page -->
+                <div id="landing" class="landing-page">
+                    <div class="main-container">
+                        <!-- Progress Bar -->
+                        <div class="progress-container">
+                            <div class="progress-bar-background">
+                                <div id="progress-bar" class="progress-bar"></div>
+                            </div>
+                        </div>
+
+                        <!-- Rotating Image -->
+                        <div class="image-container">
+                            <img id="landing-image" src="./images/Zustpe1.png" alt="Landing Animation"
+                                class="image-slide visible" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-container2">
+                    <div id="header" class="header-wrapper2 hidden">
+
+
+
+                        <header class="header">
+
+                            <div class="header-container">
+                                <div class="logo">
+                                    <a href="/">
+                                        <img src="./images/Logo.png" alt="ZustPe Logo" class="logo-img">
+                                    </a>
+                                </div>
+
+                                <div>
+                                    <nav class="header-center" id="mobileNav">
+                                        <div class="nav-item dropdown">
+                                            <a href="#company" class="dropdown-toggle">Company</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#zustPay">ZustPe Payments </a></li>
+                                                <li><a href="#zustTech">ZustPe Technologies</a></li>
+                                                <li><a href="#zustAchi">ZustPe Achiver Foundation</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="nav-item dropdown">
+                                            <a href="#products" class="dropdown-toggle">Product & Services</a>
+                                            <ul class="dropdown-menu">
+                                                <li class="dropdown-submenu">
+                                                    <a href="#hr" class="submenu-toggle">HR <span
+                                                            class="arrow">›</span></a>
+                                                    <ul class="dropdown-menu submenu">
+                                                        <li><a href="#nextgenhr">Nextgen HR</a></li>
+                                                        <li><a href="#kaamrade">Kaamrade</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown-submenu">
+                                                    <a href="#solutions">Non Profits <span class="arrow">›</span></a>
+                                                    <ul class="dropdown-menu submenu">
+                                                        <li><a href="#zustpengo">ZustPe NGO</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown-submenu">
+                                                    <a href="#solutions">E-Commerce<span class="arrow">›</span></a>
+                                                    <ul class="dropdown-menu submenu">
+                                                        <li><a href="#zustpengo">No MRP Store</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown-submenu">
+                                                    <a href="#telecomm">Telecommunication<span
+                                                            class="arrow">›</span></a>
+                                                    <ul class="dropdown-menu submenu">
+                                                        <li><a href="#kbridge">KBridge</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown-submenu">
+                                                    <a href="#consulting">Consulting<span class="arrow">›</span></a>
+                                                    <ul class="dropdown-menu submenu">
+                                                        <li><a href="#wenApp">Web APP Development</a></li>
+                                                        <li><a href="#webApp">Web APP Development</a></li>
+                                                        <li><a href="#mobApp">Mobile APP Development</a></li>
+                                                        <li><a href="#devops">DevOps</a></li>
+                                                        <li><a href="#sysInt">System Integration</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="nav-item">
+                                            <a href="./Association.html?skip=true">Association</a>
+                                        </div>
+                                        <div class="nav-item">
+                                            <a href="#knowledge">Knowledge Junction</a>
+                                        </div>
+                                        <div class="nav-item">
+                                            <a href="#career">Career</a>
+                                        </div>
+                                    </nav>
+                                </div>
+                                <div>
+                                </div>
+                                <button class="mobile-menu-toggle" id="menuToggle">☰</button>
+                        </header>
+
+
+
+                        <script>
+                            document.addEventListener("DOMContentLoaded", () => {
+                                const toggle = document.getElementById("menuToggle");
+                                const nav = document.getElementById("mobileNav");
+
+                                if (!toggle || !nav) return;
+
+                                toggle.addEventListener("click", () => {
+                                    nav.classList.toggle("active");
+                                    toggle.textContent = nav.classList.contains("active") ? "✕" : "☰";
+                                });
+
+                                nav.querySelectorAll("a").forEach(link => {
+                                    link.addEventListener("click", () => {
+                                        nav.classList.remove("active");
+                                        toggle.textContent = "☰";
+                                    });
+                                });
+                            });
+                        </script>
+
+                        <script>
+                            document.addEventListener("DOMContentLoaded", () => {
+                                if (window.innerWidth > 768) return;
+
+                                const submenuToggles = document.querySelectorAll('.submenu-toggle');
+
+                                submenuToggles.forEach(toggle => {
+                                    toggle.addEventListener('click', function (e) {
+                                        e.preventDefault();
+                                        e.stopPropagation();
+
+                                        const submenu = this.parentElement.querySelector('.submenu');
+
+                                        const parent = this.closest('.dropdown-menu, .submenu');
+                                        if (parent) {
+                                            parent.querySelectorAll('.submenu').forEach(s => {
+                                                if (s !== submenu) s.style.display = 'none';
+                                            });
+                                        }
+
+                                        if (submenu.style.display === 'block') {
+                                            submenu.style.display = 'none';
+                                        } else {
+                                            submenu.style.display = 'block';
+                                        }
+                                    });
+                                });
+
+                                const mainToggle = document.getElementById('menuToggle');
+                                if (mainToggle) {
+                                    mainToggle.addEventListener('click', () => {
+                                        const nav = document.getElementById('mobileNav');
+                                        if (!nav.classList.contains('active')) {
+                                            document.querySelectorAll('.submenu').forEach(s => {
+                                                s.style.display = 'none';
+                                            });
+                                        }
+                                    });
+                                }
+                            });
+                        </script>
+
+                        <div class="mt-[10px]  liveSec">
+                            <h2 class="text-3xl md:text-4xl font-bold text-center gold-text text-white">
+                                Live</h2>
+                            <section class="py-14  px-6 bg-[var(--charcoal)]    ">
+                                <div class="max-w-7xl  ">
+
+                                    <div class="marquee-wrapper">
+
+                                        <div class="marquee">
+                                            <div class="brand-card">
+                                                <img src="./Brand/Microsoft_logo.svg" alt="Microsoft"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/Google_Cloud_Platform-Logo.wine.png"
+                                                    alt="Google Cloud" class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="Brand/Amazon_Web_Services_Logo.svg.png" alt="AWS"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/meta2.png" alt="Meta"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/GitHub-Mark.png" alt="GitHub"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/GitLab-Logo.wine.png" alt="GitLab"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/Red_Hat-Logo.wine.png" alt="Red Hat"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/Adobe.png" alt="Adobe"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/Asus-Logo.wine.png" alt="Asus"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/gstn.png" alt="GSTN"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/digilocker.jpg" alt="DigiLocker"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/entitylocker.jpg" alt="EntityLocker"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <!-- <div class="brand-card">
+                                                <img src="./Brand/digilocker.jpg" alt="DigiLocker"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div> -->
+                                            <div class="brand-card">
+                                                <img src="./Brand/gem.jpg" alt="Gem"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/bni.jpg" alt="BNI"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/TRAI-Logo.webp" alt="Trai"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/msme-logo-png_seeklogo-480293.webp" alt="msme"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+
+                                            <div class="brand-card">
+                                                <img src="./Brand/Microsoft_logo.svg" alt="Microsoft"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/Google_Cloud_Platform-Logo.wine.png"
+                                                    alt="Google Cloud" class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="Brand/Amazon_Web_Services_Logo.svg.png" alt="AWS"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/meta2.png" alt="Meta"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/GitHub-Mark.png" alt="GitHub"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/GitLab-Logo.wine.png" alt="GitLab"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/Red_Hat-Logo.wine.png" alt="Red Hat"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/Adobe.png" alt="Adobe"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/Asus-Logo.wine.png" alt="Asus"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/gstn.png" alt="GSTN"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/digilocker.jpg" alt="DigiLocker"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/entitylocker.jpg" alt="EntityLocker"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/digilocker.jpg" alt="DigiLocker"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/gem.jpg" alt="Gem"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/bni.jpg" alt="BNI"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/TRAI-Logo.webp" alt="Trai"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                            <div class="brand-card">
+                                                <img src="./Brand/msme-logo-png_seeklogo-480293.webp" alt="msme"
+                                                    class="h-16 md:h-20 object-contain" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- Work In Progress -->
+
+                            <h2 class="text-3xl md:text-4xl font-bold text-center gold-text p-2 text-white mb-12">Work
+                                In
+                                Progress</h2>
+
+
+                            <section
+                                class="py-14 px-6 bg-[var(--charcoal)] mt-[-70px]  mx-auto items-center min-h-[300px] ">
+                                <div class="max-w-7xl w-full">
+
+                                    <div
+                                        class=" flex gap-12 md:gap-16  whitespace-nowrap flex justify-center items-center">
+                                        <div class="brand-card flex-shrink-0">
+                                            <img src="./Brand/ABHA.jpg" alt="ABHA Logo"
+                                                class="h-16 md:h-20 object-contain" />
+                                        </div>
+                                        <div class="brand-card flex-shrink-0">
+                                            <img src="Brand/bbps.png" alt="BBPS Logo"
+                                                class="h-16 md:h-20 object-contain" />
+                                        </div>
+
+
+                                    </div>
+
+
+
+                                </div>
+                            </section>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Group companies</h4>
+                    <ul>
+                        <li>ZustPe Payments</li>
+                        <li>ZustPe Technologies </li>
+                        <li>ZustPe Achievers Foundation</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li>Terms & Conditions</li>
+                        <li>About Us</li>
+                        <li>Privacy Policy</li>
+                        <li>Careers</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Help</h4>
+                    <ul>
+                        <li>Support</li>
+                        <li>Refund and Cancellation Policy</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Socials</h4>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>LinkedIn</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="run_once"></div>
+            <div class="footer-bottom">
+                <p>ZustPe Technologies . All Rights Reserved</p>
+                <p>Made by freshers with ❤️ in Chennai</p>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        const section = document.querySelector("#card-section");
+        const articles = section.querySelectorAll("article");
+        let currentIndex = 0;
+        let isScrolling = false;
+
+        function updateCards() {
+            articles.forEach((article, i) => {
+                const isVisible = i <= currentIndex;
+
+                if (isVisible) {
+                    article.style.setProperty("--_scale", 1 - (currentIndex - i) * 0.1);
+                    article.style.setProperty(
+                        "--_opacity",
+                        1 - (currentIndex - i) * 0.1
+                    );
+                    article.style.setProperty(
+                        "--_offset",
+                        `-${(currentIndex - i) * 1.5}rem`
+                    );
+                    article.style.setProperty("--_order", 10 - (currentIndex - i));
+                } else {
+                    article.style.setProperty("--_scale", 0.2);
+                    article.style.setProperty("--_opacity", 0.3);
+                    article.style.setProperty("--_offset", "1rem");
+                    article.style.setProperty("--_order", 0);
+                }
+            });
+        }
+
+        function handleScroll(e) {
+            if (isScrolling) return;
+            const delta = e.deltaY;
+
+            // Only block scrolling if we're within card range
+            if (
+                (delta > 0 && currentIndex < articles.length - 1) ||
+                (delta < 0 && currentIndex > 0)
+            ) {
+                e.preventDefault(); // prevent page scroll ONLY if we can move between cards
+                isScrolling = true;
+
+                if (delta > 0 && currentIndex < articles.length - 1) {
+                    currentIndex++; // move down
+                } else if (delta < 0 && currentIndex > 0) {
+                    currentIndex--; // move up
+                }
+
+                updateCards();
+
+                setTimeout(() => {
+                    isScrolling = false;
+                }, 400);
+            }
+            // else → let the page scroll normally
+        }
+
+        section.addEventListener("wheel", handleScroll, { passive: false });
+        updateCards();
+        // -------------------------- this is background load--------------------
+
+        // const frames = 78; // bala_00000.jpg → bala_00077.jpg
+        // const bg = document.querySelector(".bgimg");
+        // const images = [];
+        // let i = 0;
+        // // Preload all images
+        // function preloadImages(callback) {
+        //   let loaded = 0;
+        //   for (let j = 0; j < frames; j++) {
+        //     const img = new Image();
+        //     img.src = `./images/bgimg/bala_${String(j).padStart(5, "0")}.jpg`;
+        //     img.onload = () => {
+        //       loaded++;
+        //       if (loaded === frames) callback();
+        //     };
+        //     images.push(img);
+        //   }
+        // }
+
+        // // Animate background after preload
+        // function animate() {
+        //   bg.style.backgroundImage = `url('${images[i].src}')`;
+        //   i = (i + 1) % frames;
+        //   setTimeout(animate, 50); // 50ms per frame ≈ 20fps
+        // }
+        // // Start
+        // preloadImages(animate);
+
+        const bg = document.querySelector(".bgimg");
+        const images = [];
+        let i = 0;
+
+        // List all sequences you want to preload
+        const sequences = [
+            { path: "./images/bgimg/bala_", count: 78, pad: 5 }, // bala_00000 → bala_00077
+            { path: "./images/mobiles/Comp 6_", count: 77, pad: 5 }, // Comp 6_00001 → Comp 6_00077
+            { path: "./images/Tab/Comp 7_", count: 78, pad: 5 }, // Comp 7_00000 → Comp 7_00077
+        ];
+
+        // Preload all sequences
+        function preloadImages(callback) {
+            let loaded = 0;
+            let total = sequences.reduce((sum, seq) => sum + seq.count, 0);
+
+            sequences.forEach((seq) => {
+                for (let j = 0; j < seq.count; j++) {
+                    const img = new Image();
+                    img.src = `${seq.path}${String(j).padStart(seq.pad, "0")}.jpg`;
+                    img.onload = () => {
+                        loaded++;
+                        if (loaded === total) callback();
+                    };
+                    images.push(img);
+                }
+            });
+        }
+
+        // Animate background cycling through all loaded images
+        function animate() {
+            bg.style.backgroundImage = `url('${images[i].src}')`;
+            i = (i + 1) % images.length;
+            setTimeout(animate, 50); // 20fps
+        }
+
+        // Start
+        preloadImages(animate);
+
+        // -------------------------------------
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll(".container1");
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            const circles =
+                                entry.target.previousElementSibling.querySelectorAll(
+                                    ".circle"
+                                );
+                            circles.forEach((c) => c.classList.add("animate"));
+                            // Uncomment this if you want animation only once per section
+                            // observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.5 } // run when 50% of section is visible
+            );
+
+            sections.forEach((section) => observer.observe(section));
+        });
+    </script>
+</body>
+
+</html>
