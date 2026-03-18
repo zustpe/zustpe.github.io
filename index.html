@@ -18,9 +18,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Outf…
     rel=" stylesheet" />
-
-
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 
 
@@ -52,8 +50,7 @@
     }
 
     .header-container {
-      /* max-width: 1400px; */
-      /* margin: 0 auto; */
+
       padding: 1rem 2rem;
       display: flex;
       align-items: center;
@@ -61,10 +58,7 @@
       margin-right: 10px;
     }
 
-    /* .logo-img {
-      height: 58px;
-      width: auto;
-    } */
+
 
     .header-center {
       display: flex;
@@ -112,12 +106,10 @@
 
     .dropdown-toggle:hover,
     .nav-item a:hover {
-      /* color: #636161; */
       color: #dda0dd;
 
     }
 
-    /* Dropdown styles */
     .dropdown-menu,
     .submenu {
       display: none;
@@ -151,7 +143,6 @@
 
     .dropdown-menu a:hover,
     .submenu a:hover {
-      /* background-color: rgba(255, 255, 255, 0.1); */
       background-color: #fff;
       color: #dda0dd;
 
@@ -162,12 +153,10 @@
       display: block;
       opacity: 1;
       transform: translateY(0);
-      /* padding: 10px; */
     }
 
     .dropdown-submenu {
       position: relative;
-      /* padding: 0; */
     }
 
     .submenu {
@@ -188,25 +177,19 @@
     }
 
 
-    /* Added */
 
-
-    /* Hamburger Menu Styles */
     .mobile-menu-toggle {
       display: none;
       background: none;
       border: none;
-      /* font-size: 1.5rem; */
       font-size: 2.5rem;
 
       cursor: pointer;
       color: #fff;
-      /* padding: 2rem; */
       padding: 1rem 1.5rem;
 
       position: absolute;
-      /* top: 0; */
-      /* width: 100px; */
+
       top: 1rem;
 
       right: 1rem;
@@ -214,9 +197,16 @@
 
     }
 
+   
+
+    /* --- Mobile (up to 768px) --- */
     @media (max-width: 768px) {
       .mobile-menu-toggle {
-        display: block;
+        display: block !important;
+        position: fixed !important;
+        top: 0.75rem !important;
+        right: 0.75rem !important;
+        z-index: 9999 !important;
       }
 
       .header-center {
@@ -226,49 +216,35 @@
         top: 100%;
         left: 0;
         width: 100%;
-        max-width: none;
         margin: 0;
         padding: 1.5rem 0;
-
         gap: 0;
         background-color: rgba(0, 0, 0, 0.95);
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-
-        z-index: 1050;
+        z-index: 1600;
         backdrop-filter: blur(8px);
-
       }
 
       .header-center.active {
-        display: flex;
+        display: flex !important;
       }
 
       .nav-item {
         width: 100%;
         border-bottom: 1px solid #333;
         text-align: center;
-
       }
 
       .nav-item a,
       .dropdown-toggle {
-
         padding: 1.1rem 1.5rem;
-
         text-align: left;
         width: 100%;
         color: #fff;
       }
 
-      .mobile-menu-toggle {
-        display: block;
-
-      }
-
       .dropdown-menu,
       .submenu {
-
-
         display: none;
         position: static !important;
         width: 100%;
@@ -277,39 +253,13 @@
         border-radius: 0;
         margin: 0;
         padding: 0;
-
       }
 
-      .dropdown:hover>.dropdown-menu,
-      .dropdown-submenu:hover>.submenu {
-        display: block;
-        padding: 0 0 0 1rem;
-      }
-
-      .submenu {
-
-        padding-left: 1.5rem;
-        background: #222;
-
-      }
-
-      .submenu-toggle {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        padding: 1.1rem 1.5rem;
-        color: white;
-        text-decoration: none;
-      }
-
-
-
-      .submenu[style*="display: block"],
       .submenu.show {
         display: block !important;
+        padding-left: 1.5rem;
+        background: #222;
       }
-
 
       .arrow {
         float: right;
@@ -319,13 +269,9 @@
       .dropdown-submenu:hover>.submenu {
         display: none;
       }
-
-
-      .dropdown-submenu:hover .arrow {
-        transform: rotate(90deg);
-      }
     }
 
+    /* --- Phones (up to 480px) --- */
     @media (max-width: 480px) {
       .header-center {
         padding: 0.5rem;
@@ -336,8 +282,35 @@
         padding: 0.8rem;
         font-size: 0.9rem;
       }
+
+      .mobile-menu-toggle {
+        font-size: 5rem !important;
+        top: 0.1rem !important;
+        right: 0.5rem !important;
+      }
     }
 
+    /* --- Tablets (500px to 768px) --- */
+    @media (min-width: 500px) and (max-width: 768px) {
+      .header-center {
+        padding: 1rem;
+        gap: 1rem;
+      }
+
+      .nav-item a,
+      .dropdown-toggle {
+        font-size: 1rem;
+        padding: 1rem;
+      }
+
+      .mobile-menu-toggle {
+        font-size: 5.2rem;
+        top: 3.1rem !important;
+        right: -2.25rem !important;
+      }
+    }
+
+    /* ----------------------------------------------------------  */
 
     .brand-card {
       flex: 0 0 auto;
@@ -413,497 +386,6 @@
 
 
 
-    /* Our Companies */
-
-    /* .our-group-seond {
-      padding-left: 5rem;
-    }
-
-    .align {
-      font-family: "Outfit", sans-serif;
-      font-weight: 600;
-      font-style: normal;
-      font-size: clamp(1.5rem, 4vw, 2.5rem);
-      line-height: 100%;
-      letter-spacing: 0;
-      text-transform: capitalize;
-      color: white;
-      margin-bottom: 20px;
-      text-align: center;
-      margin-top: 30px;
-    }
-
-
-    .textalign {
-      font-family: "Urbanist", sans-serif;
-      font-weight: 500;
-      font-style: normal;
-      font-size: clamp(0.875rem, 2.5vw, 1rem);
-      line-height: 1.78;
-      letter-spacing: 0.01em;
-      text-align: center;
-      color: #a1a1a1;
-      max-width: 800px;
-      margin: 0 auto 2rem;
-    }
-
-    .company-container {
-      width: 100%;
-      max-width: 70rem;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      opacity: 0;
-      transform: translateY(100px);
-      transition:
-        transform 1.5s ease-out,
-        opacity 1.5s ease-out;
-      will-change: transform, opacity;
-      margin: auto;
-    }
-
-    .company-container.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .company-container:nth-child(1) {
-      transition-delay: 0s;
-    }
-
-    .company-container:nth-child(2) {
-      transition-delay: 0.2s;
-    }
-
-    .company-container:nth-child(3) {
-      transition-delay: 0.4s;
-    }
-
-    .company-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      position: relative;
-      width: 100%;
-    }
-
-    .company-info {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: 100%;
-      max-width: 60rem;
-      margin: 0 auto;
-      align-items: center;
-      border-radius: 0.5rem;
-      border: 0.15rem solid rgb(63, 61, 61);
-      background-color: rgb(32, 31, 31);
-      padding: 1.5rem;
-      box-sizing: border-box;
-    }
-
-    .company-info-left {
-      display: flex;
-      flex-direction: column;
-      flex: 1 1 40%;
-      text-align: left;
-      min-width: 200px;
-    }
-
-    .company-info-left h6 {
-      font-weight: bold;
-      color: white;
-      margin: 0 0 1rem 0;
-      padding: 0.5rem 0;
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
-    }
-
-    .container.comp_cont {
-
-      margin-bottom: -400px;
-    }
-
-    .company-logo {
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 7rem;
-      padding-top: 3rem;
-      padding-bottom: 3rem;
-    }
-
-    .company-logo img {
-      width: clamp(3rem, 8vw, 5rem);
-      height: auto;
-      max-width: 100%;
-    }
-
-    .line {
-
-      width: 0.1rem;
-      height: 6rem;
-      background-color: #fff;
-      position: absolute;
-      top: 55%;
-      left: 35%;
-      transform: translateY(-50%);
-    }
-
-    .company-details-right {
-      text-align: left;
-      flex: 1 1 55%;
-      padding-left: clamp(1rem, 3vw, 2rem);
-      min-width: 250px;
-    }
-
-
-    .company-details-right p {
-      font-family: "Poppins", sans-serif;
-      font-weight: 500;
-      font-style: normal;
-      font-size: clamp(0.75rem, 2vw, 0.875rem);
-      line-height: 1.6;
-      letter-spacing: 0.01em;
-      margin: 0.5rem 0 0;
-      color: white;
-    }
-
-    .company-container.company-two.moved {
-      transform: translateY(-20vh);
-      transition:
-        transform 1.5s ease,
-        opacity 1.5s ease;
-      z-index: 1;
-    }
-
-    .company-container.company-three.moved {
-      transform: translateY(-40vh);
-      transition:
-        transform 1.5s ease,
-        opacity 1.5s ease;
-      z-index: 3;
-    }
-
-    .company-container.out {
-      opacity: 0;
-      transform: translateY(50px);
-      transition:
-        opacity 0.5s ease,
-        transform 0.5s ease;
-    }
-
-    .container.lock-scroll {
-      overflow: hidden;
-    }
-
-
-
-
-
-    @media (max-width: 768px) {
-      .container.comp_cont {
-        padding: 1rem;
-        width: 100%;
-        overflow-x: hidden;
-        margin-bottom: -1190px;
-      }
-
-      .company-item {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-direction: column;
-        position: relative;
-        padding: 0;
-      }
-
-      .our-group-seond {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-
-      .company-container {
-        flex-direction: column;
-        align-items: center;
-        transform: translateY(50px);
-        transition:
-          transform 0.8s ease-out,
-          opacity 0.8s ease-out;
-        width: 100%;
-        margin: 1rem auto 0;
-      }
-
-      .company-info {
-        width: 100%;
-        max-width: none;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        margin: 0;
-      }
-
-      .company-info-left,
-      .company-details-right {
-        flex: 1 1 100%;
-        text-align: center;
-        padding: 0;
-        width: 100%;
-      }
-
-      .company-info-left h6 {
-        font-size: clamp(1rem, 4vw, 1.125rem);
-        text-align: center;
-        padding: 0.5rem 0;
-        margin-bottom: 1rem;
-      }
-
-      .company-logo {
-        order: -1;
-        width: 100%;
-        margin: 0 0 1rem 0;
-        padding: 0.5rem 0;
-      }
-
-      .company-logo img {
-        width: clamp(2.5rem, 12vw, 4rem);
-      }
-
-      .line {
-        display: none;
-      }
-
-      .company-details-right {
-        padding: 1rem 0 0;
-        text-align: center;
-      }
-
-      .company-details-right p {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-        font-size: clamp(0.75rem, 3vw, 0.875rem);
-        line-height: 1.6;
-        letter-spacing: 0.01em;
-        text-align: center;
-      }
-
-      .company-container.company-two.moved {
-        transform: translateY(-54vh);
-        transition:
-          transform 0.8s ease-out,
-          opacity 0.8s ease-out;
-      }
-
-      .company-container.company-three.moved {
-        transform: translateY(-107vh);
-        transition:
-          transform 0.8s ease-out,
-          opacity 0.8s ease-out;
-      }
-
-      .our-group-seond {
-        text-align: center;
-      }
-    }
-
-    @media (min-width: 769px) and (max-width: 1023px) {
-      .container.comp_cont {
-        padding: 2rem 1rem;
-        margin-bottom: -700px;
-        margin-left: 70px;
-      }
-
-      .company-container {
-        max-width: 90%;
-        margin: auto;
-        transform: translateY(50px);
-        transition:
-          transform 1s ease-out,
-          opacity 1s ease-out;
-      }
-
-      .company-info {
-        width: 100%;
-        padding: 1.5rem;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1rem;
-      }
-
-      .company-info-left,
-      .company-details-right {
-        flex: 1 1 45%;
-        text-align: left;
-        padding: 0;
-      }
-
-      .company-info-left h6 {
- 
-        font-size: clamp(1rem, 3vw, 1rem);
-        text-align: center;
-        padding: 0.5rem 0;
-      }
-
-      .company-logo {
-        margin: 0 1rem 0 0;
-        padding: 0.5rem 0;
-      }
-
-      .company-logo img {
-        width: clamp(3rem, 6vw, 4.5rem);
-      }
-
-      .line {
-        display: block;
-      }
-
-      .company-details-right {
-        padding-left: 1rem;
-      }
-
-      .company-details-right p {
-        font-size: clamp(0.875rem, 2.5vw, 1rem);
-        line-height: 1.6;
-      }
-
-      .company-container.company-two.moved {
-        transform: translateY(-28vh);
-        transition:
-          transform 1s ease-out,
-          opacity 1s ease-out;
-      }
-
-      .company-container.company-three.moved {
-        transform: translateY(-55vh);
-        transition:
-          transform 1s ease-out,
-          opacity 1s ease-out;
-      }
-    }
-
-    @media (min-width: 1024px) and (max-width: 1919px) {
-      .container {
-        max-width: none;
-      }
-
-      .container.comp_cont {
-        padding: 4rem 2rem;
-      
-        margin: auto;
-        margin-bottom: -500px;
-
-
-      }
-
-      .company-container {
-        max-width: 70rem;
-        margin: 4rem auto 0;
-      }
-
-      .company-info {
-        width: 100%;
-        max-width: 60rem;
-      }
-
-      .company-info-left h6 {
-        font-size: clamp(1rem, 1.5vw, 1rem);
-        margin-left: 32px;
-      }
-
-      .company-logo img {
-        width: clamp(4rem, 4vw, 6rem);
-      }
-
-      .company-details-right p {
-        font-size: clamp(0.875rem, 1.2vw, 14px);
-
-      }
-
-      .company-container.company-two.moved {
-        transform: translateY(-42vh);
-
-      }
-
-      .company-container.company-three.moved {
-        transform: translateY(-83vh);
-
-      }
-
-      .line {
-        display: block;
-      }
-
-      .our-group-seond {
-        padding-left: 2rem;
-      }
-    }
-
-    @media (min-width: 1920px) {
-    
-
-      .container.comp_cont {
-        padding: 2rem 1rem;
-       
-        max-width: none;
-
-      }
-
-      .align {
-        font-size: clamp(2rem, 1vw, 3rem);
-      }
-
-      .textalign {
-        font-size: clamp(1rem, 0.5vw, 1.25rem);
-      }
-
-      .company-container {
-        max-width: 80rem;
-        margin: 4rem auto 0;
-      }
-
-      .company-info {
-        width: 100%;
-        max-width: 70rem;
-      }
-
-      .company-info-left h6 {
-        font-size: 1.75rem;
-      }
-
-      .company-logo img {
-        width: 7rem;
-      }
-
-      .company-details-right p {
-        font-size: 1.125rem;
-      }
-
-      .company-container.company-two.moved {
-        transform: translateY(-29vh);
-
-      }
-
-      .company-container.company-three.moved {
-        transform: translateY(-56vh);
-
-      }
-
-      .line {
-        display: block;
-      }
-
-      .our-group-seond {
-        padding-left: 5rem;
-      }
-    } */
-
-    /* our Companie End */
-
-
-
 
     /* Our Companiees  Container Start */
 
@@ -931,7 +413,10 @@
       display: none;
     } */
 
+
+
     /* Headings */
+
     .align {
       font-family: "Outfit", sans-serif;
       font-weight: 600;
@@ -945,14 +430,7 @@
     }
 
     .textalign {
-      /* font-family: "Urbanist", sans-serif;
-      font-weight: 500;
-      font-style: normal;
-      font-size: 12px;
-      line-height: 1.78;
-      letter-spacing: 0.01em;
-      text-align: center;
-      color: #a1a1a1; */
+
 
       font-family: "Urbanist", sans-serif;
       font-weight: 500;
@@ -969,8 +447,7 @@
 
 
 
-    /* ------------------ */
-    /* Company Container */
+
     .company-container {
       width: 100vw;
       max-width: 55rem;
@@ -981,12 +458,10 @@
       position: relative;
       opacity: 0;
       transform: translateY(100px);
-      /* Start off-screen */
       transition:
         transform 1.5s ease-out,
         opacity 1.5s ease-out;
       will-change: transform, opacity;
-      /* padding-left: 10%; */
     }
 
 
@@ -1000,7 +475,6 @@
       transform: translateY(0);
     }
 
-    /* Optional stagger effect */
     .company-container:nth-child(1) {
       transition-delay: 0s;
     }
@@ -1013,8 +487,7 @@
       transition-delay: 0.4s;
     }
 
-    /* ------------------ */
-    /* Company Info Block */
+
     .company-item {
       display: flex;
       justify-content: space-between;
@@ -1029,37 +502,7 @@
 
     }
 
-    /* 
-    .company-info {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: 56vw;
-      margin-left: 20vh;
-      align-items: center;
-      border-radius: 0.5rem;
-      border: 0.15rem solid rgb(63, 61, 61);
-      background-color: rgb(32, 31, 31);
-      padding: 1rem;
-    }
 
-    
-
-    .company-info-left {
-      display: flex;
-      flex-direction: column;
-      flex: 1 1 40%;
-      text-align: left;
-    }
-
-    .company-info-left h6 {
-      font-weight: bold;
-      color: white;
-      margin: 0;
-      padding-block: 0.1rem;
-      padding-inline-start: 0.5rem;
-      font-size: 16px;
-    } */
 
 
     .company-info {
@@ -1067,7 +510,6 @@
       flex-wrap: wrap;
       justify-content: center;
       width: 100%;
-      /* max-width: 60rem; */
       margin: 0 auto;
       align-items: center;
       border-radius: 0.5rem;
@@ -1113,7 +555,6 @@
       background-color: #fff;
       position: absolute;
       top: 55%;
-      /* left: 48%; */
       left: 33%;
 
       transform: translateY(-50%);
@@ -1137,7 +578,6 @@
 
     .company-container.company-two.moved {
       transform: translateY(-18.5em);
-      /* transform: translateY(-15.5em); */
 
       transition:
         transform 1.5s ease,
@@ -1147,7 +587,6 @@
 
     .company-container.company-three.moved {
       transform: translateY(-36em);
-      /* transform: translateY(-31em); */
 
       transition:
         transform 1.5s ease,
@@ -1167,7 +606,6 @@
       overflow: hidden;
     }
 
-    /* Mobile View */
     @media (max-width: 768px) {
       .container {
         padding: 1.5rem 1rem;
@@ -1184,7 +622,6 @@
         align-items: flex-start;
         flex-wrap: wrap;
         position: relative;
-        /* padding-right: 8rem; */
         padding: 0;
       }
 
@@ -1222,7 +659,6 @@
       .dot {
         font-size: 3vw;
         margin: 0 5px;
-        /* padding-top: 3%; */
         margin-top: 1.2em;
       }
 
@@ -1250,7 +686,6 @@
         letter-spacing: 0.01em;
         text-align: center;
         color: #a1a1a1;
-        /* margin-top: -50%; */
       }
 
       .company-container {
@@ -1296,7 +731,6 @@
 
       .line {
         display: none;
-        /* Hide vertical line on mobile */
       }
 
       .company-details-right {
@@ -1314,15 +748,12 @@
 
 
       .container.comp_cont {
-        /* padding: 1rem; */
         width: 100%;
         overflow-x: hidden;
         margin-bottom: -1400px;
       }
 
-      /* Adjust scroll-based transforms */
       .company-container.company-two.moved {
-        /* transform: translateY(-28em); */
         transform: translateY(-30em);
 
         transition:
@@ -1331,7 +762,6 @@
       }
 
       .company-container.company-three.moved {
-        /* transform: translateY(-56em); */
         transform: translateY(-60em);
 
         transition:
@@ -1340,13 +770,11 @@
       }
     }
 
-    /* Tablet View */
 
     @media (min-width: 768px) and (max-width: 1030px) {
       .container {
         padding: 1.5rem 1rem;
         height: auto;
-        /* z-index: -0; */
       }
 
       .strap {
@@ -1378,71 +806,6 @@
         text-transform: capitalize;
       }
 
-      /* .textalign {
-        font-family: "Urbanist", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 12px;
-        line-height: 1.78;
-        letter-spacing: 0.01em;
-        text-align: center;
-        color: #a1a1a1;
-      } */
-
-      /* @media screen and (max-width: 768px) {
-        .company-container {
-          flex-direction: column;
-          align-items: center;
-          padding-right: 61px;
-          transform: translateY(100px);
-          transition:
-            transform 0.6s ease-out,
-            opacity 0.6s ease-out;
-          width: 80%;
-        }
-
-        .company-info {
-          width: 90vw;
-          flex-direction: column;
-          align-items: center;
-          padding: 1rem;
-          display: flex;
-        }
-
-        .company-info-left,
-        .company-details-right {
-          flex: 1 1 100%;
-          text-align: center;
-          padding: 0;
-        }
-
-        .company-info-left h6 {
-          font-size: 0.9rem;
-          text-align: center;
-          padding-block: 0.5rem;
-        }
-
-        .company-logo img {
-          width: 4rem;
-        }
-
-        .line {
-          display: none;
-        }
-
-        .company-details-right {
-          padding-top: 1rem;
-        }
-
-        .company-details-right p {
-          font-family: "Poppins", sans-serif;
-          font-weight: 500;
-          font-style: normal;
-          font-size: 10px;
-          line-height: 178%;
-          letter-spacing: 0.01em;
-        }
-      } */
 
       .company-container.company-two.moved {
         transform: translateY(-18.5em);
@@ -1459,11 +822,9 @@
       }
     }
 
-    /* Laptop/Desktop View */
 
     @media (min-width: 1024px) and (max-width: 1919px) {
       .container {
-        /* padding: 3rem 5rem; */
         z-index: 2;
       }
 
@@ -1487,7 +848,6 @@
       }
     }
 
-    /* Extra Large View TV */
     @media (min-width: 1920px) {
       .container {
         padding: 4rem 8rem;
@@ -1523,19 +883,153 @@
       }
 
       .company-container.company-two.moved {
-        /* transform: translateY(-13em); */
         transform: translateY(-18em);
 
       }
 
       .company-container.company-three.moved {
-        /* transform: translateY(-26em); */
         transform: translateY(-36em);
 
       }
     }
 
     /* Full Container End */
+
+
+    /* Our Core Values */
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .cv-section-container {
+      position: relative;
+      height: 450vh;
+      background-color: #fff;
+    }
+
+    .cv-scene {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      background: black;
+      /* margin-top: 400px; */
+
+    }
+
+    .cv-wrapper {
+      position: relative;
+      width: 1573px;
+      height: 1020px;
+      flex-shrink: 0;
+    }
+
+    .cv-circle {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: #ffffff;
+      border-radius: 50%;
+      z-index: 1;
+      width: 20px;
+      height: 20px;
+      opacity: 0;
+      transition: width 100ms linear, height 100ms linear, opacity 400ms ease;
+    }
+
+    .cv-cards-container {
+      position: absolute;
+      inset: 0;
+      z-index: 20;
+      transform-origin: center center;
+      will-change: transform;
+    }
+
+    .cv-card {
+      position: absolute;
+      border-radius: 20px;
+      padding: 24px 20px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      transform-origin: center center;
+      will-change: transform, opacity;
+      opacity: 0;
+    }
+
+    .cv-card-dark {
+      background: #afaeae;
+      color: #fff;
+    }
+
+    .cv-card-light {
+      background: rgba(255, 255, 255, 0.98);
+      color: #111;
+      border: 1px solid #eee;
+    }
+
+    .cv-icon-circle {
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 14px;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .cv-card i {
+      font-size: 28px;
+    }
+
+    .cv-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .cv-card p {
+      font-size: 0.88rem;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 1600px) {
+      .cv-wrapper {
+        transform: scale(0.72);
+      }
+    }
+
+    @media (max-width: 1200px) {
+      .cv-wrapper {
+        transform: scale(0.52);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .cv-wrapper {
+        transform: scale(0.35);
+      }
+
+    }
+
+    @media (max-width: 480px) {
+      .cv-scene {
+        margin-top: 400px;
+      }
+    }
   </style>
 
 
@@ -1597,6 +1091,8 @@
                           <ul class="dropdown-menu submenu">
                             <li><a href="#nextgenhr">Nextgen HR</a></li>
                             <li><a href="#kaamrade">Kaamrade</a></li>
+                            <li><a href="https://academy.zustpe.com">Academy</a></li>
+
                           </ul>
                         </li>
                         <li class="dropdown-submenu">
@@ -1608,7 +1104,7 @@
                         <li class="dropdown-submenu">
                           <a href="#solutions">E-Commerce<span class="arrow">›</span></a>
                           <ul class="dropdown-menu submenu">
-                            <li><a href="#zustpengo">No MRP Store</a></li>
+                            <li><a href="https://nomrp.store">No MRP Store</a></li>
                           </ul>
                         </li>
                         <li class="dropdown-submenu">
@@ -1668,17 +1164,7 @@
               });
             </script>
 
-            <!-- Main Content -->
-            <!-- <div class="center-content" id="para">
-              <h1 class="this_is_h1">
-                Zeal & Upliftment for Success and <br />
-                Transformation with Potential Empowerment<br />
-                Basically
-                <span class="zustpe">ZUSTPE</span>
-              </h1>
-            </div>
-            <img src="./images/arrowDown.png" class="arrowDown" alt="" />
-          </div> -->
+
           </div>
           <div class="center-content" id="para">
             <h1 class="this_is_h1">
@@ -2021,6 +1507,136 @@
     <!-- end of rakshana code -->
 
 
+
+
+    <!-- ==================== OUR CORE VALUES ==================== -->
+    <div class="cv-section-container" id="core-values-trigger">
+      <div class="cv-scene">
+        <div class="cv-wrapper">
+          <div class="cv-circle"></div>
+
+          <div class="cv-cards-container">
+            <div class="cv-card cv-card-dark" data-dist="320" style="left: 95px; top: 195px; width: 260px;">
+              <div class="cv-icon-circle"><i class="fa-solid fa-users text-indigo-400"></i></div>
+              <h3>Diversity</h3>
+              <p>We believe that a diverse team is a stronger team. We actively promote inclusivity.</p>
+            </div>
+            <div class="cv-card cv-card-dark" data-dist="340" style="left: 435px; top: 95px; width: 150px;">
+              <div class="cv-icon-circle"><i class="fa-solid fa-bullseye text-amber-400"></i></div>
+              <h3>Success</h3>
+              <p>We are passionate about what we do...</p>
+            </div>
+            <div class="cv-card cv-card-light" data-dist="300" style="left: 645px; top: 125px; width: 260px;">
+              <div class="cv-icon-circle"><i class="fa-solid fa-people-group text-blue-500"></i></div>
+              <h3>Teamwork</h3>
+              <p>We value the power of teamwork and recognize the importance of collaboration.</p>
+            </div>
+            <div class="cv-card cv-card-dark" data-dist="340" style="left: 975px; top: 95px; width: 170px;">
+              <div class="cv-icon-circle"><i class="fa-solid fa-shield-halved text-green-400"></i></div>
+              <h3>Integrity</h3>
+              <p>We uphold the highest standards of transparency.</p>
+            </div>
+            <div class="cv-card cv-card-dark" data-dist="320" style="left: 1185px; top: 195px; width: 260px;">
+              <div class="cv-icon-circle"><i class="fa-solid fa-arrow-up-right-dots text-purple-400"></i></div>
+              <h3>Growth</h3>
+              <p>Committed to helping our students grow professionally.</p>
+            </div>
+            <div class="cv-card cv-card-light" data-dist="280" style="left: 95px; top: 585px; width: 260px;">
+              <div class="cv-icon-circle"><i class="fa-solid fa-rotate text-teal-400"></i></div>
+              <h3>Agility</h3>
+              <p>We thrive in a rapidly changing world and are committed to adaptability.</p>
+            </div>
+            <div class="cv-card cv-card-dark" data-dist="260" style="left: 435px; top: 605px; width: 150px;">
+              <div class="cv-icon-circle"><i class="fa-solid fa-hand-holding-heart text-rose-400"></i></div>
+              <h3>Focus</h3>
+              <p>We put our customers at the center of everything.</p>
+            </div>
+            <div class="cv-card cv-card-light" data-dist="220" style="left: 645px; top: 690px; width: 260px;">
+              <div class="cv-icon-circle"><i class="fa-solid fa-lightbulb text-yellow-400"></i></div>
+              <h3>Innovation</h3>
+              <p>Innovation is the heart of everything we do. We think outside the box.</p>
+            </div>
+            <div class="cv-card cv-card-dark" data-dist="260" style="left: 975px; top: 605px; width: 170px;">
+              <div class="cv-icon-circle"><i class="fa-solid fa-arrows-rotate text-cyan-400"></i></div>
+              <h3>Ownership</h3>
+              <p>We trust our clan to take ownership and stay accountable.</p>
+            </div>
+            <div class="cv-card cv-card-dark" data-dist="280" style="left: 1185px; top: 515px; width: 260px;">
+              <div class="cv-icon-circle"><i class="fa-solid fa-book-open text-violet-400"></i></div>
+              <h3>Learning</h3>
+              <p>We believe in fostering continuous learning and skill development.</p>
+            </div>
+          </div>
+
+          <div
+            class="cv-title absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-4 text-white">Our Core Values</h1>
+            <p class="text-lg md:text-xl opacity-90 text-white">Aligning our mission, vision, and commitment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function () {
+        const container = document.querySelector('#core-values-trigger');
+        const circle = document.querySelector('.cv-circle');
+        const cardsContainer = document.querySelector('.cv-cards-container');
+        const title = document.querySelector('.cv-title');
+        const cards = document.querySelectorAll('.cv-card');
+
+        function updateOnScroll() {
+          const rect = container.getBoundingClientRect();
+          const containerHeight = container.offsetHeight;
+          const viewportHeight = window.innerHeight;
+
+          let progress = -rect.top / (containerHeight - viewportHeight);
+          progress = Math.min(Math.max(progress, 0), 1);
+
+          const circleSize = 20 + (progress * 2800);
+          const circleOpacity = Math.min(1, Math.max(0, (progress - 0.05) * 5));
+
+          circle.style.width = `${circleSize}px`;
+          circle.style.height = `${circleSize}px`;
+          circle.style.opacity = circleOpacity;
+
+          cardsContainer.style.transform = `scale(${1 + progress * 0.4})`;
+
+          cards.forEach(card => {
+            const dist = parseFloat(card.dataset.dist) || 300;
+            const hideThreshold = 0.45 + (dist / 1800);
+
+            let opacity = 0;
+            if (progress < 0.15) {
+              opacity = progress / 0.15;
+            }
+            else if (progress < hideThreshold) {
+              opacity = 1;
+            }
+            else {
+              const fadeOutEnd = Math.min(1, hideThreshold + 0.25);
+              opacity = progress >= fadeOutEnd ? 0 : 1 - (progress - hideThreshold) / (fadeOutEnd - hideThreshold);
+            }
+
+            card.style.opacity = opacity;
+            card.style.display = opacity <= 0.01 ? 'none' : 'block';
+            card.style.transform = `scale(${1 + progress * 0.2})`;
+          });
+
+          title.style.opacity = Math.max(0, 1 - progress * 2.5);
+        }
+
+        window.addEventListener('scroll', updateOnScroll, { passive: true });
+        window.addEventListener('resize', updateOnScroll);
+        updateOnScroll();
+      })();
+    </script>
+
+    <!-- ==================== END CORE VALUES ==================== -->
+
+
+
+
+
     <!-- Card Stack Section -->
     <div class="white">
 
@@ -2165,26 +1781,6 @@
                 </div>
               </div>
 
-              <div class="cardT" style="transform: rotateY(300deg) translateZ(460px);">
-                <div class="card-innerT">
-                  <div class="logo-boxT">
-                    <img src="./images/image (2).png" alt="Vinayaga Engineering" class="w-24 h-24 object-contain">
-                  </div>
-                  <div class="flex-1 flex flex-col justify-between py-2">
-                    <p class="quoteT">We are extremely pleased with the exceptional service provided
-                      by
-                      ZustPe Technologies in developing our new website. The team's
-                      professionalism,
-                      technical expertise, and dedication to quality were evident throughout the
-                      project...</p>
-                    <div>
-                      <div class="authorT">Karan</div>
-                      <div class="companyT">Vinayaga Engineering</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               <div class="cardT" style="transform: rotateY(180deg) translateZ(460px);">
                 <div class="card-innerT">
                   <div class="logo-boxT">
@@ -2198,7 +1794,7 @@
                       value.I strongly recommend them for any Microsoft 365 setup or migration work. They delivers
                       results,
                       not excuses.</p>
-                    <div>
+                    <div class="CQblock">
                       <div class="authorT">Coach venkat</div>
                       <div class="companyT">Excel Coach Venkat</div>
                     </div>
@@ -2218,32 +1814,33 @@
                       professionalism are truly commendable, and I highly recommend their services to anyone in need of
                       reliable IT support.
                     </p>
-                    <div>
+                    <div class="CQblock">
                       <div class="authorT">Quadrobay</div>
                       <div class="companyT">Quadrobay Technologies Pvt Ltd</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- <div class="cardT" style="transform: rotateY(300deg) translateZ(460px);">
+           
+              <div class="cardT" style="transform: rotateY(300deg) translateZ(460px);">
                 <div class="card-innerT">
                   <div class="logo-boxT">
                     <img src="./images/image (2).png" alt="Vinayaga Engineering" class="w-24 h-24 object-contain">
                   </div>
                   <div class="flex-1 flex flex-col justify-between py-2">
-                    <p class="quoteT">We are extremely pleased with the exceptional service provided
-                      by
-                      ZustPe Technologies in developing our new website. The team's
-                      professionalism,
-                      technical expertise, and dedication to quality were evident throughout the
-                      project...</p>
+                    <p class="quoteT">This is Praveen Shankar from BNI. Bravo. This testimonial to
+                      Kapil
+                      is a reflection of my satisfaction in the service levels and sensitivity he
+                      has
+                      shown towards a commitment provided.I wanted to check and see..</p>
                     <div>
-                      <div class="authorT">Karan</div>
-                      <div class="companyT">Vinayaga Engineering</div>
+                      <div class="authorT">Praveen Shankar</div>
+                      <div class="companyT">Deerak Solutions</div>
                     </div>
                   </div>
                 </div>
-              </div> -->
+              </div>
+
 
             </div>
           </div>
@@ -2253,150 +1850,6 @@
 
 
     <!-- Testimonial Script start -->
-
-    <!-- 6 cards -->
-
-    <!-- <script>
-
-      const carouselT = document.getElementById("carouselT");
-      const prevBtnT = document.getElementById("prevT");
-      const nextBtnT = document.getElementById("nextT");
-
-      let currentAngle = 0;
-      const numCards = 6;
-      const angleStepT = 360 / numCards;
-
-      function setCenterAndBackCards() {
-        const cards = document.querySelectorAll(".cardT");
-
-        let centerCard = null;
-        let backCard = null;
-        let minDiff = Infinity;
-        let maxDiff = -Infinity;
-
-        cards.forEach((card, i) => {
-          let angle = (i * angleStepT + currentAngle) % 360;
-          if (angle > 180) angle -= 360;
-          const diff = Math.abs(angle);
-
-          if (diff < minDiff) {
-            minDiff = diff;
-            centerCard = card;
-          }
-          if (diff > maxDiff) {
-            maxDiff = diff;
-            backCard = card;
-          }
-        });
-
-        cards.forEach((c) => c.classList.remove("is-center", "is-back"));
-
-        if (centerCard) centerCard.classList.add("is-center");
-        if (backCard && maxDiff > 90) backCard.classList.add("is-back");
-      }
-
-      function updateCarousel() {
-        carouselT.style.transform = `rotateY(${currentAngle}deg)`;
-
-        requestAnimationFrame(() => {
-          setCenterAndBackCards();
-        });
-      }
-
-      nextBtnT.addEventListener("click", () => {
-        currentAngle -= angleStepT;
-        updateCarousel();
-      });
-
-      prevBtnT.addEventListener("click", () => {
-        currentAngle += angleStepT;
-        updateCarousel();
-      });
-
-      updateCarousel();
-      setCenterAndBackCards();
-
-      // Testimonial END
-    </script> -->
-    <!-- 6 cards end -->
-
-
-    <!-- 5 cards -->
-    <!-- <script>
-      const carouselT = document.getElementById("carouselT");
-      const prevBtnT = document.getElementById("prevT");
-      const nextBtnT = document.getElementById("nextT");
-
-      let currentAngle = 0;
-
-      function initCarousel() {
-        const cards = Array.from(document.querySelectorAll(".cardT"));
-        const numCards = cards.length;
-        if (numCards === 0) return;
-
-        const angleStepT = 360 / numCards;
-
-        const cardRect = cards[0].getBoundingClientRect();
-        const cardWidth = cardRect.width;
-        const radius = (cardWidth / 2) / Math.tan(Math.PI / numCards)+60;
-
-        cards.forEach((card, i) => {
-          const baseAngle = i * angleStepT;
-          card.style.transform = `rotateY(${baseAngle}deg) translateZ(${radius}px)`;
-        });
-
-        function setCenterAndBackCards() {
-          let centerCard = null;
-          let backCard = null;
-          let minDiff = Infinity;
-          let maxDiff = -Infinity;
-
-          cards.forEach((card, i) => {
-            const baseAngle = i * angleStepT;
-            let angle = (baseAngle + currentAngle) % 360;
-            if (angle > 180) angle -= 360;
-            const diff = Math.abs(angle);
-
-            if (diff < minDiff) {
-              minDiff = diff;
-              centerCard = card;
-            }
-            if (diff > maxDiff) {
-              maxDiff = diff;
-              backCard = card;
-            }
-          });
-
-          cards.forEach((c) => c.classList.remove("is-center", "is-back"));
-          if (centerCard) centerCard.classList.add("is-center");
-          if (backCard && maxDiff > 90) backCard.classList.add("is-back");
-        }
-
-        function updateCarousel() {
-          carouselT.style.transform = `rotateY(${currentAngle}deg)`;
-          requestAnimationFrame(setCenterAndBackCards);
-        }
-
-        nextBtnT.addEventListener("click", () => {
-          currentAngle -= angleStepT;
-          updateCarousel();
-        });
-
-        prevBtnT.addEventListener("click", () => {
-          currentAngle += angleStepT;
-          updateCarousel();
-        });
-
-        updateCarousel();
-        setCenterAndBackCards();
-      }
-
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", initCarousel);
-      } else {
-        initCarousel();
-      }
-    </script> -->
 
 
     <!-- 6 cards -->
@@ -2480,6 +1933,83 @@
     </script>
 
     <!-- 6 cards end -->
+
+      <!-- 5 cards -->
+    <!-- <script>
+      const carouselT = document.getElementById("carouselT");
+      const prevBtnT = document.getElementById("prevT");
+      const nextBtnT = document.getElementById("nextT");
+
+      let currentAngle = 0;
+
+      function initCarousel() {
+        const cards = Array.from(document.querySelectorAll(".cardT"));
+        const numCards = cards.length;
+        if (numCards === 0) return;
+
+        const angleStepT = 360 / numCards;
+
+        const cardRect = cards[0].getBoundingClientRect();
+        const cardWidth = cardRect.width;
+        const radius = (cardWidth / 2) / Math.tan(Math.PI / numCards)+60;
+
+        cards.forEach((card, i) => {
+          const baseAngle = i * angleStepT;
+          card.style.transform = `rotateY(${baseAngle}deg) translateZ(${radius}px)`;
+        });
+
+        function setCenterAndBackCards() {
+          let centerCard = null;
+          let backCard = null;
+          let minDiff = Infinity;
+          let maxDiff = -Infinity;
+
+          cards.forEach((card, i) => {
+            const baseAngle = i * angleStepT;
+            let angle = (baseAngle + currentAngle) % 360;
+            if (angle > 180) angle -= 360;
+            const diff = Math.abs(angle);
+
+            if (diff < minDiff) {
+              minDiff = diff;
+              centerCard = card;
+            }
+            if (diff > maxDiff) {
+              maxDiff = diff;
+              backCard = card;
+            }
+          });
+
+          cards.forEach((c) => c.classList.remove("is-center", "is-back"));
+          if (centerCard) centerCard.classList.add("is-center");
+          if (backCard && maxDiff > 90) backCard.classList.add("is-back");
+        }
+
+        function updateCarousel() {
+          carouselT.style.transform = `rotateY(${currentAngle}deg)`;
+          requestAnimationFrame(setCenterAndBackCards);
+        }
+
+        nextBtnT.addEventListener("click", () => {
+          currentAngle -= angleStepT;
+          updateCarousel();
+        });
+
+        prevBtnT.addEventListener("click", () => {
+          currentAngle += angleStepT;
+          updateCarousel();
+        });
+
+        updateCarousel();
+        setCenterAndBackCards();
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initCarousel);
+      } else {
+        initCarousel();
+      }
+    </script> -->
 
 
 
@@ -2624,38 +2154,12 @@
     updateCards();
     // -------------------------- this is background load--------------------
 
-    // const frames = 78; // bala_00000.jpg → bala_00077.jpg
-    // const bg = document.querySelector(".bgimg");
-    // const images = [];
-    // let i = 0;
-    // // Preload all images
-    // function preloadImages(callback) {
-    //   let loaded = 0;
-    //   for (let j = 0; j < frames; j++) {
-    //     const img = new Image();
-    //     img.src = `./images/bgimg/bala_${String(j).padStart(5, "0")}.jpg`;
-    //     img.onload = () => {
-    //       loaded++;
-    //       if (loaded === frames) callback();
-    //     };
-    //     images.push(img);
-    //   }
-    // }
-
-    // // Animate background after preload
-    // function animate() {
-    //   bg.style.backgroundImage = `url('${images[i].src}')`;
-    //   i = (i + 1) % frames;
-    //   setTimeout(animate, 50); // 50ms per frame ≈ 20fps
-    // }
-    // // Start
-    // preloadImages(animate);
+ 
 
     const bg = document.querySelector(".bgimg");
     const images = [];
     let i = 0;
 
-    // List all sequences you want to preload
     const sequences = [
       { path: "./images/bgimg/bala_", count: 78, pad: 5 }, // bala_00000 → bala_00077
       { path: "./images/mobiles/Comp 6_", count: 77, pad: 5 }, // Comp 6_00001 → Comp 6_00077

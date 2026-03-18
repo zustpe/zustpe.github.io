@@ -697,12 +697,9 @@ h2 {
   color: #dda0dd;
 }
 
-.center-content {
+/* .center-content {
   padding-top: 30px;
   line-height: 1.4;
-  /* margin-top: 50px; */
-  margin-top: 20px;
-
   position: relative;
   justify-content: center;
   align-items: center;
@@ -722,7 +719,7 @@ h2 {
   font-weight: 600;
   line-height: 63px;
   letter-spacing: 0.02em;
-}
+} */
 
 /* .center-content .this_is_h1 {
   margin-top: 15vh;
@@ -2511,17 +2508,15 @@ h2 {
     display: none;
   }
 
-  .arrowDown {
+  /* .arrowDown {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 46%;
     opacity: 1;
-    /* margin-left: 20px; */
     margin-top: 38vh;
-    /* margin-left: 32vw; */
-  }
+  } */
 
   .mobile-menu-toggle {
     transform: scale(0.5);
@@ -2531,7 +2526,6 @@ h2 {
     margin-top: 20px;
     color: white;
     position: absolute;
-    /* top: 1.2rem; */
     top: 9.5rem;
     right: 1.5rem;
     z-index: 1001;
@@ -3587,10 +3581,10 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 50%;
+    margin-left: 46%;
     opacity: 1;
     /* margin-left: 20px; */
-    margin-top: -5vh;
+    margin-top: -20vh;
   }
 
   .outer_circle {
@@ -3790,7 +3784,7 @@ h2 {
     height: auto;
   }
 
-  .center-content h1 {
+  /* .center-content h1 {
     font-size: 2.8vw;
     line-height: 60px;
     margin-bottom: 160px;
@@ -3799,7 +3793,36 @@ h2 {
     display: inline-block;
     width: fit-content;
     pointer-events: none;
-  }
+  } */
+
+
+  .center-content {
+  padding-top: 30px;
+  line-height: 1.4;
+  /* margin-top: 50px; */
+  /* margin-top: 20px; */
+
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.center-content h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  line-height: 63px;
+  letter-spacing: 0.02em;
+}
+
 
   .main-container {
     width: 85%;
@@ -4864,16 +4887,18 @@ h2 {
     height: 4.5vh;
   }
 
-  .arrowDown {
+  /* .arrowDown {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 50%;
     opacity: 1;
-    /* margin-left: 20px; */
     margin-top: -5vh;
-  }
+  } */
+
+
+
 
   .marquee-content {
     display: inline-block;
@@ -5266,8 +5291,8 @@ h2 {
     margin-top: 9vw;
   }
 
-  /* .center-content h1 {
-    font-size: 3.8vw;
+  .center-content h1 {
+
     line-height: 90px;
     letter-spacing: 3%;
     margin-bottom: 180px;
@@ -5275,7 +5300,7 @@ h2 {
     display: inline-block;
     width: fit-content;
     pointer-events: none;
-  } */
+  }
 
   .header-center {
     display: flex;
@@ -5827,9 +5852,9 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 50%;
+  margin-left: 46%;
   opacity: 1;
-  margin-top: -5vh;
+  margin-top: 22vh;
 }
 
 .marquee-content {
@@ -5898,13 +5923,11 @@ h2 {
 
 .center-content h1 {
   font-size: 3vw;
-  margin-bottom: 180px;
   margin-top: -30vw;
-  line-height: 120px;
   letter-spacing: 3%;
   display: inline-block;
   width: fit-content;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 
 .main-container {
@@ -6183,11 +6206,14 @@ h2 {
   }
 
   .arrowDown {
-    width: 50px;
+    width: 60px;
+    margin-left: 154px;
+    margin-top: 40px;
   }
 
   .center-content h1 {
     font-size: 14px;
+    margin-top: 30vw;
   }
 
   .footer {
@@ -6507,7 +6533,6 @@ h2 {
   top: 50%;
   margin-left: calc(var(--card-width) * -0.5);
   margin-top: calc(var(--card-height) * -0.5);
-  /* box-shadow: 0 10px 40px rgba(0, 0, 0, 0.22); */
   border-radius: 22px;
   overflow: hidden;
   transition:
@@ -6529,17 +6554,7 @@ h2 {
   z-index: 1;
 }
 
-/* .card-innerT {
-  width: 100%;
-  height: 100%;
-  padding: 15px;
 
-  display: flex;
-  align-items: flex-start;
-  gap: var(--gap);
-  background: var(--bg-card);
-  border-radius: 22px;
-} */
 
 .card-innerT {
   width: 100%;
@@ -6550,12 +6565,10 @@ h2 {
   gap: 18px;
   background: var(--bg-card);
   border-radius: 22px;
-  /* Blur effect */
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
 
-/* Extra blur for the back card */
 .cardT.is-back .card-innerT {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -6564,15 +6577,11 @@ h2 {
 }
 
 
-
-
 .logo-boxT {
   flex-shrink: 0;
   width: 120px;
-  /* slightly smaller logo box */
   height: 150px;
   margin-bottom: 12px;
-  /* space below logo */
   background: var(--logo-bg);
   border-radius: 18px;
   display: flex;
@@ -6588,28 +6597,6 @@ h2 {
 }
 
 
-/* .logo-boxT {
-  flex-shrink: 0;
-
-  width: 100px;
-  height: 125px;
-  background: var(--logo-bg);
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-}
-
-.logo-boxT img {
-  width: 62% !important;
-  height: 90% !important;
-
-  object-fit: contain !important;
-} */
-
-
-
 
 .card-innerT>div.flex-1 {
   flex: 1;
@@ -6618,49 +6605,6 @@ h2 {
   justify-content: space-between;
   height: 100%;
 }
-
-/* 
-.quoteT {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: var(--quote-size);
-  line-height: 1.58;
-  color: var(--text-primary);
-  margin: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-}
-
-.coachVe {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: var(--quote-size);
-  line-height: 1.58;
-  color: var(--text-primary);
-  margin: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-}
-
-
-.authorT {
-  padding-top: 36px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: var(--author-size);
-  line-height: 1.3;
-  color: var(--text-primary);
-}
-
-.companyT {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: var(--company-size);
-  color: var(--text-secondary);
-  margin: 0;
-} */
 
 
 .quoteT {
@@ -6821,6 +6765,9 @@ h2 {
     width: 161px;
     height: 77px;
     margin-top: 12px;
+  }
+  .CQblock{
+    margin-top: -59px;
   }
 }
 
