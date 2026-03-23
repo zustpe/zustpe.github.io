@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Career</title>
+  <link rel="icon" href="./images/Logo.png" type="image/png" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Outf…"
+    rel=" stylesheet" />
+
+
+
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background: #000;
+      color: white;
+      font-family: 'Outfit', system-ui, sans-serif;
+    }
+
+
+
+    .bgimg2 {
+      background-color: #000000;
+
+    }
+
+
+
+    .header-wrapper2 {
+      width: 100%;
+      color: white;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+
+    .header {
+      position: relative;
+
+      width: 100%;
+      z-index: 1000;
+    }
+
+
+
+    .header-container {
+
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 10px;
+    }
+
+    .logo-img {
+      height: 58px;
+      width: auto;
+      margin-top: -22px;
+    }
+
+
+    .header-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 1300px;
+      /* margin: 60px auto 0; */
+      margin: 32px auto 0;
+
+      padding: 0 1rem;
+      gap: 2rem;
+      margin-left: 12px;
+    }
+
+
+    .btn-get-started {
+      background: #dda0dd;
+      color: #000;
+      font-weight: 600;
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      white-space: nowrap;
+    }
+
+    .btn-get-started:hover {
+      background: #c084c0;
+    }
+
+
+    .nav-item {
+      position: relative;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-toggle,
+    .nav-item a {
+      display: block;
+      padding: 1rem 0.5rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .dropdown-toggle:hover,
+    .nav-item a:hover {
+      color: #dda0dd;
+
+    }
+
+    .dropdown-menu,
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #636161;
+      min-width: 220px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      border-radius: 6px;
+      padding: 8px 0;
+      z-index: 100;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .dropdown-menu li,
+    .submenu li {
+      padding: 0;
+    }
+
+    .dropdown-menu a,
+    .submenu a {
+      display: block;
+      padding: 0.8rem 1.5rem;
+      color: #fff;
+      white-space: nowrap;
+      transition: background-color 0.2s ease;
+    }
+
+    .dropdown-menu a:hover,
+    .submenu a:hover {
+      background-color: #fff;
+      color: #dda0dd;
+
+    }
+
+    .dropdown:hover>.dropdown-menu,
+    .dropdown-submenu:hover>.submenu {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .dropdown-submenu {
+      position: relative;
+    }
+
+    .submenu {
+      top: 0;
+      left: 100%;
+      margin-left: 4px;
+    }
+
+    .arrow {
+      display: inline-block;
+      margin-left: 0.5rem;
+      transition: transform 0.2s ease;
+      font-size: 0.8rem;
+    }
+
+    .dropdown-submenu:hover .arrow {
+      transform: rotate(90deg);
+    }
+
+
+
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 4.5rem;
+
+      cursor: pointer;
+      color: #fff;
+      padding: 1rem 1.5rem;
+
+      position: absolute;
+
+      top: -1rem;
+
+      right: 1rem;
+      z-index: 1001;
+
+    }
+
+    @media (max-width: 768px) {
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .header-center {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 1.5rem 0;
+
+        gap: 0;
+        background-color: rgba(0, 0, 0, 0.95);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+        z-index: 1050;
+        backdrop-filter: blur(8px);
+
+      }
+
+      .header-center.active {
+        display: flex;
+      }
+
+      .nav-item {
+        width: 100%;
+        border-bottom: 1px solid #333;
+        text-align: center;
+
+      }
+
+      .nav-item a,
+      .dropdown-toggle {
+
+        padding: 1.1rem 1.5rem;
+
+        text-align: left;
+        width: 100%;
+        color: #fff;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+
+      }
+
+      /* .dropdown-menu,
+      .submenu {
+
+
+        display: none;
+        position: static !important;
+        width: 100%;
+        background: #1a1a1a;
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+
+      } */
+
+
+      .dropdown-menu,
+      .submenu {
+        display: none;
+        /* Keep hidden by default */
+        position: static !important;
+        width: 100%;
+        background: #222;
+        /* Slightly different color for contrast */
+        opacity: 1 !important;
+        /* Reset opacity for mobile */
+        transform: none !important;
+        /* Reset transform for mobile */
+        transition: none;
+        box-shadow: none;
+      }
+
+
+      .dropdown:hover>.dropdown-menu,
+      .dropdown-submenu:hover>.submenu {
+        display: block;
+        padding: 0 0 0 1rem;
+      }
+
+      .submenu {
+
+        padding-left: 1.5rem;
+        background: #222;
+
+      }
+
+      .submenu-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 1.1rem 1.5rem;
+        color: white;
+        text-decoration: none;
+      }
+
+
+
+      .submenu[style*="display: block"],
+      .submenu.show {
+        display: block !important;
+      }
+
+
+      .arrow {
+        float: right;
+      }
+
+      /* 
+      .dropdown:hover>.dropdown-menu,
+      .dropdown-submenu:hover>.submenu {
+        display: none;
+      } */
+
+      .dropdown-menu.open,
+      .submenu.open {
+        display: block !important;
+      }
+
+
+      .dropdown-submenu:hover .arrow {
+        transform: rotate(90deg);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-center {
+        padding: 0.5rem;
+      }
+
+      .nav-item a,
+      .dropdown-toggle {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+      }
+
+    }
+
+    /* ---------------------------------------------------------------------------------- */
+
+
+
+    :root {
+      --primary: #000000;
+      --secondary: #dda0dd;
+      --secondary-dark: #c084c0;
+      --accent: #dda0dd;
+      --text-primary: #ffffff;
+      --text-secondary: #ffffff;
+      --surface: #111111;
+      --surface-light: #1a1a1a;
+      --border: #333333;
+      --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+    }
+
+    .careers-main-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      flex: 1;
+    }
+
+    /* Hero Section */
+    .careers-hero-section {
+      text-align: center;
+      margin-bottom: 4rem;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, var(--surface) 0%, var(--primary) 100%);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    .careers-hero-title {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .careers-hero-description {
+      font-size: 1.2rem;
+      color: white;
+      max-width: 800px;
+      margin: 1.5rem auto 0;
+      line-height: 1.6;
+    }
+
+    .careers-hero-strong {
+      color: var(--secondary);
+    }
+
+    /* Section Titles */
+    .careers-section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 3rem 0 2rem;
+      position: relative;
+      display: inline-block;
+      color: white;
+    }
+
+    .careers-section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--secondary);
+      border-radius: 2px;
+    }
+
+    /* Who We Hire Cards */
+    .careers-whowehire-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .careers-whowehire-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    .careers-whowehire-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--secondary);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .careers-card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--secondary);
+    }
+
+    .careers-card-description {
+      color: white;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .careers-card-strong {
+      color: var(--secondary);
+    }
+
+    .careers-card-list {
+      margin: 0 0 1.5rem 1.5rem;
+      color: white;
+    }
+
+    .careers-list-item {
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    .careers-list-item::marker {
+      color: var(--secondary);
+    }
+
+    .careers-fee-tag {
+      background: var(--surface-light);
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-md);
+      margin: 1rem 0;
+      border: 1px solid var(--border);
+      display: inline-block;
+      color: white;
+    }
+
+    .careers-fee-strong {
+      color: white;
+    }
+
+    /* Buttons */
+    .careers-btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      text-align: center;
+      margin-top: auto;
+      cursor: pointer;
+    }
+
+    .careers-btn-solid {
+      border: 2px solid white;
+      color: white;
+
+    }
+
+    .careers-btn-solid:hover {
+      background: var(--secondary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      color: #000;
+    }
+
+    .careers-btn-outline {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .careers-btn-outline:hover {
+      background: var(--secondary);
+      color: black;
+      border-color: var(--secondary);
+    }
+
+    /* Who We Are Section */
+    .careers-whoweare-section .careers-whoweare-card {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: all 0.3s ease;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    .careers-whoweare-section .careers-whoweare-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--secondary);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .careers-whoweare-paragraph {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    /* Application Process */
+    .careers-application-container {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    .careers-application-text {
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .careers-application-link {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .careers-application-link:hover {
+      text-decoration: underline;
+    }
+
+    .careers-application-list {
+      margin: 1.5rem 0 1.5rem 1.8rem;
+      color: white;
+    }
+
+    .careers-application-list-item {
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    .careers-application-preformat {
+      background: #222;
+      padding: 1rem;
+      border-radius: 8px;
+      display: inline-block;
+      margin: 1rem 0;
+      color: var(--secondary);
+      font-family: monospace;
+      border: 1px solid var(--border);
+    }
+
+    .careers-application-alert {
+      background: var(--surface-light);
+      border-left: 4px solid var(--secondary);
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      margin: 1.5rem 0 0;
+      color: white;
+    }
+
+    .careers-alert-strong {
+      color: white;
+    }
+
+    .careers-application-strong {
+      color: white;
+    }
+
+    /* Address Block */
+    .careers-venue-container {
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    .careers-address-block {
+      font-style: normal;
+      line-height: 1.8;
+      color: white;
+      font-size: 1.1rem;
+      padding: 2rem;
+      background: var(--surface-light);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+
+    .careers-address-strong {
+      color: var(--secondary);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 1024px) {
+      .careers-whowehire-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .careers-whowehire-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .careers-hero-title {
+        font-size: 2rem;
+      }
+
+      .careers-hero-section {
+        padding: 2rem 1rem;
+      }
+
+      .careers-section-title {
+        font-size: 1.5rem;
+      }
+
+      .careers-main-container {
+        padding: 0 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .careers-btn {
+        width: 100%;
+      }
+
+      .careers-whowehire-card {
+        padding: 1.5rem;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="black">
+    <div class="fullpage" id="Homepage">
+      <div class="bgimg2">
+        <!-- Landing Page -->
+        <div id="landing" class="landing-page">
+          <div class="main-container">
+            <!-- Progress Bar -->
+            <div class="progress-container">
+              <div class="progress-bar-background">
+                <div id="progress-bar" class="progress-bar"></div>
+              </div>
+            </div>
+
+            <!-- Rotating Image -->
+            <div class="image-container">
+              <img id="landing-image" src="./images/Zustpe1.png" alt="Landing Animation" class="image-slide visible" />
+            </div>
+          </div>
+        </div>
+
+        <div class="content-container2">
+          <div id="header" class="header-wrapper2 hidden">
+
+
+
+            <header class="header">
+
+              <div class="header-container">
+                <div class="logo">
+                  <a href="/">
+                    <img src="./images/Logo.png" alt="ZustPe Logo" class="logo-img">
+                  </a>
+                </div>
+
+                <div>
+                  <nav class="header-center" id="mobileNav">
+                    <div class="nav-item dropdown">
+                      <a href="#company" class="dropdown-toggle">Company</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#zustPay">ZustPe Payments </a></li>
+                        <li><a href="#zustTech">ZustPe Technologies</a></li>
+                        <li><a href="#zustAchi">ZustPe Achiver Foundation</a></li>
+                      </ul>
+                    </div>
+                    <div class="nav-item dropdown">
+                      <a href="#products" class="dropdown-toggle">Product & Services</a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-submenu">
+                          <a href="#hr" class="submenu-toggle">HR <span class="arrow">›</span></a>
+                          <ul class="dropdown-menu submenu">
+                            <li><a href="#nextgenhr">Nextgen HR</a></li>
+                            <li><a href="#kaamrade">Kaamrade</a></li>
+                            <li><a href="https://academy.zustpe.com">Academy</a></li>
+
+                          </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                          <a href="#solutions">Non Profits <span class="arrow">›</span></a>
+                          <ul class="dropdown-menu submenu">
+                            <li><a href="#zustpengo">ZustPe NGO</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                          <a href="#solutions">E-Commerce<span class="arrow">›</span></a>
+                          <ul class="dropdown-menu submenu">
+                            <li><a href="https://nomrp.store">No MRP Store</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                          <a href="#telecomm">Telecommunication<span class="arrow">›</span></a>
+                          <ul class="dropdown-menu submenu">
+                            <li><a href="#kbridge">KBridge</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                          <a href="#consulting">Consulting<span class="arrow">›</span></a>
+                          <ul class="dropdown-menu submenu">
+                            <li><a href="#webApp">Web APP Development</a></li>
+                            <li><a href="#mobApp">Mobile APP Development</a></li>
+                            <li><a href="#devops">DevOps</a></li>
+                            <li><a href="#sysInt">System Integration</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="nav-item">
+                      <a href="./Association.html?skip=true">Association</a>
+                    </div>
+                    <div class="nav-item">
+                      <a href="./KnowledgeJunction.html?skip=true">Knowledge Junction</a>
+                    </div>
+                    <div class="nav-item">
+                      <a href="./Career.html?skip=true">Career</a>
+                    </div>
+                  </nav>
+                </div>
+                <div>
+                </div>
+                <button class="mobile-menu-toggle" id="menuToggle">☰</button>
+            </header>
+
+
+
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                const toggle = document.getElementById("menuToggle");
+                const nav = document.getElementById("mobileNav");
+
+                if (toggle && nav) {
+                  toggle.addEventListener("click", () => {
+                    nav.classList.toggle("active");
+                    toggle.textContent = nav.classList.contains("active") ? "✕" : "☰";
+                  });
+                }
+
+                const dropdowns = document.querySelectorAll('.nav-item.dropdown > .dropdown-toggle, .dropdown-submenu > a');
+
+                dropdowns.forEach(btn => {
+                  btn.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                      e.preventDefault(); // Prevent navigating if it's a parent link
+
+                      const parent = btn.parentElement;
+                      const menu = btn.nextElementSibling;
+
+                      if (menu) {
+                        const isVisible = menu.style.display === "block";
+                        menu.style.display = isVisible ? "none" : "block";
+                        menu.style.opacity = isVisible ? "0" : "1";
+                        menu.style.transform = isVisible ? "translateY(-10px)" : "translateY(0)";
+
+                        const arrow = btn.querySelector('.arrow');
+                        if (arrow) {
+                          arrow.style.transform = isVisible ? "rotate(0deg)" : "rotate(90deg)";
+                        }
+                      }
+                    }
+                  });
+                });
+              });
+            </script>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <!-- Main Content -->
+    <main class="careers-main-container">
+      <section class="careers-hero-section">
+        <h1 class="careers-hero-title">Careers at ZustPe</h1>
+        <p class="careers-hero-description">
+          Where high‑impact engineering meets purpose. We maintain rigorous hiring standards to
+          ensure every member of the <strong class="careers-hero-strong">ZustPe Clan</strong> delivers real‑world
+          impact.
+        </p>
+      </section>
+
+      <!-- Who We Hire -->
+      <section class="careers-whowehire-section">
+        <h2 class="careers-section-title careers-whowehire-title">Who We Hire</h2>
+        <div class="careers-whowehire-grid">
+          <div class="careers-whowehire-card careers-trainee-card">
+            <h3 class="careers-card-title careers-trainee-title">Trainee (Entry‑Level)</h3>
+            <p class="careers-card-description careers-trainee-description">For candidates without live project
+              exposure. Enrollment in our <strong class="careers-card-strong">6‑Month Training Program</strong> is
+              mandatory.</p>
+            <ul class="careers-card-list careers-trainee-list">
+              <li class="careers-list-item">Real‑world exposure to modern systems</li>
+              <li class="careers-list-item">Hands‑on production scenarios</li>
+              <li class="careers-list-item">Industry‑aligned practices</li>
+            </ul>
+            <div class="careers-fee-tag careers-trainee-fee">
+              <strong class="careers-fee-strong">Duration:</strong> 6 months • <strong
+                class="careers-fee-strong">Fee:</strong> ₹50,000 + taxes
+            </div>
+            <a href="#careers-application" class="careers-btn careers-btn-solid careers-trainee-btn">Apply as
+              Trainee</a>
+          </div>
+
+          <div class="careers-whowehire-card careers-fresher-card">
+            <h3 class="careers-card-title careers-fresher-title">Fresher</h3>
+            <p class="careers-card-description careers-fresher-description">For freshers with demonstrable real‑time
+              projects and active user base metrics.</p>
+            <ul class="careers-card-list careers-fresher-list">
+              <li class="careers-list-item">Scenario‑based technical assessment</li>
+              <li class="careers-list-item">Evaluation on stability & security</li>
+            </ul>
+            <a href="#careers-application" class="careers-btn careers-btn-outline careers-fresher-btn">Apply as
+              Fresher</a>
+          </div>
+
+          <div class="careers-whowehire-card careers-experienced-card">
+            <h3 class="careers-card-title careers-experienced-title">Experienced</h3>
+            <p class="careers-card-description careers-experienced-description">Experts who contribute from day one—own
+              modules and deliver measurable outcomes.</p>
+            <ul class="careers-card-list careers-experienced-list">
+              <li class="careers-list-item">Immediate impact expected</li>
+              <li class="careers-list-item">No counter‑offers entertained</li>
+            </ul>
+            <a href="#careers-application" class="careers-btn careers-btn-outline careers-experienced-btn">Apply as
+              Expert</a>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Application Process -->
+      <section id="careers-application" class="careers-application-section">
+        <h2 class="careers-section-title careers-application-title">Application Process</h2>
+        <div class="careers-application-container">
+          <p class="careers-application-text careers-application-email">Send your application to <strong
+              class="careers-application-strong"><a href="mailto:careers@zustpe.com"
+                class="careers-application-link">careers@zustpe.com</a></strong> using the exact subject format below
+            and include a detailed cover letter and a resume with track records.</p>
+
+          <p class="careers-application-text careers-application-subject"><strong
+              class="careers-application-strong">Subject format (required):</strong></p>
+          <pre class="careers-application-preformat">Role Name | Candidate Name | Experience Level</pre>
+          <div class="careers-application-alert">
+            <strong class="careers-alert-strong">⚠️ Important:</strong> Emails not following this template will be
+            ignored.
+          </div>
+        </div>
+      </section>
+
+      <!-- Interview Venue -->
+      <section class="careers-venue-section">
+        <h2 class="careers-section-title careers-venue-title">Interview Venue — Direct Walk‑In Only</h2>
+        <div class="careers-venue-container"
+          style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:2.5rem;">
+          <div class="careers-address-block">
+            <strong class="careers-address-strong">ZustPe Technologies Private Limited</strong><br>
+            Flat A, Plot 94B, 6th Main Road<br>
+            Ram Nagar North Extension<br>
+            Velachery, Chennai<br>
+            Tamil Nadu – 600042<br>
+            India
+          </div>
+          <a href="https://maps.google.com/?q=ZustPe+Technologies+Velachery+Chennai" target="_blank"
+            class="careers-btn careers-btn-solid careers-venue-mapbtn" style="display: inline-block;">
+            View on Google Maps →
+          </a>
+        </div>
+      </section>
+
+
+
+      <section class="careers-venue-section">
+        <h2 class="careers-section-title careers-venue-title">Disclaimer</h2>
+        <div class="careers-venue-container mb-5"
+          style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:2.5rem;">
+          <small class="careers-disclaimer-text" style="color: white;">*Regulator names mentioned (TRAI, NPCI,
+            DigiLocker,
+            etc.) are for reference only. No claims of affiliation, certification, or endorsement are implied.</small>
+
+        </div>
+      </section>
+    </main>
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h4>Group companies</h4>
+          <ul>
+            <li>ZustPe Payments</li>
+            <li>ZustPe Technologies </li>
+            <li>ZustPe Achievers Foundation</li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li>Terms & Conditions</li>
+            <li>About Us</li>
+            <li>Privacy Policy</li>
+            <li>Careers</li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Help</h4>
+          <ul>
+            <li>Support</li>
+            <li>Refund and Cancellation Policy</li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Socials</h4>
+          <ul>
+            <li> <a href="https://www.facebook.com/zustpepayment/" target="_blank">FaceBook</a></li>
+            <li><a href="https://www.instagram.com/zustpe/" target="_blank">Instagram</a></li>
+            <li><a href="https://in.linkedin.com/company/zustpe" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/@zustpe" target="_blank">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="run_once"></div>
+      <div class="footer-bottom">
+        <p>ZustPe Technologies . All Rights Reserved</p>
+        <p>Made by freshers with ❤️ in Chennai</p>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

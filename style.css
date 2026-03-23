@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap");
 @layer base, utilities, demo;
-@import url(https://fonts.bunny.net/css?family=kodchasan:200,400,600) layer(demo);
+@import url(https://fonts.bunny.net/css?family=kodchasan:200,400,600)
+layer(demo);
 
 * {
   margin: 0;
@@ -9,16 +10,8 @@
   box-sizing: border-box;
 }
 
-/* .our-group-seond {
-  padding-left: 6rem;
-} */
-
 .our-group-seond {
-  /* text-align: center; */
   padding-left: 5rem;
-
-  /* padding: 0 clamp(1rem, 4vw, 6rem);
-      margin-bottom: clamp(2rem, 5vw, 3rem); */
 }
 
 body {
@@ -37,17 +30,6 @@ body {
   padding: 40px 0;
   min-height: 110vh;
 }
-
-/*       
-           body {
-        font-family: "Segoe UI", Tahoma, sans-serif;
-        background: #e4e4e4;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 40px 0;
-        min-height: 100vh;
-      } */
 
 h2 {
   font-size: 2rem;
@@ -126,12 +108,14 @@ h2 {
   margin-left: -10vw;
   margin-top: 7vh;
   background: linear-gradient(to right, #999, #fff);
-  clip-path: polygon(2.71% 19.01%,
-      30% 26%,
-      39.99% 33.34%,
-      40.99% 68.33%,
-      30% 75%,
-      2.71% 81.67%);
+  clip-path: polygon(
+    2.71% 19.01%,
+    30% 26%,
+    39.99% 33.34%,
+    40.99% 68.33%,
+    30% 75%,
+    2.71% 81.67%
+  );
   z-index: 1;
   border-radius: 30px;
 }
@@ -166,10 +150,12 @@ h2 {
   margin-left: 55vw;
   margin-top: 7.5vh;
   background: linear-gradient(to right, #fff, #999);
-  clip-path: polygon(26.72% 25.68%,
-      91.42% 13.46%,
-      91.42% 73.31%,
-      26.72% 62.09%);
+  clip-path: polygon(
+    26.72% 25.68%,
+    91.42% 13.46%,
+    91.42% 73.31%,
+    26.72% 62.09%
+  );
   z-index: 1;
   border-radius: 160px;
 }
@@ -451,7 +437,6 @@ h2 {
   }
 }
 
-
 /* Full Page start */
 
 .fullpage {
@@ -602,24 +587,12 @@ h2 {
 
 @font-face {
   font-family: Zustpe_Font;
-  /* src: url(./fonts/Zustpe_Font.ttf) format("truetype" ); */
   src: url(./Zustpe_Italic.otf) format("opentype");
 }
-
-/* .arrowDown{
-  position: absolute;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 50%;
-  opacity: 1;
-
-} */
 
 .get-started-button1 {
   font-size: 0.3rem;
   padding: 1.1vh 1.2vw;
-  /* margin: 1.5em auto 0 auto; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -628,9 +601,7 @@ h2 {
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  /* font-weight: 160px; */
-  /* margin-top: 30vh;
-    margin-right: -53vw; */
+
   font-size: 1.4vw;
 }
 
@@ -647,7 +618,6 @@ h2 {
 }
 
 .get-started-button1:hover .arrow-img {
-  /* content: url("./images/arrow2.png"); */
   content: url("./images/arrow1.png");
 }
 
@@ -656,7 +626,6 @@ h2 {
   justify-content: center;
   align-items: center;
   min-height: 100px;
-  /* Adjust height as needed */
 }
 
 .run-once-img {
@@ -697,34 +666,6 @@ h2 {
   color: #dda0dd;
 }
 
-/* .center-content {
-  padding-top: 30px;
-  line-height: 1.4;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-}
-
-.center-content h1 {
-  font-size: 2rem;
-  color: #ffffff;
-  text-align: center;
-  font-family: "Outfit", sans-serif;
-  font-weight: 600;
-  line-height: 63px;
-  letter-spacing: 0.02em;
-} */
-
-/* .center-content .this_is_h1 {
-  margin-top: 15vh;
-} */
-
 .bgimg {
   background-color: #000000;
   position: relative;
@@ -743,851 +684,10 @@ h2 {
     background-image: url("./images/bgimg/bala_00000.jpg");
   }
 
-  1.2987% {
-    background-image: url("./images/bgimg/bala_00001.jpg");
-  }
-
-  2.5974% {
-    background-image: url("./images/bgimg/bala_00002.jpg");
-  }
-
-  3.8961% {
-    background-image: url("./images/bgimg/bala_00003.jpg");
-  }
-
-  5.1948% {
-    background-image: url("./images/bgimg/bala_00004.jpg");
-  }
-
-  6.4935% {
-    background-image: url("./images/bgimg/bala_00005.jpg");
-  }
-
-  7.7922% {
-    background-image: url("./images/bgimg/bala_00006.jpg");
-  }
-
-  9.0909% {
-    background-image: url("./images/bgimg/bala_00007.jpg");
-  }
-
-  10.3896% {
-    background-image: url("./images/bgimg/bala_00008.jpg");
-  }
-
-  11.6883% {
-    background-image: url("./images/bgimg/bala_00009.jpg");
-  }
-
-  12.987% {
-    background-image: url("./images/bgimg/bala_00010.jpg");
-  }
-
-  14.2857% {
-    background-image: url("./images/bgimg/bala_00011.jpg");
-  }
-
-  15.5844% {
-    background-image: url("./images/bgimg/bala_00012.jpg");
-  }
-
-  16.8831% {
-    background-image: url("./images/bgimg/bala_00013.jpg");
-  }
-
-  18.1818% {
-    background-image: url("./images/bgimg/bala_00014.jpg");
-  }
-
-  19.4805% {
-    background-image: url("./images/bgimg/bala_00015.jpg");
-  }
-
-  20.7792% {
-    background-image: url("./images/bgimg/bala_00016.jpg");
-  }
-
-  22.0779% {
-    background-image: url("./images/bgimg/bala_00017.jpg");
-  }
-
-  23.3766% {
-    background-image: url("./images/bgimg/bala_00018.jpg");
-  }
-
-  24.6753% {
-    background-image: url("./images/bgimg/bala_00019.jpg");
-  }
-
-  25.974% {
-    background-image: url("./images/bgimg/bala_00020.jpg");
-  }
-
-  27.2727% {
-    background-image: url("./images/bgimg/bala_00021.jpg");
-  }
-
-  28.5714% {
-    background-image: url("./images/bgimg/bala_00022.jpg");
-  }
-
-  29.8701% {
-    background-image: url("./images/bgimg/bala_00023.jpg");
-  }
-
-  31.1688% {
-    background-image: url("./images/bgimg/bala_00024.jpg");
-  }
-
-  32.4675% {
-    background-image: url("./images/bgimg/bala_00025.jpg");
-  }
-
-  33.7662% {
-    background-image: url("./images/bgimg/bala_00026.jpg");
-  }
-
-  35.0649% {
-    background-image: url("./images/bgimg/bala_00027.jpg");
-  }
-
-  36.3636% {
-    background-image: url("./images/bgimg/bala_00028.jpg");
-  }
-
-  37.6623% {
-    background-image: url("./images/bgimg/bala_00029.jpg");
-  }
-
-  38.961% {
-    background-image: url("./images/bgimg/bala_00030.jpg");
-  }
-
-  40.2597% {
-    background-image: url("./images/bgimg/bala_00031.jpg");
-  }
-
-  41.5584% {
-    background-image: url("./images/bgimg/bala_00032.jpg");
-  }
-
-  42.8571% {
-    background-image: url("./images/bgimg/bala_00033.jpg");
-  }
-
-  44.1558% {
-    background-image: url("./images/bgimg/bala_00034.jpg");
-  }
-
-  45.4545% {
-    background-image: url("./images/bgimg/bala_00035.jpg");
-  }
-
-  46.7532% {
-    background-image: url("./images/bgimg/bala_00036.jpg");
-  }
-
-  48.0519% {
-    background-image: url("./images/bgimg/bala_00037.jpg");
-  }
-
-  49.3506% {
-    background-image: url("./images/bgimg/bala_00038.jpg");
-  }
-
-  50.6493% {
-    background-image: url("./images/bgimg/bala_00039.jpg");
-  }
-
-  51.948% {
-    background-image: url("./images/bgimg/bala_00040.jpg");
-  }
-
-  53.2467% {
-    background-image: url("./images/bgimg/bala_00041.jpg");
-  }
-
-  54.5454% {
-    background-image: url("./images/bgimg/bala_00042.jpg");
-  }
-
-  55.8441% {
-    background-image: url("./images/bgimg/bala_00043.jpg");
-  }
-
-  57.1428% {
-    background-image: url("./images/bgimg/bala_00044.jpg");
-  }
-
-  58.4415% {
-    background-image: url("./images/bgimg/bala_00045.jpg");
-  }
-
-  59.7402% {
-    background-image: url("./images/bgimg/bala_00046.jpg");
-  }
-
-  61.0389% {
-    background-image: url("./images/bgimg/bala_00047.jpg");
-  }
-
-  62.3376% {
-    background-image: url("./images/bgimg/bala_00048.jpg");
-  }
-
-  63.6363% {
-    background-image: url("./images/bgimg/bala_00049.jpg");
-  }
-
-  64.935% {
-    background-image: url("./images/bgimg/bala_00050.jpg");
-  }
-
-  66.2337% {
-    background-image: url("./images/bgimg/bala_00051.jpg");
-  }
-
-  67.5324% {
-    background-image: url("./images/bgimg/bala_00052.jpg");
-  }
-
-  68.8311% {
-    background-image: url("./images/bgimg/bala_00053.jpg");
-  }
-
-  70.1298% {
-    background-image: url("./images/bgimg/bala_00054.jpg");
-  }
-
-  71.4285% {
-    background-image: url("./images/bgimg/bala_00055.jpg");
-  }
-
-  72.7272% {
-    background-image: url("./images/bgimg/bala_00056.jpg");
-  }
-
-  74.0259% {
-    background-image: url("./images/bgimg/bala_00057.jpg");
-  }
-
-  75.3246% {
-    background-image: url("./images/bgimg/bala_00058.jpg");
-  }
-
-  76.6233% {
-    background-image: url("./images/bgimg/bala_00059.jpg");
-  }
-
-  77.922% {
-    background-image: url("./images/bgimg/bala_00060.jpg");
-  }
-
-  79.2207% {
-    background-image: url("./images/bgimg/bala_00061.jpg");
-  }
-
-  80.5194% {
-    background-image: url("./images/bgimg/bala_00062.jpg");
-  }
-
-  81.8181% {
-    background-image: url("./images/bgimg/bala_00063.jpg");
-  }
-
-  83.1168% {
-    background-image: url("./images/bgimg/bala_00064.jpg");
-  }
-
-  84.4155% {
-    background-image: url("./images/bgimg/bala_00065.jpg");
-  }
-
-  85.7142% {
-    background-image: url("./images/bgimg/bala_00066.jpg");
-  }
-
-  87.0129% {
-    background-image: url("./images/bgimg/bala_00067.jpg");
-  }
-
-  88.3116% {
-    background-image: url("./images/bgimg/bala_00068.jpg");
-  }
-
-  89.6103% {
-    background-image: url("./images/bgimg/bala_00069.jpg");
-  }
-
-  90.909% {
-    background-image: url("./images/bgimg/bala_00070.jpg");
-  }
-
-  92.2077% {
-    background-image: url("./images/bgimg/bala_00071.jpg");
-  }
-
-  93.5064% {
-    background-image: url("./images/bgimg/bala_00072.jpg");
-  }
-
-  94.8051% {
-    background-image: url("./images/bgimg/bala_00073.jpg");
-  }
-
-  96.1038% {
-    background-image: url("./images/bgimg/bala_00074.jpg");
-  }
-
-  97.4025% {
-    background-image: url("./images/bgimg/bala_00075.jpg");
-  }
-
-  98.7012% {
-    background-image: url("./images/bgimg/bala_00076.jpg");
-  }
-
   100% {
     background-image: url("./images/bgimg/bala_00077.jpg");
   }
 }
-
-/* Full Screen Container Start */
-/* 
-.container {
-  width: 100vw;
-
-  text-align: center;
-  background-color: #000;
-  z-index: 0;
-  box-sizing: border-box;
-  position: relative;
-  overflow-x: hidden;
-  padding: 2rem 0;
-  height: auto;
-  justify-content: center;
-  justify-items: center;
-  margin: auto;
-}
-
-.container {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.container::-webkit-scrollbar {
-  display: none;
-}
-
-.align {
-  font-family: "Outfit", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 100%;
-  letter-spacing: 0;
-  text-transform: capitalize;
-  color: white;
-  margin-bottom: 20px;
-}
-
-.textalign {
-  font-family: "Urbanist", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 12px;
-  line-height: 1.78;
-  letter-spacing: 0.01em;
-  text-align: center;
-  color: #a1a1a1;
-}
-
-
-.company-container {
-  width: 100vw;
-  max-width: 55rem;
-  max-height: none;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  opacity: 0;
-  transform: translateY(100px);
-  transition:
-    transform 1.5s ease-out,
-    opacity 1.5s ease-out;
-  will-change: transform, opacity;
-  margin-top: 41px;
-  margin-right: 64px;
-}
-
-.company-container.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.company-container:nth-child(1) {
-  transition-delay: 0s;
-}
-
-.company-container:nth-child(2) {
-  transition-delay: 0.2s;
-}
-
-.company-container:nth-child(3) {
-  transition-delay: 0.4s;
-}
-
-
-.company-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  position: relative;
-}
-
-.company-info {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 56vw;
-  margin-left: 20vh;
-  align-items: center;
-  border-radius: 0.5rem;
-  border: 0.15rem solid rgb(63, 61, 61);
-  background-color: rgb(32, 31, 31);
-  padding: 1rem;
-}
-
-.company-info-left {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 40%;
-  text-align: left;
-}
-
-.company-info-left h6 {
-  font-weight: bold;
-  color: white;
-  margin: 0;
-  padding-block: 0.1rem;
-  padding-inline-start: 0.5rem;
-  font-size: 16px;
-}
-
-.company-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 7rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.company-logo img {
-  width: 5rem;
-  height: auto;
-}
-
-.line {
-  width: 0.1rem;
-  height: 6rem;
-  background-color: #fff;
-  position: absolute;
-  top: 55%;
-  left: 48%;
-  transform: translateY(-50%);
-}
-
-.company-details-right {
-  text-align: left;
-  flex: 1 1 55%;
-  padding-left: 1rem;
-}
-
-.company-details-right p {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 12px;
-  line-height: 178%;
-  letter-spacing: 0.01em;
-  padding-top: 0.8rem;
-}
-
-.company-container.company-two.moved {
-  transform: translateY(-13em);
-  transition:
-    transform 1.5s ease,
-    opacity 1.5s ease;
-  z-index: 1;
-}
-
-.company-container.company-three.moved {
-  transform: translateY(-26em);
-  transition:
-    transform 1.5s ease,
-    opacity 1.5s ease;
-  z-index: 3;
-
-}
-
-.company-container.out {
-  opacity: 0;
-  transform: translateY(50px);
-  transition:
-    opacity 0.5s ease,
-    transform 0.5s ease;
-}
-
-.container.lock-scroll {
-  overflow: hidden;
-}
-
-@media (max-width: 768px) {
-
-  .container {
-    padding: 1.5rem 1rem;
-    height: auto;
-    min-height: auto;
-    width: 100%;
-    padding-top: 60%;
-  }
-
-  .company-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    position: relative;
-    padding-right: 8rem;
-  }
-
-  .strap {
-    height: 10vh;
-    transform: rotate(2.2deg);
-    padding-top: 40px;
-  }
-
-  .strap-content {
-    height: 30px;
-    font-size: 0.75rem;
-  }
-
-  .strap-diagonal-left,
-  .strap-diagonal-right {
-    width: 400%;
-    left: -200%;
-  }
-
-  .strap-diagonal-left {
-    left: -150%;
-    transform: rotate(2.9deg);
-    background-color: #8f96c0;
-    width: 100vw;
-  }
-
-  Top-left to bottom-right ribbon .strap-diagonal-right {
-    top: 5rem;
-    left: -150%;
-    transform: rotate(-3.4deg);
-    background-color: #6b75b8;
-  }
-
-  .dot {
-    font-size: 3vw;
-    margin: 0 5px;
-    margin-top: 1.2em;
-  }
-
-  .scrolling-text {
-    animation-duration: 20s;
-  }
-
-  .align {
-    font-family: "Outfit", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 100%;
-    letter-spacing: 0;
-    text-transform: capitalize;
-    margin-top: -50%;
-  }
-
-  .textalign {
-    font-family: "Urbanist", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 12px;
-    line-height: 1.78;
-    letter-spacing: 0.01em;
-    text-align: center;
-    color: #a1a1a1;
-  }
-
-  .company-container {
-    flex-direction: column;
-    align-items: center;
-    padding-left: 0;
-    transform: translateY(100px);
-    transition:
-      transform 0.6s ease-out,
-      opacity 0.6s ease-out;
-    width: 80%;
-    margin-right: 54px;
-  }
-
-  .company-info {
-    width: 90vw;
-    flex-direction: column;
-    align-items: center;
-    padding-right: 3rem;
-    padding: 1rem;
-  }
-
-  .our-group-seond {
-    padding-left: 1rem;
-  }
-
-  .company-info-left,
-  .company-details-right {
-    flex: 1 1 100%;
-    text-align: center;
-    padding: 0;
-  }
-
-  .company-info-left h6 {
-    font-size: 0.9rem;
-    text-align: center;
-    padding-block: 0.5rem;
-  }
-
-  .company-info-left img {
-    margin-left: 7rem;
-  }
-
-  .line {
-    display: none;
-  }
-
-  .company-details-right {
-    padding-top: 1rem;
-  }
-
-  .company-details-right p {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 10px;
-    line-height: 178%;
-    letter-spacing: 0.01em;
-  }
-
-  .company-container.company-two.moved {
-    transform: translateY(-28em);
-    transition:
-      transform 0.6s ease-out,
-      opacity 0.6s ease-out;
-  }
-
-  .company-container.company-three.moved {
-    transform: translateY(-55em);
-    transition:
-      transform 0.6s ease-out,
-      opacity 0.6s ease-out;
-  }
-}
-
-
-@media (min-width: 768px) and (max-width: 1030px) {
-  .container {
-    padding: 1.5rem 1rem;
-    height: auto;
-  }
-
-  .strap {
-    height: 15vh;
-  }
-
-  .strap-content {
-    height: 35px;
-    font-size: 0.9rem;
-  }
-
-  .strap-diagonal-left,
-  .strap-diagonal-right {
-    width: 350%;
-    left: -175%;
-  }
-
-  .scrolling-text {
-    animation-duration: 22s;
-  }
-
-  .align {
-    font-family: "Outfit", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 100%;
-    letter-spacing: 0;
-    text-transform: capitalize;
-  }
-
-  .textalign {
-    font-family: "Urbanist", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 12px;
-    line-height: 1.78;
-    letter-spacing: 0.01em;
-    text-align: center;
-    color: #a1a1a1;
-  }
-
-  @media screen and (max-width: 768px) {
-    .company-container {
-      flex-direction: column;
-      align-items: center;
-      padding-right: 61px;
-      transform: translateY(100px);
-      transition:
-        transform 0.6s ease-out,
-        opacity 0.6s ease-out;
-      width: 80%;
-    }
-
-    .company-info {
-      width: 90vw;
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
-      display: flex;
-    }
-
-    .company-info-left,
-    .company-details-right {
-      flex: 1 1 100%;
-      text-align: center;
-      padding: 0;
-    }
-
-    .company-info-left h6 {
-      font-size: 0.9rem;
-      text-align: center;
-      padding-block: 0.5rem;
-    }
-
-    .company-logo img {
-      width: 4rem;
-    }
-
-    .line {
-      display: none;
-    }
-
-    .company-details-right {
-      padding-top: 1rem;
-    }
-
-    .company-details-right p {
-      font-family: "Poppins", sans-serif;
-      font-weight: 500;
-      font-style: normal;
-      font-size: 10px;
-      line-height: 178%;
-      letter-spacing: 0.01em;
-    }
-  }
-
-  .company-container.company-two.moved {
-    transform: translateY(-18em);
-    transition:
-      transform 0.6s ease-out,
-      opacity 0.6s ease-out;
-  }
-
-  .company-container.company-three.moved {
-    transform: translateY(-36em);
-    transition:
-      transform 0.6s ease-out,
-      opacity 0.6s ease-out;
-  }
-}
-
-
-@media (min-width: 1024px) and (max-width: 1919px) {
-  .container {
-    z-index: 2;
-    margin: auto;
-    height: 168vh;
-  }
-
-  .strap {
-    height: 20vh;
-  }
-
-  .strap-content {
-    height: 40px;
-    font-size: 1.1rem;
-  }
-
-  .strap-diagonal-left,
-  .strap-diagonal-right {
-    width: 300%;
-    left: -150%;
-  }
-
-  .scrolling-text {
-    animation-duration: 25s;
-  }
-}
-
-@media (min-width: 1920px) {
-  .container {
-    padding: 4rem 8rem;
-  }
-
-  .align {
-    font-size: 32px;
-  }
-
-  .textalign {
-    font-size: 16px;
-  }
-
-  .company-container {
-    max-width: 70rem;
-    margin: 4rem auto;
-  }
-
-  .company-info {
-    width: 60vw;
-  }
-
-  .company-info-left h6 {
-    font-size: 1.5rem;
-  }
-
-  .company-logo img {
-    width: 6rem;
-  }
-
-  .company-details-right p {
-    font-size: 12px;
-  }
-
-  .company-container.company-two.moved {
-    transform: translateY(-13em);
-  }
-
-  .company-container.company-three.moved {
-    transform: translateY(-26em);
-  }
-} */
-
-/* Full Container End */
 
 /* ---------------------------- end -------------------------- */
 .extra-content {
@@ -1651,176 +751,6 @@ h2 {
 }
 
 /* start */
-/* 
-.stats-section {
-  text-align: center;
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.stats-section h2 {
-  font-size: 2rem;
-  margin-bottom: 12px;
-  color: #333;
-}
-
-.subtitle {
-  max-width: 700px;
-  margin: 0 auto 40px;
-  color: #666;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.stats-viewport {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  height: 120px;
-
-  margin: 0 auto 30px;
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.central-card {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  z-index: 10;
-  width: 180px;
-  height: 100px;
-  background: #fff;
-  border: 3px solid #959393;
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-.central-card h3 {
-  font-size: 46px;
-  font-weight: bold;
-  margin: 0;
-  color: #774d9f;
-  line-height: 1;
-}
-
-.central-card p {
-  margin-top: 8px;
-  font-size: 12px;
-  color: #774d9f;
-  font-weight: 500;
-}
-
-.peek-stat {
-  position: absolute;
-  top: 0;
-  width: 140px;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.peek-stat.far-left {
-  left: 6.25%;
-  transform: translateX(-50%);
-}
-
-.peek-stat.left {
-  left: 25%;
-  transform: translateX(-50%);
-}
-
-.peek-stat.right {
-  left: 75%;
-  transform: translateX(-50%);
-}
-
-.peek-stat.far-right {
-  left: 93.75%;
-  transform: translateX(-50%);
-}
-
-.peek-stat h3 {
-  font-size: 28px;
-  margin: 0;
-  color: #aaa;
-  line-height: 1;
-}
-
-.peek-stat p {
-  margin-top: 6px;
-  font-size: 21.99px;
-  color: #bbb;
-  text-align: center;
-}
-
-.stats-section::-webkit-scrollbar {
-  height: 2px;
-}
-
-.stats-section::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.stats-section::-webkit-scrollbar-thumb {
-  background-color: #ccc;
-  border-radius: 2px;
-}
-
-.stats-section::-webkit-scrollbar-thumb:hover {
-  background-color: #a46cff;
-}
-
-.scroll-indicator-track {
-  width: 80px;
-  height: 8px;
-  background: #d3d3d3;
-  border-radius: 4px;
-  position: relative;
-  margin: 20px auto;
-}
-
-.scroll-indicator-thumb {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 100%;
-  background: linear-gradient(to bottom, #ddd, #444);
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-  cursor: grab;
-  transition: left 0.35s cubic-bezier(0.23, 1, 0.32, 1);
-  will-change: left;
-}
-
-.scroll-indicator-thumb:active {
-  cursor: grabbing;
-  background: linear-gradient(to bottom, #ccc, #333);
-}
-
-.hidden {
-  display: none;
-}
-
-.no-select {
-  user-select: none;
-} */
-
 
 .stats-section {
   text-align: center;
@@ -2098,7 +1028,6 @@ h2 {
 
 /* Hide thumb on large screens */
 @media (min-width: 1025px) {
-
   .scroll-indicator-track,
   .scroll-indicator-thumb {
     display: none;
@@ -2107,14 +1036,11 @@ h2 {
 
 /* Show thumb only on small screens */
 @media (max-width: 1024px) {
-
   .scroll-indicator-track,
   .scroll-indicator-thumb {
     display: block;
   }
 }
-
-
 
 .hidden {
   display: none;
@@ -2145,8 +1071,6 @@ h2 {
   padding-left: 100%;
   animation: scroll-left 20s linear infinite;
   margin-top: -15px;
-  /* width: 100%; */
-  /* white-space: nowrap; */
 }
 
 .marquee-right .marquee-content {
@@ -2176,60 +1100,6 @@ h2 {
     transform: translateX(0);
   }
 }
-
-/* 
-.founder-section {
-  padding: 80px 20px;
-  background-image: url("./images/bg-shape.png");
-  background-repeat: no-repeat;
-  background-size: 200%;
-  background-position: right -600px top -400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #111;
-  color: #fff;
-  text-align: center;
-}
-
-.founder-text {
-  flex: 1;
-  min-width: 280px;
-  padding-right: 20px;
-  text-align: left;
-}
-
-.founder-text p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-.founder-text strong {
-  font-size: 1.1rem;
-  display: block;
-  margin-bottom: 5px;
-}
-
-.founder-text span {
-  color: #aaa;
-  font-size: 0.9rem;
-}
-
-.founder-image {
-  flex: 1;
-  min-width: 250px;
-  display: flex;
-  justify-content: center;
-}
-
-.founder-image img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-} */
 
 .founder-section {
   padding: 80px 20px;
@@ -2419,7 +1289,6 @@ h2 {
 }
 
 @media screen and (min-width: 319px) {
-
   html,
   body {
     margin: 0;
@@ -2508,16 +1377,6 @@ h2 {
     display: none;
   }
 
-  /* .arrowDown {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 46%;
-    opacity: 1;
-    margin-top: 38vh;
-  } */
-
   .mobile-menu-toggle {
     transform: scale(0.5);
     display: block;
@@ -2537,20 +1396,6 @@ h2 {
     top: 420px;
   }
 
-  /* .header-center {
-    display: none;
-    flex-direction: column;
-    gap: 15px;
-    position: absolute;
-   
-    background-color: #fff;
-    width: 70%;
-    padding: 1rem;
-    z-index: 1000;
-    text-align: center;
-    border-radius: 10px;
-  } */
-
   .arrow-circle {
     background-color: white;
     border-radius: 50%;
@@ -2567,21 +1412,6 @@ h2 {
     height: 9px;
     object-fit: contain;
   }
-
-  /* .header-center.active {
-    margin-top: 10vh;
-    display: flex;
-    right: 60px;
-  }
-
-  .header-center a {
-    font-size: 1.1rem;
-    padding: 10px;
-    color: white;
-   
-    text-decoration: none;
-  
-  } */
 
   .main-container {
     width: 92%;
@@ -2623,11 +1453,9 @@ h2 {
 
   .center-content h1 {
     padding-top: 35vw;
-    /* padding-right: 100px; */
     font-size: 1em;
     color: #ffffff;
     text-align: center;
-    /* line-height: 120px; */
     margin-top: 5.5vh;
   }
 
@@ -2644,33 +1472,9 @@ h2 {
     height: 10px;
   }
 
-  /* .center-content h1 {
-    padding-top: 3rem;
-    padding-right: 100px;
-    font-size: 0.6em;
-    color: #ffffff;
-    text-align: center;
-    line-height: 1.5;
-    margin-top: 9.5vh;
-  } */
-
-  /* .strap {
-    height: 70px;
-  } */
-
-  /* .strap-content1,
-  .strap-content2 {
-    font-size: 0.9rem;
-  } */
-
   .extra-content {
     padding: 80px 20px;
   }
-
-  /* .card-stack {
-    width: 85%;
-    height: 35vh;
-  } */
 
   .stats-carousel {
     gap: 18px;
@@ -2709,19 +1513,14 @@ h2 {
   .bgimg {
     background-color: #000000;
     position: relative;
-    /* top: 0; */
     padding-top: 130px;
     padding-right: -30px;
-    /* transform: scale(1.5); */
-    /* left: 20px; */
-    /* width: 65%; */
-    /* right: 0 */
+
     bottom: 40px;
     width: 1005;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-attachment: fixed; */
     animation: changeBackground 4s infinite;
 
     transform: scale(1);
@@ -2730,310 +1529,6 @@ h2 {
   @keyframes changeBackground {
     0% {
       background-image: url("./images/mobiles/Comp 6_00077.jpg");
-    }
-
-    1.2987% {
-      background-image: url("./images/mobiles/Comp 6_00076.jpg");
-    }
-
-    2.5974% {
-      background-image: url("./images/mobiles/Comp 6_00075.jpg");
-    }
-
-    3.8961% {
-      background-image: url("./images/mobiles/Comp 6_00074.jpg");
-    }
-
-    5.1948% {
-      background-image: url("./images/mobiles/Comp 6_00073.jpg");
-    }
-
-    6.4935% {
-      background-image: url("./images/mobiles/Comp 6_00072.jpg");
-    }
-
-    7.7922% {
-      background-image: url("./images/mobiles/Comp 6_00071.jpg");
-    }
-
-    9.0909% {
-      background-image: url("./images/mobiles/Comp 6_00070.jpg");
-    }
-
-    10.3896% {
-      background-image: url("./images/mobiles/Comp 6_00069.jpg");
-    }
-
-    11.6883% {
-      background-image: url("./images/mobiles/Comp 6_00068.jpg");
-    }
-
-    12.987% {
-      background-image: url("./images/mobiles/Comp 6_00067.jpg");
-    }
-
-    14.2857% {
-      background-image: url("./images/mobiles/Comp 6_00066.jpg");
-    }
-
-    15.5844% {
-      background-image: url("./images/mobiles/Comp 6_00065.jpg");
-    }
-
-    16.8831% {
-      background-image: url("./images/mobiles/Comp 6_00064.jpg");
-    }
-
-    18.1818% {
-      background-image: url("./images/mobiles/Comp 6_00063.jpg");
-    }
-
-    19.4805% {
-      background-image: url("./images/mobiles/Comp 6_00062.jpg");
-    }
-
-    20.7792% {
-      background-image: url("./images/mobiles/Comp 6_00061.jpg");
-    }
-
-    22.0779% {
-      background-image: url("./images/mobiles/Comp 6_00060.jpg");
-    }
-
-    23.3766% {
-      background-image: url("./images/mobiles/Comp 6_00059.jpg");
-    }
-
-    24.6753% {
-      background-image: url("./images/mobiles/Comp 6_00058.jpg");
-    }
-
-    25.974% {
-      background-image: url("./images/mobiles/Comp 6_00057.jpg");
-    }
-
-    27.2727% {
-      background-image: url("./images/mobiles/Comp 6_00056.jpg");
-    }
-
-    28.5714% {
-      background-image: url("./images/mobiles/Comp 6_00055.jpg");
-    }
-
-    29.8701% {
-      background-image: url("./images/mobiles/Comp 6_00054.jpg");
-    }
-
-    31.1688% {
-      background-image: url("./images/mobiles/Comp 6_00053.jpg");
-    }
-
-    32.4675% {
-      background-image: url("./images/mobiles/Comp 6_00052.jpg");
-    }
-
-    33.7662% {
-      background-image: url("./images/mobiles/Comp 6_00051.jpg");
-    }
-
-    35.0649% {
-      background-image: url("./images/mobiles/Comp 6_00050.jpg");
-    }
-
-    36.3636% {
-      background-image: url("./images/mobiles/Comp 6_00049.jpg");
-    }
-
-    37.6623% {
-      background-image: url("./images/mobiles/Comp 6_00048.jpg");
-    }
-
-    38.961% {
-      background-image: url("./images/mobiles/Comp 6_00047.jpg");
-    }
-
-    40.2597% {
-      background-image: url("./images/mobiles/Comp 6_00046.jpg");
-    }
-
-    41.5584% {
-      background-image: url("./images/mobiles/Comp 6_00045.jpg");
-    }
-
-    42.8571% {
-      background-image: url("./images/mobiles/Comp 6_00044.jpg");
-    }
-
-    44.1558% {
-      background-image: url("./images/mobiles/Comp 6_00043.jpg");
-    }
-
-    45.4545% {
-      background-image: url("./images/mobiles/Comp 6_00042.jpg");
-    }
-
-    46.7532% {
-      background-image: url("./images/mobiles/Comp 6_00041.jpg");
-    }
-
-    48.0519% {
-      background-image: url("./images/mobiles/Comp 6_00040.jpg");
-    }
-
-    49.3506% {
-      background-image: url("./images/mobiles/Comp 6_00039.jpg");
-    }
-
-    50.6493% {
-      background-image: url("./images/mobiles/Comp 6_00038.jpg");
-    }
-
-    51.948% {
-      background-image: url("./images/mobiles/Comp 6_00037.jpg");
-    }
-
-    53.2467% {
-      background-image: url("./images/mobiles/Comp 6_00036.jpg");
-    }
-
-    54.5454% {
-      background-image: url("./images/mobiles/Comp 6_00035.jpg");
-    }
-
-    55.8441% {
-      background-image: url("./images/mobiles/Comp 6_00034.jpg");
-    }
-
-    57.1428% {
-      background-image: url("./images/mobiles/Comp 6_00033.jpg");
-    }
-
-    58.4415% {
-      background-image: url("./images/mobiles/Comp 6_00032.jpg");
-    }
-
-    59.7402% {
-      background-image: url("./images/mobiles/Comp 6_00031.jpg");
-    }
-
-    61.0389% {
-      background-image: url("./images/mobiles/Comp 6_00030.jpg");
-    }
-
-    62.3376% {
-      background-image: url("./images/mobiles/Comp 6_00029.jpg");
-    }
-
-    63.6363% {
-      background-image: url("./images/mobiles/Comp 6_00028.jpg");
-    }
-
-    64.935% {
-      background-image: url("./images/mobiles/Comp 6_00027.jpg");
-    }
-
-    66.2337% {
-      background-image: url("./images/mobiles/Comp 6_00026.jpg");
-    }
-
-    67.5324% {
-      background-image: url("./images/mobiles/Comp 6_00025.jpg");
-    }
-
-    68.8311% {
-      background-image: url("./images/mobiles/Comp 6_00024.jpg");
-    }
-
-    70.1298% {
-      background-image: url("./images/mobiles/Comp 6_00023.jpg");
-    }
-
-    71.4285% {
-      background-image: url("./images/mobiles/Comp 6_00022.jpg");
-    }
-
-    72.7272% {
-      background-image: url("./images/mobiles/Comp 6_00021.jpg");
-    }
-
-    74.0259% {
-      background-image: url("./images/mobiles/Comp 6_00020.jpg");
-    }
-
-    75.3246% {
-      background-image: url("./images/mobiles/Comp 6_00019.jpg");
-    }
-
-    76.6233% {
-      background-image: url("./images/mobiles/Comp 6_00018.jpg");
-    }
-
-    77.922% {
-      background-image: url("./images/mobiles/Comp 6_00017.jpg");
-    }
-
-    79.2207% {
-      background-image: url("./images/mobiles/Comp 6_00016.jpg");
-    }
-
-    80.5194% {
-      background-image: url("./images/mobiles/Comp 6_00015.jpg");
-    }
-
-    81.8181% {
-      background-image: url("./images/mobiles/Comp 6_00014.jpg");
-    }
-
-    83.1168% {
-      background-image: url("./images/mobiles/Comp 6_00013.jpg");
-    }
-
-    84.4155% {
-      background-image: url("./images/mobiles/Comp 6_00012.jpg");
-    }
-
-    85.7142% {
-      background-image: url("./images/mobiles/Comp 6_00011.jpg");
-    }
-
-    87.0129% {
-      background-image: url("./images/mobiles/Comp 6_00010.jpg");
-    }
-
-    88.3116% {
-      background-image: url("./images/mobiles/Comp 6_00009.jpg");
-    }
-
-    89.6103% {
-      background-image: url("./images/mobiles/Comp 6_00008.jpg");
-    }
-
-    90.909% {
-      background-image: url("./images/mobiles/Comp 6_00007.jpg");
-    }
-
-    92.2077% {
-      background-image: url("./images/mobiles/Comp 6_00006.jpg");
-    }
-
-    93.5064% {
-      background-image: url("./images/mobiles/Comp 6_00005.jpg");
-    }
-
-    94.8051% {
-      background-image: url("./images/mobiles/Comp 6_00004.jpg");
-    }
-
-    96.1038% {
-      background-image: url("./images/mobiles/Comp 6_00003.jpg");
-    }
-
-    97.4025% {
-      background-image: url("./images/mobiles/Comp 6_00002.jpg");
-    }
-
-    98.7012% {
-      background-image: url("./images/mobiles/Comp 6_00001.jpg");
     }
 
     100% {
@@ -3064,28 +1559,6 @@ h2 {
     height: 35px;
     font-size: 1.1rem;
   }
-
-  /* .header-center {
-    display: flex;
-    flex-direction: row;
-    position: static;
-    gap: 0px;
-    background: none;
-    width: auto;
-    padding: 0;
-    text-align: center;
-    justify-content: center;
-    margin-right: 120px;
-  }
-
-  .header-center a {
-    font-family: "Urbanist", sans-serif;
-    font-size: 15px;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 15px 8px;
-    margin-top: 7.9vw;
-  } */
 
   .main-container {
     width: 90%;
@@ -3176,310 +1649,6 @@ h2 {
       background-image: url("./images/Tab/Comp 7_00077.jpg");
     }
 
-    1.2987% {
-      background-image: url("./images/Tab/Comp 7_00076.jpg");
-    }
-
-    2.5974% {
-      background-image: url("./images/Tab/Comp 7_00075.jpg");
-    }
-
-    3.8961% {
-      background-image: url("./images/Tab/Comp 7_00074.jpg");
-    }
-
-    5.1948% {
-      background-image: url("./images/Tab/Comp 7_00073.jpg");
-    }
-
-    6.4935% {
-      background-image: url("./images/Tab/Comp 7_00072.jpg");
-    }
-
-    7.7922% {
-      background-image: url("./images/Tab/Comp 7_00071.jpg");
-    }
-
-    9.0909% {
-      background-image: url("./images/Tab/Comp 7_00070.jpg");
-    }
-
-    10.3896% {
-      background-image: url("./images/Tab/Comp 7_00069.jpg");
-    }
-
-    11.6883% {
-      background-image: url("./images/Tab/Comp 7_00068.jpg");
-    }
-
-    12.987% {
-      background-image: url("./images/Tab/Comp 7_00067.jpg");
-    }
-
-    14.2857% {
-      background-image: url("./images/Tab/Comp 7_00066.jpg");
-    }
-
-    15.5844% {
-      background-image: url("./images/Tab/Comp 7_00065.jpg");
-    }
-
-    16.8831% {
-      background-image: url("./images/Tab/Comp 7_00064.jpg");
-    }
-
-    18.1818% {
-      background-image: url("./images/Tab/Comp 7_00063.jpg");
-    }
-
-    19.4805% {
-      background-image: url("./images/Tab/Comp 7_00062.jpg");
-    }
-
-    20.7792% {
-      background-image: url("./images/Tab/Comp 7_00061.jpg");
-    }
-
-    22.0779% {
-      background-image: url("./images/Tab/Comp 7_00060.jpg");
-    }
-
-    23.3766% {
-      background-image: url("./images/Tab/Comp 7_00059.jpg");
-    }
-
-    24.6753% {
-      background-image: url("./images/Tab/Comp 7_00058.jpg");
-    }
-
-    25.974% {
-      background-image: url("./images/Tab/Comp 7_00057.jpg");
-    }
-
-    27.2727% {
-      background-image: url("./images/Tab/Comp 7_00056.jpg");
-    }
-
-    28.5714% {
-      background-image: url("./images/Tab/Comp 7_00055.jpg");
-    }
-
-    29.8701% {
-      background-image: url("./images/Tab/Comp 7_00054.jpg");
-    }
-
-    31.1688% {
-      background-image: url("./images/Tab/Comp 7_00053.jpg");
-    }
-
-    32.4675% {
-      background-image: url("./images/Tab/Comp 7_00052.jpg");
-    }
-
-    33.7662% {
-      background-image: url("./images/Tab/Comp 7_00051.jpg");
-    }
-
-    35.0649% {
-      background-image: url("./images/Tab/Comp 7_00050.jpg");
-    }
-
-    36.3636% {
-      background-image: url("./images/Tab/Comp 7_00049.jpg");
-    }
-
-    37.6623% {
-      background-image: url("./images/Tab/Comp 7_00048.jpg");
-    }
-
-    38.961% {
-      background-image: url("./images/Tab/Comp 7_00047.jpg");
-    }
-
-    40.2597% {
-      background-image: url("./images/Tab/Comp 7_00046.jpg");
-    }
-
-    41.5584% {
-      background-image: url("./images/Tab/Comp 7_00045.jpg");
-    }
-
-    42.8571% {
-      background-image: url("./images/Tab/Comp 7_00044.jpg");
-    }
-
-    44.1558% {
-      background-image: url("./images/Tab/Comp 7_00043.jpg");
-    }
-
-    45.4545% {
-      background-image: url("./images/Tab/Comp 7_00042.jpg");
-    }
-
-    46.7532% {
-      background-image: url("./images/Tab/Comp 7_00041.jpg");
-    }
-
-    48.0519% {
-      background-image: url("./images/Tab/Comp 7_00040.jpg");
-    }
-
-    49.3506% {
-      background-image: url("./images/Tab/Comp 7_00039.jpg");
-    }
-
-    50.6493% {
-      background-image: url("./images/Tab/Comp 7_00038.jpg");
-    }
-
-    51.948% {
-      background-image: url("./images/Tab/Comp 7_00037.jpg");
-    }
-
-    53.2467% {
-      background-image: url("./images/Tab/Comp 7_00036.jpg");
-    }
-
-    54.5454% {
-      background-image: url("./images/Tab/Comp 7_00035.jpg");
-    }
-
-    55.8441% {
-      background-image: url("./images/Tab/Comp 7_00034.jpg");
-    }
-
-    57.1428% {
-      background-image: url("./images/Tab/Comp 7_00033.jpg");
-    }
-
-    58.4415% {
-      background-image: url("./images/Tab/Comp 7_00032.jpg");
-    }
-
-    59.7402% {
-      background-image: url("./images/Tab/Comp 7_00031.jpg");
-    }
-
-    61.0389% {
-      background-image: url("./images/Tab/Comp 7_00030.jpg");
-    }
-
-    62.3376% {
-      background-image: url("./images/Tab/Comp 7_00029.jpg");
-    }
-
-    63.6363% {
-      background-image: url("./images/Tab/Comp 7_00028.jpg");
-    }
-
-    64.935% {
-      background-image: url("./images/Tab/Comp 7_00027.jpg");
-    }
-
-    66.2337% {
-      background-image: url("./images/Tab/Comp 7_00026.jpg");
-    }
-
-    67.5324% {
-      background-image: url("./images/Tab/Comp 7_00025.jpg");
-    }
-
-    68.8311% {
-      background-image: url("./images/Tab/Comp 7_00024.jpg");
-    }
-
-    70.1298% {
-      background-image: url("./images/Tab/Comp 7_00023.jpg");
-    }
-
-    71.4285% {
-      background-image: url("./images/Tab/Comp 7_00022.jpg");
-    }
-
-    72.7272% {
-      background-image: url("./images/Tab/Comp 7_00021.jpg");
-    }
-
-    74.0259% {
-      background-image: url("./images/Tab/Comp 7_00020.jpg");
-    }
-
-    75.3246% {
-      background-image: url("./images/Tab/Comp 7_00019.jpg");
-    }
-
-    76.6233% {
-      background-image: url("./images/Tab/Comp 7_00018.jpg");
-    }
-
-    77.922% {
-      background-image: url("./images/Tab/Comp 7_00017.jpg");
-    }
-
-    79.2207% {
-      background-image: url("./images/Tab/Comp 7_00016.jpg");
-    }
-
-    80.5194% {
-      background-image: url("./images/Tab/Comp 7_00015.jpg");
-    }
-
-    81.8181% {
-      background-image: url("./images/Tab/Comp 7_00014.jpg");
-    }
-
-    83.1168% {
-      background-image: url("./images/Tab/Comp 7_00013.jpg");
-    }
-
-    84.4155% {
-      background-image: url("./images/Tab/Comp 7_00012.jpg");
-    }
-
-    85.7142% {
-      background-image: url("./images/Tab/Comp 7_00011.jpg");
-    }
-
-    87.0129% {
-      background-image: url("./images/Tab/Comp 7_00010.jpg");
-    }
-
-    88.3116% {
-      background-image: url("./images/Tab/Comp 7_00009.jpg");
-    }
-
-    89.6103% {
-      background-image: url("./images/Tab/Comp 7_00008.jpg");
-    }
-
-    90.909% {
-      background-image: url("./images/Tab/Comp 7_00007.jpg");
-    }
-
-    92.2077% {
-      background-image: url("./images/Tab/Comp 7_00006.jpg");
-    }
-
-    93.5064% {
-      background-image: url("./images/Tab/Comp 7_00005.jpg");
-    }
-
-    94.8051% {
-      background-image: url("./images/Tab/Comp 7_00004.jpg");
-    }
-
-    96.1038% {
-      background-image: url("./images/Tab/Comp 7_00003.jpg");
-    }
-
-    97.4025% {
-      background-image: url("./images/Tab/Comp 7_00002.jpg");
-    }
-
-    98.7012% {
-      background-image: url("./images/Tab/Comp 7_00001.jpg");
-    }
-
     100% {
       background-image: url("./images/Tab/Comp 7_00000.jpg");
     }
@@ -3496,7 +1665,6 @@ h2 {
     font-size: 2vw;
     margin: 0 5px;
     padding-top: 3%;
-    /* margin-bottom: 3.8em; */
   }
 
   .carousel {
@@ -3573,7 +1741,6 @@ h2 {
 
   #founderSection {
     margin-right: 20px;
-    /* transform: scale(.5); */
   }
 
   .arrowDown {
@@ -3583,7 +1750,6 @@ h2 {
     align-items: center;
     margin-left: 46%;
     opacity: 1;
-    /* margin-left: 20px; */
     margin-top: -20vh;
   }
 
@@ -3605,7 +1771,6 @@ h2 {
     z-index: 2;
     padding: 0 20px;
     opacity: 1;
-    /* always visible */
   }
 
   .this_is_h3 {
@@ -3720,40 +1885,10 @@ h2 {
     height: auto;
   }
 
-  /* .header-center {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    gap: 5px;
-    background: none;
-    padding: 10px 0;
-    margin: 0 auto;
-    position: relative;
-    top: -53px;
-    z-index: 10;
-  }
-
-  .header-center a {
-    color: #ffffff;
-    text-decoration: none;
-    font-family: "Urbanist", sans-serif;
-    font-size: 15px;
-    line-height: 1.4;
-    letter-spacing: 0.5px;
-    text-align: center;
-    padding: 10px 4px;
-    margin-right: 10px;
-    transition: color 0.3s ease;
-  } */
-
   .get-started-button {
     font-size: 1rem;
     padding: 5px 10px;
-    /* margin-top: -890px; */
     margin-top: -530px;
-    /* margin-left: 119px; */
     border-radius: 1.5em;
     position: fixed;
   }
@@ -3784,45 +1919,30 @@ h2 {
     height: auto;
   }
 
-  /* .center-content h1 {
-    font-size: 2.8vw;
-    line-height: 60px;
-    margin-bottom: 160px;
-    margin-top: -450px;
-    letter-spacing: 3%;
-    display: inline-block;
-    width: fit-content;
-    pointer-events: none;
-  } */
-
-
   .center-content {
-  padding-top: 30px;
-  line-height: 1.4;
-  /* margin-top: 50px; */
-  /* margin-top: 20px; */
+    padding-top: 30px;
+    line-height: 1.4;
 
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-}
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
 
-.center-content h1 {
-  font-size: 2rem;
-  color: #ffffff;
-  text-align: center;
-  font-family: "Outfit", sans-serif;
-  font-weight: 600;
-  line-height: 63px;
-  letter-spacing: 0.02em;
-}
-
+  .center-content h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+    line-height: 63px;
+    letter-spacing: 0.02em;
+  }
 
   .main-container {
     width: 85%;
@@ -3843,7 +1963,6 @@ h2 {
   .extra-content {
     position: relative;
     padding: 100px 30px;
-    /* transform: scale(1.5); */
   }
 
   .stats-carousel {
@@ -3879,15 +1998,12 @@ h2 {
     padding-left: 100%;
     animation: scroll-left 20s linear infinite;
     margin-top: -35px;
-    /* font-size: 20px; */
   }
 
   #founderSection {
     background: url("./images/bg-tall.png") repeat-y;
     background-size: cover;
-    /* margin-right: 200px; */
     background-color: black;
-    /* animation: moveUp 10s linear infinite; */
   }
 
   /* Founder Section */
@@ -3896,9 +2012,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     background-color: #0c0c0c;
-    /* Dark background */
     color: #ffffff;
-    /* White text */
     padding: 50px 60px;
     border-radius: 12px;
     gap: 40px;
@@ -3962,317 +2076,12 @@ h2 {
     background-size: cover;
     animation: changeBackground 3.5s infinite;
     background-image: url("./images/bgimg/bala_00000.jpg");
-    /* background-image: url("./images/arrowDown.png"); */
     transition: background-image 0.2s ease-in-out;
   }
 
   @keyframes changeBackground {
     0% {
       background-image: url("./images/Comp/Comp 5_00077.jpg");
-    }
-
-    1.2987% {
-      background-image: url("./images/Comp/Comp 5_00076.jpg");
-    }
-
-    2.5974% {
-      background-image: url("./images/Comp/Comp 5_00075.jpg");
-    }
-
-    3.8961% {
-      background-image: url("./images/Comp/Comp 5_00074.jpg");
-    }
-
-    5.1948% {
-      background-image: url("./images/Comp/Comp 5_00073.jpg");
-    }
-
-    6.4935% {
-      background-image: url("./images/Comp/Comp 5_00072.jpg");
-    }
-
-    7.7922% {
-      background-image: url("./images/Comp/Comp 5_00071.jpg");
-    }
-
-    9.0909% {
-      background-image: url("./images/Comp/Comp 5_00070.jpg");
-    }
-
-    10.3896% {
-      background-image: url("./images/Comp/Comp 5_00069.jpg");
-    }
-
-    11.6883% {
-      background-image: url("./images/Comp/Comp 5_00068.jpg");
-    }
-
-    12.987% {
-      background-image: url("./images/Comp/Comp 5_00067.jpg");
-    }
-
-    14.2857% {
-      background-image: url("./images/Comp/Comp 5_00066.jpg");
-    }
-
-    15.5844% {
-      background-image: url("./images/Comp/Comp 5_00065.jpg");
-    }
-
-    16.8831% {
-      background-image: url("./images/Comp/Comp 5_00064.jpg");
-    }
-
-    18.1818% {
-      background-image: url("./images/Comp/Comp 5_00063.jpg");
-    }
-
-    19.4805% {
-      background-image: url("./images/Comp/Comp 5_00062.jpg");
-    }
-
-    20.7792% {
-      background-image: url("./images/Comp/Comp 5_00061.jpg");
-    }
-
-    22.0779% {
-      background-image: url("./images/Comp/Comp 5_00060.jpg");
-    }
-
-    23.3766% {
-      background-image: url("./images/Comp/Comp 5_00059.jpg");
-    }
-
-    24.6753% {
-      background-image: url("./images/Comp/Comp 5_00058.jpg");
-    }
-
-    25.974% {
-      background-image: url("./images/Comp/Comp 5_00057.jpg");
-    }
-
-    27.2727% {
-      background-image: url("./images/Comp/Comp 5_00056.jpg");
-    }
-
-    28.5714% {
-      background-image: url("./images/Comp/Comp 5_00055.jpg");
-    }
-
-    29.8701% {
-      background-image: url("./images/Comp/Comp 5_00054.jpg");
-    }
-
-    31.1688% {
-      background-image: url("./images/Comp/Comp 5_00053.jpg");
-    }
-
-    32.4675% {
-      background-image: url("./images/Comp/Comp 5_00052.jpg");
-    }
-
-    33.7662% {
-      background-image: url("./images/Comp/Comp 5_00051.jpg");
-    }
-
-    35.0649% {
-      background-image: url("./images/Comp/Comp 5_00050.jpg");
-    }
-
-    36.3636% {
-      background-image: url("./images/Comp/Comp 5_00049.jpg");
-    }
-
-    37.6623% {
-      background-image: url("./images/Comp/Comp 5_00048.jpg");
-    }
-
-    38.961% {
-      background-image: url("./images/Comp/Comp 5_00047.jpg");
-    }
-
-    40.2597% {
-      background-image: url("./images/Comp/Comp 5_00046.jpg");
-    }
-
-    41.5584% {
-      background-image: url("./images/Comp/Comp 5_00045.jpg");
-    }
-
-    42.8571% {
-      background-image: url("./images/Comp/Comp 5_00044.jpg");
-    }
-
-    44.1558% {
-      background-image: url("./images/Comp/Comp 5_00043.jpg");
-    }
-
-    45.4545% {
-      background-image: url("./images/Comp/Comp 5_00042.jpg");
-    }
-
-    46.7532% {
-      background-image: url("./images/Comp/Comp 5_00041.jpg");
-    }
-
-    48.0519% {
-      background-image: url("./images/Comp/Comp 5_00040.jpg");
-    }
-
-    49.3506% {
-      background-image: url("./images/Comp/Comp 5_00039.jpg");
-    }
-
-    50.6493% {
-      background-image: url("./images/Comp/Comp 5_00038.jpg");
-    }
-
-    51.948% {
-      background-image: url("./images/Comp/Comp 5_00037.jpg");
-    }
-
-    53.2467% {
-      background-image: url("./images/Comp/Comp 5_00036.jpg");
-    }
-
-    54.5454% {
-      background-image: url("./images/Comp/Comp 5_00035.jpg");
-    }
-
-    55.8441% {
-      background-image: url("./images/Comp/Comp 5_00034.jpg");
-    }
-
-    57.1428% {
-      background-image: url("./images/Comp/Comp 5_00033.jpg");
-    }
-
-    58.4415% {
-      background-image: url("./images/Comp/Comp 5_00032.jpg");
-    }
-
-    59.7402% {
-      background-image: url("./images/Comp/Comp 5_00031.jpg");
-    }
-
-    61.0389% {
-      background-image: url("./images/Comp/Comp 5_00030.jpg");
-    }
-
-    62.3376% {
-      background-image: url("./images/Comp/Comp 5_00029.jpg");
-    }
-
-    63.6363% {
-      background-image: url("./images/Comp/Comp 5_00028.jpg");
-    }
-
-    64.935% {
-      background-image: url("./images/Comp/Comp 5_00027.jpg");
-    }
-
-    66.2337% {
-      background-image: url("./images/Comp/Comp 5_00026.jpg");
-    }
-
-    67.5324% {
-      background-image: url("./images/Comp/Comp 5_00025.jpg");
-    }
-
-    68.8311% {
-      background-image: url("./images/Comp/Comp 5_00024.jpg");
-    }
-
-    70.1298% {
-      background-image: url("./images/Comp/Comp 5_00023.jpg");
-    }
-
-    71.4285% {
-      background-image: url("./images/Comp/Comp 5_00022.jpg");
-    }
-
-    72.7272% {
-      background-image: url("./images/Comp/Comp 5_00021.jpg");
-    }
-
-    74.0259% {
-      background-image: url("./images/Comp/Comp 5_00020.jpg");
-    }
-
-    75.3246% {
-      background-image: url("./images/Comp/Comp 5_00019.jpg");
-    }
-
-    76.6233% {
-      background-image: url("./images/Comp/Comp 5_00018.jpg");
-    }
-
-    77.922% {
-      background-image: url("./images/Comp/Comp 5_00017.jpg");
-    }
-
-    79.2207% {
-      background-image: url("./images/Comp/Comp 5_00016.jpg");
-    }
-
-    80.5194% {
-      background-image: url("./images/Comp/Comp 5_00015.jpg");
-    }
-
-    81.8181% {
-      background-image: url("./images/Comp/Comp 5_00014.jpg");
-    }
-
-    83.1168% {
-      background-image: url("./images/Comp/Comp 5_00013.jpg");
-    }
-
-    84.4155% {
-      background-image: url("./images/Comp/Comp 5_00012.jpg");
-    }
-
-    85.7142% {
-      background-image: url("./images/Comp/Comp 5_00011.jpg");
-    }
-
-    87.0129% {
-      background-image: url("./images/Comp/Comp 5_00010.jpg");
-    }
-
-    88.3116% {
-      background-image: url("./images/Comp/Comp 5_00009.jpg");
-    }
-
-    89.6103% {
-      background-image: url("./images/Comp/Comp 5_00008.jpg");
-    }
-
-    90.909% {
-      background-image: url("./images/Comp/Comp 5_00007.jpg");
-    }
-
-    92.2077% {
-      background-image: url("./images/Comp/Comp 5_00006.jpg");
-    }
-
-    93.5064% {
-      background-image: url("./images/Comp/Comp 5_00005.jpg");
-    }
-
-    94.8051% {
-      background-image: url("./images/Comp/Comp 5_00004.jpg");
-    }
-
-    96.1038% {
-      background-image: url("./images/Comp/Comp 5_00003.jpg");
-    }
-
-    97.4025% {
-      background-image: url("./images/Comp/Comp 5_00002.jpg");
-    }
-
-    98.7012% {
-      background-image: url("./images/Comp/Comp 5_00001.jpg");
     }
 
     100% {
@@ -4291,10 +2100,6 @@ h2 {
     perspective: 1000px;
   }
 
-  /* .cart1{
-   margin-right: -900px; 
-    background-color: red; 
-} */
   article {
     margin-right: -29vw;
 
@@ -4317,43 +2122,35 @@ h2 {
 
   article:nth-of-type(1) {
     --_scale: 0.95;
-    /* Reduce scale */
   }
 
   article:nth-of-type(2) {
     --_scale: 0.95;
-    /* Reduce scale */
   }
 
   article:nth-of-type(3) {
     --_scale: 0.95;
-    /* Reduce scale */
   }
 
   article:nth-of-type(1) {
     --_offset: 1rem;
-    /* Decrease offset */
   }
 
   article:nth-of-type(2) {
     --_offset: 1rem;
-    /* Decrease offset */
   }
 
   article:nth-of-type(3) {
     --_offset: 1rem;
-    /* Decrease offset */
   }
 
   .imgs {
     width: 100%;
-    /* height: 200px; */
     height: 59vh;
     margin-left: 15px;
   }
 
   .poem {
-    /* padding: 20px; */
     font-size: 16px;
     line-height: 1.5;
     color: #333;
@@ -4394,7 +2191,6 @@ h2 {
     line-height: 1.4;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    /* Regular */
     font-size: 13.29px;
     line-height: 18.61px;
     letter-spacing: 0px;
@@ -4409,14 +2205,6 @@ h2 {
     font-size: clamp(0.8rem, 1.2vw, 1rem);
     font-family: "Poppins", sans-serif;
   }
-
-  /* 
-.stats div + div::before {
-  content: '|';
-  color: #888; 
-  margin: 0 1rem;
-  font-size: 1.5rem;
-} */
 
   .stats strong {
     display: block;
@@ -4435,7 +2223,6 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-left: 150px; */
     align-self: flex-start;
     padding: 0.5rem 1rem;
     font-size: clamp(0.8rem, 1vw, 1rem);
@@ -4453,18 +2240,12 @@ h2 {
 
   @layer demo {
     section {
-      /* defaults */
       --_offset-steps: 6rem;
-      /* distance up */
       --_scale-steps: 2;
-      /* scale behind*/
       --_opacity-steps: 15;
-      /* opacity behind */
 
       --_ani-duration: 300ms;
-      /* transition on card elements */
       --_ani-delay: 200ms;
-      /* delay on card elements (will be multiplied) */
 
       /* calculations */
       --_offset-steps-two: calc(var(--_offset-steps) * -1);
@@ -4478,13 +2259,12 @@ h2 {
 
       @media (width > 600px) {
         --_offset-steps: 4em;
-        /* distance up */
       }
 
       display: grid;
       grid-template-areas: "stack";
       color: black;
-      width: min(calc(100% - 2rem), 40rem);
+      /* width: min(calc(100% - 2rem), 40rem); */
     }
 
     article {
@@ -4497,7 +2277,6 @@ h2 {
       isolation: isolate;
       background-color: white;
       grid-area: stack;
-      /*overflow: clip;*/
       transition: 500ms ease-in-out;
       border-radius: var(--_border-radius);
 
@@ -4519,10 +2298,11 @@ h2 {
       &::before {
         z-index: -1;
         inset: calc(var(--_bg-dot-offset) * -1);
-        background-image: radial-gradient(var(--_bg-dot-color) 1px,
-            transparent 0px);
+        background-image: radial-gradient(
+          var(--_bg-dot-color) 1px,
+          transparent 0px
+        );
         background-repeat: repeat;
-        /* background-size: 10px 10px;  */
         background-position: center;
         border-radius: calc(var(--_border-radius) + var(--_bg-dot-offset));
       }
@@ -4575,7 +2355,12 @@ h2 {
 
     section:has(input:nth-child(1):focus-visible) article:nth-of-type(1) label,
     section:has(input:nth-child(2):focus-visible) article:nth-of-type(2) label,
-    section:has(input:nth-child(3):focus-visible) article:nth-of-type(3) label section:has(input:nth-child(4):focus-visible) article:nth-of-type(4) label {
+    section:has(input:nth-child(3):focus-visible)
+      article:nth-of-type(3)
+      label
+      section:has(input:nth-child(4):focus-visible)
+      article:nth-of-type(4)
+      label {
       rotate: 90deg;
     }
 
@@ -4654,7 +2439,7 @@ h2 {
       --_3-offset: var(--_offset-steps-three);
     }
 
-    article>div {
+    article > div {
       position: relative;
       display: grid;
       grid-template-columns: 1fr;
@@ -4710,12 +2495,10 @@ h2 {
       color: light-dark(var(--txt-light), var(--txt-dark));
       min-height: 100svh;
       margin: 0;
-      /* padding: 2rem; */
       font-size: 1rem;
       font-family: system-ui;
       line-height: 1.5;
-      /* display: grid;
-      place-items: center; */
+
       gap: 2rem;
     }
   }
@@ -4775,7 +2558,6 @@ h2 {
     z-index: 2;
     padding: 0 20px;
     opacity: 1;
-    /* always visible */
   }
 
   .this_is_h3 {
@@ -4887,19 +2669,6 @@ h2 {
     height: 4.5vh;
   }
 
-  /* .arrowDown {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 50%;
-    opacity: 1;
-    margin-top: -5vh;
-  } */
-
-
-
-
   .marquee-content {
     display: inline-block;
     padding-left: 100%;
@@ -4935,310 +2704,6 @@ h2 {
       background-image: url("./images/Comp/Comp 5_00000.jpg");
     }
 
-    1.2987% {
-      background-image: url("./images/Comp/Comp 5_00001.jpg");
-    }
-
-    2.5974% {
-      background-image: url("./images/Comp/Comp 5_00002.jpg");
-    }
-
-    3.8961% {
-      background-image: url("./images/Comp/Comp 5_00003.jpg");
-    }
-
-    5.1948% {
-      background-image: url("./images/Comp/Comp 5_00004.jpg");
-    }
-
-    6.4935% {
-      background-image: url("./images/Comp/Comp 5_00005.jpg");
-    }
-
-    7.7922% {
-      background-image: url("./images/Comp/Comp 5_00006.jpg");
-    }
-
-    9.0909% {
-      background-image: url("./images/Comp/Comp 5_00007.jpg");
-    }
-
-    10.3896% {
-      background-image: url("./images/Comp/Comp 5_00008.jpg");
-    }
-
-    11.6883% {
-      background-image: url("./images/Comp/Comp 5_00009.jpg");
-    }
-
-    12.987% {
-      background-image: url("./images/Comp/Comp 5_00010.jpg");
-    }
-
-    14.2857% {
-      background-image: url("./images/Comp/Comp 5_00011.jpg");
-    }
-
-    15.5844% {
-      background-image: url("./images/Comp/Comp 5_00012.jpg");
-    }
-
-    16.8831% {
-      background-image: url("./images/Comp/Comp 5_00013.jpg");
-    }
-
-    18.1818% {
-      background-image: url("./images/Comp/Comp 5_00014.jpg");
-    }
-
-    19.4805% {
-      background-image: url("./images/Comp/Comp 5_00015.jpg");
-    }
-
-    20.7792% {
-      background-image: url("./images/Comp/Comp 5_00016.jpg");
-    }
-
-    22.0779% {
-      background-image: url("./images/Comp/Comp 5_00017.jpg");
-    }
-
-    23.3766% {
-      background-image: url("./images/Comp/Comp 5_00018.jpg");
-    }
-
-    24.6753% {
-      background-image: url("./images/Comp/Comp 5_00019.jpg");
-    }
-
-    25.974% {
-      background-image: url("./images/Comp/Comp 5_00020.jpg");
-    }
-
-    27.2727% {
-      background-image: url("./images/Comp/Comp 5_00021.jpg");
-    }
-
-    28.5714% {
-      background-image: url("./images/Comp/Comp 5_00022.jpg");
-    }
-
-    29.8701% {
-      background-image: url("./images/Comp/Comp 5_00023.jpg");
-    }
-
-    31.1688% {
-      background-image: url("./images/Comp/Comp 5_00024.jpg");
-    }
-
-    32.4675% {
-      background-image: url("./images/Comp/Comp 5_00025.jpg");
-    }
-
-    33.7662% {
-      background-image: url("./images/Comp/Comp 5_00026.jpg");
-    }
-
-    35.0649% {
-      background-image: url("./images/Comp/Comp 5_00027.jpg");
-    }
-
-    36.3636% {
-      background-image: url("./images/Comp/Comp 5_00028.jpg");
-    }
-
-    37.6623% {
-      background-image: url("./images/Comp/Comp 5_00029.jpg");
-    }
-
-    38.961% {
-      background-image: url("./images/Comp/Comp 5_00030.jpg");
-    }
-
-    40.2597% {
-      background-image: url("./images/Comp/Comp 5_00031.jpg");
-    }
-
-    41.5584% {
-      background-image: url("./images/Comp/Comp 5_00032.jpg");
-    }
-
-    42.8571% {
-      background-image: url("./images/Comp/Comp 5_00033.jpg");
-    }
-
-    44.1558% {
-      background-image: url("./images/Comp/Comp 5_00034.jpg");
-    }
-
-    45.4545% {
-      background-image: url("./images/Comp/Comp 5_00035.jpg");
-    }
-
-    46.7532% {
-      background-image: url("./images/Comp/Comp 5_00036.jpg");
-    }
-
-    48.0519% {
-      background-image: url("./images/Comp/Comp 5_00037.jpg");
-    }
-
-    49.3506% {
-      background-image: url("./images/Comp/Comp 5_00038.jpg");
-    }
-
-    50.6493% {
-      background-image: url("./images/Comp/Comp 5_00039.jpg");
-    }
-
-    51.948% {
-      background-image: url("./images/Comp/Comp 5_00040.jpg");
-    }
-
-    53.2467% {
-      background-image: url("./images/Comp/Comp 5_00041.jpg");
-    }
-
-    54.5454% {
-      background-image: url("./images/Comp/Comp 5_00042.jpg");
-    }
-
-    55.8441% {
-      background-image: url("./images/Comp/Comp 5_00043.jpg");
-    }
-
-    57.1428% {
-      background-image: url("./images/Comp/Comp 5_00044.jpg");
-    }
-
-    58.4415% {
-      background-image: url("./images/Comp/Comp 5_00045.jpg");
-    }
-
-    59.7402% {
-      background-image: url("./images/Comp/Comp 5_00046.jpg");
-    }
-
-    61.0389% {
-      background-image: url("./images/Comp/Comp 5_00047.jpg");
-    }
-
-    62.3376% {
-      background-image: url("./images/Comp/Comp 5_00048.jpg");
-    }
-
-    63.6363% {
-      background-image: url("./images/Comp/Comp 5_00049.jpg");
-    }
-
-    64.935% {
-      background-image: url("./images/Comp/Comp 5_00050.jpg");
-    }
-
-    66.2337% {
-      background-image: url("./images/Comp/Comp 5_00051.jpg");
-    }
-
-    67.5324% {
-      background-image: url("./images/Comp/Comp 5_00052.jpg");
-    }
-
-    68.8311% {
-      background-image: url("./images/Comp/Comp 5_00053.jpg");
-    }
-
-    70.1298% {
-      background-image: url("./images/Comp/Comp 5_00054.jpg");
-    }
-
-    71.4285% {
-      background-image: url("./images/Comp/Comp 5_00055.jpg");
-    }
-
-    72.7272% {
-      background-image: url("./images/Comp/Comp 5_00056.jpg");
-    }
-
-    74.0259% {
-      background-image: url("./images/Comp/Comp 5_00057.jpg");
-    }
-
-    75.3246% {
-      background-image: url("./images/Comp/Comp 5_00058.jpg");
-    }
-
-    76.6233% {
-      background-image: url("./images/Comp/Comp 5_00059.jpg");
-    }
-
-    77.922% {
-      background-image: url("./images/Comp/Comp 5_00060.jpg");
-    }
-
-    79.2207% {
-      background-image: url("./images/Comp/Comp 5_00061.jpg");
-    }
-
-    80.5194% {
-      background-image: url("./images/Comp/Comp 5_00062.jpg");
-    }
-
-    81.8181% {
-      background-image: url("./images/Comp/Comp 5_00063.jpg");
-    }
-
-    83.1168% {
-      background-image: url("./images/Comp/Comp 5_00064.jpg");
-    }
-
-    84.4155% {
-      background-image: url("./images/Comp/Comp 5_00065.jpg");
-    }
-
-    85.7142% {
-      background-image: url("./images/Comp/Comp 5_00066.jpg");
-    }
-
-    87.0129% {
-      background-image: url("./images/Comp/Comp 5_00067.jpg");
-    }
-
-    88.3116% {
-      background-image: url("./images/Comp/Comp 5_00068.jpg");
-    }
-
-    89.6103% {
-      background-image: url("./images/Comp/Comp 5_00069.jpg");
-    }
-
-    90.909% {
-      background-image: url("./images/Comp/Comp 5_00070.jpg");
-    }
-
-    92.2077% {
-      background-image: url("./images/Comp/Comp 5_00071.jpg");
-    }
-
-    93.5064% {
-      background-image: url("./images/Comp/Comp 5_00072.jpg");
-    }
-
-    94.8051% {
-      background-image: url("./images/Comp/Comp 5_00073.jpg");
-    }
-
-    96.1038% {
-      background-image: url("./images/Comp/Comp 5_00074.jpg");
-    }
-
-    97.4025% {
-      background-image: url("./images/Comp/Comp 5_00075.jpg");
-    }
-
-    98.7012% {
-      background-image: url("./images/Comp/Comp 5_00076.jpg");
-    }
-
     100% {
       background-image: url("./images/Comp/Comp 5_00077.jpg");
     }
@@ -5251,14 +2716,11 @@ h2 {
     line-height: 1.5;
     margin-right: 60vw;
     margin-top: -55vh;
-    /* padding-bottom: 10vh; */
-    /* padding-top: 20vh; */
   }
 
   .founder-text p {
     font-size: 1.1rem;
     color: #cccccc;
-    /* Light gray for paragraph */
     margin-bottom: 20px;
     line-height: 1.2em;
   }
@@ -5281,7 +2743,6 @@ h2 {
     max-width: 400px;
     height: auto;
     border-radius: 16px;
-    /* Rounded corners */
     object-fit: cover;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     margin-right: -40vw;
@@ -5292,7 +2753,6 @@ h2 {
   }
 
   .center-content h1 {
-
     line-height: 90px;
     letter-spacing: 3%;
     margin-bottom: 180px;
@@ -5333,17 +2793,12 @@ h2 {
   .logo-img {
     height: 150px;
     width: auto;
-
   }
-
-
 
   .get-started-button {
     font-size: 1.2rem;
     padding: 10px 15px;
-    /* margin-top: -890px; */
     margin-top: -490px;
-    /* margin-left: 119px; */
     border-radius: 1.5em;
     position: fixed;
   }
@@ -5380,11 +2835,9 @@ h2 {
     height: 100vh;
     overflow: hidden;
     background-position: center;
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
+
     background-size: cover;
     animation: changeBackground 5s infinite;
-    /* background-position: 20%; */
     overflow-x: hidden;
   }
 
@@ -5393,317 +2846,11 @@ h2 {
       background-image: url("./images/Comp/Comp 5_00077.jpg");
     }
 
-    1.2987% {
-      background-image: url("./images/Comp/Comp 5_00076.jpg");
-    }
-
-    2.5974% {
-      background-image: url("./images/Comp/Comp 5_00075.jpg");
-    }
-
-    3.8961% {
-      background-image: url("./images/Comp/Comp 5_00074.jpg");
-    }
-
-    5.1948% {
-      background-image: url("./images/Comp/Comp 5_00073.jpg");
-    }
-
-    6.4935% {
-      background-image: url("./images/Comp/Comp 5_00072.jpg");
-    }
-
-    7.7922% {
-      background-image: url("./images/Comp/Comp 5_00071.jpg");
-    }
-
-    9.0909% {
-      background-image: url("./images/Comp/Comp 5_00070.jpg");
-    }
-
-    10.3896% {
-      background-image: url("./images/Comp/Comp 5_00069.jpg");
-    }
-
-    11.6883% {
-      background-image: url("./images/Comp/Comp 5_00068.jpg");
-    }
-
-    12.987% {
-      background-image: url("./images/Comp/Comp 5_00067.jpg");
-    }
-
-    14.2857% {
-      background-image: url("./images/Comp/Comp 5_00066.jpg");
-    }
-
-    15.5844% {
-      background-image: url("./images/Comp/Comp 5_00065.jpg");
-    }
-
-    16.8831% {
-      background-image: url("./images/Comp/Comp 5_00064.jpg");
-    }
-
-    18.1818% {
-      background-image: url("./images/Comp/Comp 5_00063.jpg");
-    }
-
-    19.4805% {
-      background-image: url("./images/Comp/Comp 5_00062.jpg");
-    }
-
-    20.7792% {
-      background-image: url("./images/Comp/Comp 5_00061.jpg");
-    }
-
-    22.0779% {
-      background-image: url("./images/Comp/Comp 5_00060.jpg");
-    }
-
-    23.3766% {
-      background-image: url("./images/Comp/Comp 5_00059.jpg");
-    }
-
-    24.6753% {
-      background-image: url("./images/Comp/Comp 5_00058.jpg");
-    }
-
-    25.974% {
-      background-image: url("./images/Comp/Comp 5_00057.jpg");
-    }
-
-    27.2727% {
-      background-image: url("./images/Comp/Comp 5_00056.jpg");
-    }
-
-    28.5714% {
-      background-image: url("./images/Comp/Comp 5_00055.jpg");
-    }
-
-    29.8701% {
-      background-image: url("./images/Comp/Comp 5_00054.jpg");
-    }
-
-    31.1688% {
-      background-image: url("./images/Comp/Comp 5_00053.jpg");
-    }
-
-    32.4675% {
-      background-image: url("./images/Comp/Comp 5_00052.jpg");
-    }
-
-    33.7662% {
-      background-image: url("./images/Comp/Comp 5_00051.jpg");
-    }
-
-    35.0649% {
-      background-image: url("./images/Comp/Comp 5_00050.jpg");
-    }
-
-    36.3636% {
-      background-image: url("./images/Comp/Comp 5_00049.jpg");
-    }
-
-    37.6623% {
-      background-image: url("./images/Comp/Comp 5_00048.jpg");
-    }
-
-    38.961% {
-      background-image: url("./images/Comp/Comp 5_00047.jpg");
-    }
-
-    40.2597% {
-      background-image: url("./images/Comp/Comp 5_00046.jpg");
-    }
-
-    41.5584% {
-      background-image: url("./images/Comp/Comp 5_00045.jpg");
-    }
-
-    42.8571% {
-      background-image: url("./images/Comp/Comp 5_00044.jpg");
-    }
-
-    44.1558% {
-      background-image: url("./images/Comp/Comp 5_00043.jpg");
-    }
-
-    45.4545% {
-      background-image: url("./images/Comp/Comp 5_00042.jpg");
-    }
-
-    46.7532% {
-      background-image: url("./images/Comp/Comp 5_00041.jpg");
-    }
-
-    48.0519% {
-      background-image: url("./images/Comp/Comp 5_00040.jpg");
-    }
-
-    49.3506% {
-      background-image: url("./images/Comp/Comp 5_00039.jpg");
-    }
-
-    50.6493% {
-      background-image: url("./images/Comp/Comp 5_00038.jpg");
-    }
-
-    51.948% {
-      background-image: url("./images/Comp/Comp 5_00037.jpg");
-    }
-
-    53.2467% {
-      background-image: url("./images/Comp/Comp 5_00036.jpg");
-    }
-
-    54.5454% {
-      background-image: url("./images/Comp/Comp 5_00035.jpg");
-    }
-
-    55.8441% {
-      background-image: url("./images/Comp/Comp 5_00034.jpg");
-    }
-
-    57.1428% {
-      background-image: url("./images/Comp/Comp 5_00033.jpg");
-    }
-
-    58.4415% {
-      background-image: url("./images/Comp/Comp 5_00032.jpg");
-    }
-
-    59.7402% {
-      background-image: url("./images/Comp/Comp 5_00031.jpg");
-    }
-
-    61.0389% {
-      background-image: url("./images/Comp/Comp 5_00030.jpg");
-    }
-
-    62.3376% {
-      background-image: url("./images/Comp/Comp 5_00029.jpg");
-    }
-
-    63.6363% {
-      background-image: url("./images/Comp/Comp 5_00028.jpg");
-    }
-
-    64.935% {
-      background-image: url("./images/Comp/Comp 5_00027.jpg");
-    }
-
-    66.2337% {
-      background-image: url("./images/Comp/Comp 5_00026.jpg");
-    }
-
-    67.5324% {
-      background-image: url("./images/Comp/Comp 5_00025.jpg");
-    }
-
-    68.8311% {
-      background-image: url("./images/Comp/Comp 5_00024.jpg");
-    }
-
-    70.1298% {
-      background-image: url("./images/Comp/Comp 5_00023.jpg");
-    }
-
-    71.4285% {
-      background-image: url("./images/Comp/Comp 5_00022.jpg");
-    }
-
-    72.7272% {
-      background-image: url("./images/Comp/Comp 5_00021.jpg");
-    }
-
-    74.0259% {
-      background-image: url("./images/Comp/Comp 5_00020.jpg");
-    }
-
-    75.3246% {
-      background-image: url("./images/Comp/Comp 5_00019.jpg");
-    }
-
-    76.6233% {
-      background-image: url("./images/Comp/Comp 5_00018.jpg");
-    }
-
-    77.922% {
-      background-image: url("./images/Comp/Comp 5_00017.jpg");
-    }
-
-    79.2207% {
-      background-image: url("./images/Comp/Comp 5_00016.jpg");
-    }
-
-    80.5194% {
-      background-image: url("./images/Comp/Comp 5_00015.jpg");
-    }
-
-    81.8181% {
-      background-image: url("./images/Comp/Comp 5_00014.jpg");
-    }
-
-    83.1168% {
-      background-image: url("./images/Comp/Comp 5_00013.jpg");
-    }
-
-    84.4155% {
-      background-image: url("./images/Comp/Comp 5_00012.jpg");
-    }
-
-    85.7142% {
-      background-image: url("./images/Comp/Comp 5_00011.jpg");
-    }
-
-    87.0129% {
-      background-image: url("./images/Comp/Comp 5_00010.jpg");
-    }
-
-    88.3116% {
-      background-image: url("./images/Comp/Comp 5_00009.jpg");
-    }
-
-    89.6103% {
-      background-image: url("./images/Comp/Comp 5_00008.jpg");
-    }
-
-    90.909% {
-      background-image: url("./images/Comp/Comp 5_00007.jpg");
-    }
-
-    92.2077% {
-      background-image: url("./images/Comp/Comp 5_00006.jpg");
-    }
-
-    93.5064% {
-      background-image: url("./images/Comp/Comp 5_00005.jpg");
-    }
-
-    94.8051% {
-      background-image: url("./images/Comp/Comp 5_00004.jpg");
-    }
-
-    96.1038% {
-      background-image: url("./images/Comp/Comp 5_00003.jpg");
-    }
-
-    97.4025% {
-      background-image: url("./images/Comp/Comp 5_00002.jpg");
-    }
-
-    98.7012% {
-      background-image: url("./images/Comp/Comp 5_00001.jpg");
-    }
-
     100% {
       background-image: url("./images/Comp/Comp 5_00000.jpg");
     }
   }
 }
-
-
 
 .carousel {
   width: 60%;
@@ -5864,9 +3011,6 @@ h2 {
   margin-top: -20px;
 }
 
-
-
-
 .header-center {
   display: flex;
   flex-direction: row;
@@ -5897,10 +3041,7 @@ h2 {
   height: 150px;
   width: auto;
   margin-left: -10px;
-
 }
-
-
 
 .get-started-button {
   font-size: 1.2rem;
@@ -5993,7 +3134,6 @@ h2 {
   animation: changeBackground 5s infinite;
   overflow-x: hidden;
 }
-
 
 @keyframes fadeIn11 {
   0% {
@@ -6151,7 +3291,6 @@ h2 {
   }
 
   .mobile-menu-toggle {
-    /* top: 2.5rem; */
     top: 8.5rem;
     margin-right: -35px;
   }
@@ -6310,22 +3449,6 @@ h2 {
     object-fit: contain;
   }
 
-  /* .company-container.company-two.moved {
-    transform: translateY(-10em);
-    transition:
-      transform 1.5s ease,
-      opacity 1.5s ease;
-    z-index: 1;
-  }
-
-  .company-container.company-three.moved {
-    transform: translateY(-23em);
-    transition:
-      transform 1.5s ease,
-      opacity 1.5s ease;
-    z-index: 3;
-  } */
-
   article {
     position: absolute;
     width: 80%;
@@ -6475,12 +3598,6 @@ h2 {
   }
 }
 
-
-
-
-
-
-
 /* Current Testimonial CSS */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
@@ -6498,7 +3615,6 @@ h2 {
   --logo-bg: #d9d9d9;
   --text-primary: #ffffff;
   --text-secondary: #fffafa;
-
 }
 
 .carousel-containerT {
@@ -6554,8 +3670,6 @@ h2 {
   z-index: 1;
 }
 
-
-
 .card-innerT {
   width: 100%;
   height: 100%;
@@ -6576,7 +3690,6 @@ h2 {
   z-index: 1;
 }
 
-
 .logo-boxT {
   flex-shrink: 0;
   width: 120px;
@@ -6596,9 +3709,7 @@ h2 {
   object-fit: contain;
 }
 
-
-
-.card-innerT>div.flex-1 {
+.card-innerT > div.flex-1 {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -6606,19 +3717,16 @@ h2 {
   height: 100%;
 }
 
-
 .quoteT {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: var(--quote-size);
   line-height: 1.6;
   color: var(--text-primary);
-  /* margin: 0 0 12px 0; space below quote */
   margin: 0 0 -15px 0;
 
   display: -webkit-box;
   -webkit-line-clamp: 6;
-  /* show more lines */
   -webkit-box-orient: vertical;
 }
 
@@ -6628,9 +3736,7 @@ h2 {
   font-size: 8px;
   line-height: 1.6;
   color: var(--text-primary) !important;
-  /* margin: 0 0 -15px 0; */
   margin: 0 0 34px 0;
-
 
   display: -webkit-box;
   -webkit-line-clamp: 6;
@@ -6652,9 +3758,7 @@ h2 {
   font-size: var(--company-size);
   color: var(--text-secondary);
   margin-top: 4px;
-  /* space below author */
 }
-
 
 @media (max-width: 1024px) {
   :root {
@@ -6701,21 +3805,16 @@ h2 {
     --card-width: clamp(220px, 62vw, 300px);
     --card-height: clamp(255px, 78vw, 310px);
     --quote-size: clamp(13.5px, 3.7vw, 15.5px);
-    /* --quote-size: clamp(8px, 2vw, 13.5px); */
-
   }
 
   .sceneT {
     height: clamp(330px, 85vw, 400px) !important;
-
   }
 
   .card-innerT {
     flex-direction: column !important;
     align-items: center;
     text-align: center;
-    /* padding: 18px 20px;
-            gap: 14px; */
   }
 
   .quoteT {
@@ -6724,7 +3823,6 @@ h2 {
   }
 
   .authorT {
-    /* padding-top: 8px; */
   }
 
   .logo-boxT {
@@ -6735,20 +3833,13 @@ h2 {
 
 @media (max-width: 480px) {
   :root {
-    /* --card-width: clamp(200px, 58vw, 270px);
-            --card-height: clamp(245px, 80vw, 495px);
-            --quote-size: clamp(13px, 3.8vw, 14.5px); */
-
     --card-width: clamp(200px, 65vw, 270px);
-    /* --card-height: clamp(236px, 34vw, 490px); */
     --card-height: clamp(262px, 34vw, 490px);
 
     --quote-size: clamp(8px, 2vw, 13.5px);
-
   }
 
   .sceneT {
-    /* height: clamp(15px, 90vw, 380px) !important; */
     height: clamp(15px, 100vw, 380px) !important;
 
     border-radius: 13px;
@@ -6760,19 +3851,15 @@ h2 {
   }
 
   .logo-boxT {
-    /* width: 88px;
-            height: 88px; */
     width: 161px;
     height: 77px;
     margin-top: 12px;
   }
-  .CQblock{
+
+  .CQblock {
     margin-top: -59px;
   }
 }
-
-
-
 
 .testh2 {
   font-family: "Outfit", sans-serif;
@@ -6785,14 +3872,12 @@ h2 {
 
 .testP {
   font-family: "Urbanist", sans-serif;
-  /* font-weight: 600; */
-  /* font-style: "SemiBold"; */
+
   font-size: 16px;
   line-height: 130%;
   letter-spacing: -3%;
   text-align: center;
   margin-bottom: 120px;
-
 }
 
 /* Arrow Button Styles */
@@ -6809,7 +3894,9 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
   transition: background-color 0.15s ease-in-out;
   font-size: 1.5rem;
   font-weight: 700;
@@ -6823,7 +3910,6 @@ h2 {
 #nextT {
   right: -0.5rem;
   top: -4px;
-
 }
 
 @media (min-width: 375px) {
@@ -6840,13 +3926,10 @@ h2 {
   .testP {
     padding-bottom: 234px;
 
-    /* font-weight: 600;
-    font-style: "SemiBold"; */
     font-size: 16px;
     line-height: 130%;
     letter-spacing: -3%;
     text-align: center;
-
   }
 }
 
@@ -6858,14 +3941,9 @@ h2 {
   #nextT {
     right: -1.5rem;
   }
-
-  /* .testP{
-    padding-bottom: 80px;
-  } */
 }
 
 @media (min-width: 768px) {
-
   #prevT,
   #nextT {
     width: 3.5rem;
@@ -6884,14 +3962,12 @@ h2 {
 
 @media (min-width: 1024px) {
   #prevT {
-    /* left: 12rem; */
     left: 3rem;
 
     top: 5px;
   }
 
   #nextT {
-    /* right: 12rem; */
     right: 3rem;
 
     top: 5px;

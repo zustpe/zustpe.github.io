@@ -16,9 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Outf…
-    rel=" stylesheet" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Outf…"
+        rel=" stylesheet" />
 
 
 
@@ -290,6 +289,7 @@
 
             } */
 
+
             .dropdown-menu,
             .submenu {
                 display: none;
@@ -305,6 +305,7 @@
                 transition: none;
                 box-shadow: none;
             }
+
 
             .dropdown:hover>.dropdown-menu,
             .dropdown-submenu:hover>.submenu {
@@ -351,7 +352,6 @@
                 display: block !important;
             }
 
-
             .dropdown-submenu:hover .arrow {
                 transform: rotate(90deg);
             }
@@ -370,86 +370,78 @@
 
         }
 
+        /* Message Section */
+        .message-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            /* background: linear-gradient(135deg, #1a1a1a, #000); */
+            margin: 2rem auto;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            /* margin-top: 52px; */
+            margin-top: 150px;
 
+            height: 500px;
 
-
-
-        .brand-card {
-            flex: 0 0 auto;
-            width: 170px;
-            height: 110px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.2rem;
-            background: rgba(30, 30, 35, 0.75);
-            border: 1px solid rgba(221, 160, 221, 0.2);
-            border-radius: 14px;
-            transition: all 0.3s ease;
         }
 
-        .brand-card:hover {
-            transform: scale(1.08);
-            border-color: rgba(221, 160, 221, 0.5);
-            box-shadow: 0 0 25px rgba(221, 160, 221, 0.15);
+        .message {
+            font-size: 2em;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 30px 50px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out, pulse 3s infinite;
         }
 
-        .marquee-wrapper {
-            /* overflow: hidden; */
-            width: 100%;
-        }
-
-        .marquee {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
-            white-space: nowrap;
-            animation: scroll-left 45s linear infinite;
-        }
-
-        @keyframes scroll-left {
+        @keyframes fadeIn {
             from {
-                transform: translateX(0);
+                opacity: 0;
+                transform: translateY(20px);
             }
 
             to {
-                transform: translateX(-121%);
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
-        .marquee-wrapper:hover .marquee {
-            animation-play-state: paused;
-        }
-
-        @media (max-width: 640px) {
-            .brand-card {
-                width: 140px;
-                height: 95px;
-                padding: 1rem;
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
             }
 
-            .marquee {
-                gap: 3rem;
-                animation-duration: 55s;
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
             }
         }
 
-        .content-container2 {
-            width: 100%;
-            margin-top: -30px;
-            background: transparent;
-            /* padding: 20px; */
-            padding: 10px 0px;
 
-            position: relative;
-            text-align: center;
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+
+            .message {
+                font-size: 1.5em;
+                padding: 20px 30px;
+            }
+
+
         }
 
-        .testSection {
-            z-index: 2;
+        @media (max-width: 480px) {
+            .message {
+                font-size: 1.2em;
+                padding: 15px 20px;
+            }
         }
     </style>
-
 
 </head>
 
@@ -599,190 +591,14 @@
                             });
                         </script>
 
-                        <div class="mt-[10px]  liveSec">
-                            <h2 class="text-3xl md:text-4xl font-bold text-center gold-text text-white">
-                                Live</h2>
-                            <section class="py-14  px-6 bg-[var(--charcoal)]    ">
-                                <div class="max-w-7xl  ">
-
-                                    <div class="marquee-wrapper">
-
-                                        <div class="marquee">
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/Microsoft_logo.svg" alt="Microsoft"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/Google_Cloud_Platform-Logo.wine.png"
-                                                    alt="Google Cloud" class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/Amazon_Web_Services_Logo.png" alt="AWS"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/meta2.png" alt="Meta"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/GitHub-Mark.png" alt="GitHub"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/GitLab-Logo.wine.png" alt="GitLab"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/Red_Hat-Logo.wine.png" alt="Red Hat"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/Adobe.png" alt="Adobe"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/Asus-Logo.wine.png" alt="Asus"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/gstn.png" alt="GSTN"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/digilocker.jpg" alt="DigiLocker"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/entitylocker.jpg" alt="EntityLocker"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <!-- <div class="brand-card">
-                                                <img src="./images/Brand/digilocker.jpg" alt="DigiLocker"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div> -->
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/gem.jpg" alt="Gem"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/bni.jpg" alt="BNI"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/TRAI-Logo.webp" alt="Trai"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/msme-logo-png_seeklogo-480293.webp" alt="msme"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/Microsoft_logo.svg" alt="Microsoft"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/Google_Cloud_Platform-Logo.wine.png"
-                                                    alt="Google Cloud" class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/Amazon_Web_Services_Logo.svg.png" alt="AWS"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/meta2.png" alt="Meta"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/GitHub-Mark.png" alt="GitHub"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/GitLab-Logo.wine.png" alt="GitLab"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/Red_Hat-Logo.wine.png" alt="Red Hat"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/Adobe.png" alt="Adobe"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/Asus-Logo.wine.png" alt="Asus"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/gstn.png" alt="GSTN"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/digilocker.jpg" alt="DigiLocker"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/entitylocker.jpg" alt="EntityLocker"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/digilocker.jpg" alt="DigiLocker"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/gem.jpg" alt="Gem"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/bni.jpg" alt="BNI"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/TRAI-Logo.webp" alt="Trai"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                            <div class="brand-card">
-                                                <img src="./images/Brand/msme-logo-png_seeklogo-480293.webp" alt="msme"
-                                                    class="h-16 md:h-20 object-contain" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-
-                            <!-- Work In Progress -->
-
-                            <h2 class="text-3xl md:text-4xl font-bold text-center gold-text p-2 text-white mb-5">Work
-                                In
-                                Progress</h2>
 
 
-                            <section
-                                class="py-14 px-6 bg-[var(--charcoal)] mt-[-70px]  mx-auto items-center min-h-[300px] ">
-                                <div class="max-w-7xl w-full mx-auto">
-
-                                    <div
-                                        class=" flex gap-12 md:gap-16  whitespace-nowrap flex justify-center items-center">
-                                        <div class="brand-card flex-shrink-0">
-                                            <img src="./images/Brand/ABHA.jpg" alt="ABHA Logo"
-                                                class="h-16 md:h-20 object-contain" />
-                                        </div>
-                                        <div class="brand-card flex-shrink-0">
-                                            <img src="./images/Brand/bbps.png" alt="BBPS Logo"
-                                                class="h-16 md:h-20 object-contain" />
-                                        </div>
-
-
-                                    </div>
-
-
-
-                                </div>
-                            </section>
-
-
+                        <!-- Message Section - Moved outside the hidden wrapper -->
+                        <div class="message-section">
+                            <div class="message">
+                                Major changes happening underhood, Stay tuned...
+                            </div>
                         </div>
-
 
                     </div>
                 </div>
@@ -827,10 +643,10 @@
                 <div class="footer-column">
                     <h4>Socials</h4>
                     <ul>
-                        <li> <a href="https://www.facebook.com/zustpepayment/">FaceBook</a></li>
-                        <li><a href="https://www.instagram.com/zustpe/">Instagram</a></li>
-                        <li><a href="https://in.linkedin.com/company/zustpe">LinkedIn</a></li>
-                        <li><a href="https://www.youtube.com/@zustpe">YouTube</a></li>
+                        <li> <a href="https://www.facebook.com/zustpepayment/" target="_blank">FaceBook</a></li>
+                        <li><a href="https://www.instagram.com/zustpe/" target="_blank">Instagram</a></li>
+                        <li><a href="https://in.linkedin.com/company/zustpe" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://www.youtube.com/@zustpe" target="_blank">YouTube</a></li>
                     </ul>
                 </div>
             </div>

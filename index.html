@@ -197,7 +197,7 @@
 
     }
 
-   
+
 
     /* --- Mobile (up to 768px) --- */
     @media (max-width: 768px) {
@@ -243,17 +243,20 @@
         color: #fff;
       }
 
+
+
       .dropdown-menu,
       .submenu {
         display: none;
         position: static !important;
         width: 100%;
-        background: #1a1a1a;
+        background: #222;
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none;
         box-shadow: none;
-        border-radius: 0;
-        margin: 0;
-        padding: 0;
       }
+
 
       .submenu.show {
         display: block !important;
@@ -265,9 +268,10 @@
         float: right;
       }
 
-      .dropdown:hover>.dropdown-menu,
-      .dropdown-submenu:hover>.submenu {
-        display: none;
+
+      .dropdown-menu.open,
+      .submenu.open {
+        display: block !important;
       }
     }
 
@@ -388,32 +392,6 @@
 
 
     /* Our Companiees  Container Start */
-
-    /* .container {
-      width: 100vw;
-
-      text-align: center;
-      background-color: #000;
-      z-index: 0;
-      box-sizing: border-box;
-      position: relative;
-      overflow-x: hidden;
-      padding: 2rem 0;
-      height: auto;
-      justify-content: center;
-      justify-items: center;
-    }
-
-    .container {
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-
-    .container::-webkit-scrollbar {
-      display: none;
-    } */
-
-
 
     /* Headings */
 
@@ -589,7 +567,7 @@
       transform: translateY(-36em);
 
       transition:
-        transform 1.5s ease,
+        transform 1.6s ease,
         opacity 1.5s ease;
       z-index: 3;
 
@@ -757,7 +735,7 @@
         transform: translateY(-30em);
 
         transition:
-          transform 0.6s ease-out,
+          transform 1.6s ease-out,
           opacity 0.6s ease-out;
       }
 
@@ -765,7 +743,7 @@
         transform: translateY(-60em);
 
         transition:
-          transform 0.6s ease-out,
+          transform 1.7s ease-out,
           opacity 0.6s ease-out;
       }
     }
@@ -810,14 +788,14 @@
       .company-container.company-two.moved {
         transform: translateY(-18.5em);
         transition:
-          transform 0.6s ease-out,
+          transform 1.6s ease-out,
           opacity 0.6s ease-out;
       }
 
       .company-container.company-three.moved {
         transform: translateY(-36em);
         transition:
-          transform 0.6s ease-out,
+          transform 1.9s ease-out,
           opacity 0.6s ease-out;
       }
     }
@@ -1116,7 +1094,7 @@
                         <li class="dropdown-submenu">
                           <a href="#consulting">Consulting<span class="arrow">›</span></a>
                           <ul class="dropdown-menu submenu">
-                            <li><a href="#wenApp">Web APP Development</a></li>
+                            <!-- <li><a href="#wenApp">Web APP Development</a></li> -->
                             <li><a href="#webApp">Web APP Development</a></li>
                             <li><a href="#mobApp">Mobile APP Development</a></li>
                             <li><a href="#devops">DevOps</a></li>
@@ -1129,10 +1107,10 @@
                       <a href="./Association.html?skip=true">Association</a>
                     </div>
                     <div class="nav-item">
-                      <a href="#knowledge">Knowledge Junction</a>
+                      <a href="./KnowledgeJunction.html?skip=true">Knowledge Junction</a>
                     </div>
                     <div class="nav-item">
-                      <a href="#career">Career</a>
+                      <a href="./Career.html?skip=true">Career</a>
                     </div>
                   </nav>
                 </div>
@@ -1142,7 +1120,7 @@
             </header>
 
 
-
+            <!-- 
             <script>
               document.addEventListener("DOMContentLoaded", () => {
                 const toggle = document.getElementById("menuToggle");
@@ -1162,6 +1140,50 @@
                   });
                 });
               });
+            </script> -->
+
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                // Existing Menu Toggle Code
+                const toggle = document.getElementById("menuToggle");
+                const nav = document.getElementById("mobileNav");
+
+                if (toggle && nav) {
+                  toggle.addEventListener("click", () => {
+                    nav.classList.toggle("active");
+                    toggle.textContent = nav.classList.contains("active") ? "✕" : "☰";
+                  });
+                }
+
+                // NEW: Dropdown Toggling for Mobile
+                const dropdowns = document.querySelectorAll('.nav-item.dropdown > .dropdown-toggle, .dropdown-submenu > a');
+
+                dropdowns.forEach(btn => {
+                  btn.addEventListener('click', (e) => {
+                    // Only run this if we are on a mobile-sized screen
+                    if (window.innerWidth <= 768) {
+                      e.preventDefault(); // Prevent navigating if it's a parent link
+
+                      const parent = btn.parentElement;
+                      const menu = btn.nextElementSibling;
+
+                      // Toggle the 'active' class on the menu
+                      if (menu) {
+                        const isVisible = menu.style.display === "block";
+                        menu.style.display = isVisible ? "none" : "block";
+                        menu.style.opacity = isVisible ? "0" : "1";
+                        menu.style.transform = isVisible ? "translateY(-10px)" : "translateY(0)";
+
+                        // Optional: Rotate the arrow
+                        const arrow = btn.querySelector('.arrow');
+                        if (arrow) {
+                          arrow.style.transform = isVisible ? "rotate(0deg)" : "rotate(90deg)";
+                        }
+                      }
+                    }
+                  });
+                });
+              });
             </script>
 
 
@@ -1178,247 +1200,8 @@
         </div>
 
       </div>
-      <div style="display: none">
-        <img src="./images/Comp/Comp 5_00000.jpg" />
-        <img src="./images/Comp/Comp 5_00001.jpg" />
-        <img src="./images/Comp/Comp 5_00002.jpg" />
-        <img src="./images/Comp/Comp 5_00003.jpg" />
-        <img src="./images/Comp/Comp 5_00004.jpg" />
-        <img src="./images/Comp/Comp 5_00005.jpg" />
-        <img src="./images/Comp/Comp 5_00006.jpg" />
-        <img src="./images/Comp/Comp 5_00007.jpg" />
-        <img src="./images/Comp/Comp 5_00008.jpg" />
-        <img src="./images/Comp/Comp 5_00009.jpg" />
-        <img src="./images/Comp/Comp 5_00010.jpg" />
-        <img src="./images/Comp/Comp 5_00011.jpg" />
-        <img src="./images/Comp/Comp 5_00012.jpg" />
-        <img src="./images/Comp/Comp 5_00013.jpg" />
-        <img src="./images/Comp/Comp 5_00014.jpg" />
-        <img src="./images/Comp/Comp 5_00015.jpg" />
-        <img src="./images/Comp/Comp 5_00016.jpg" />
-        <img src="./images/Comp/Comp 5_00017.jpg" />
-        <img src="./images/Comp/Comp 5_00018.jpg" />
-        <img src="./images/Comp/Comp 5_00019.jpg" />
-        <img src="./images/Comp/Comp 5_00020.jpg" />
-        <img src="./images/Comp/Comp 5_00021.jpg" />
-        <img src="./images/Comp/Comp 5_00022.jpg" />
-        <img src="./images/Comp/Comp 5_00023.jpg" />
-        <img src="./images/Comp/Comp 5_00024.jpg" />
-        <img src="./images/Comp/Comp 5_00025.jpg" />
-        <img src="./images/Comp/Comp 5_00026.jpg" />
-        <img src="./images/Comp/Comp 5_00027.jpg" />
-        <img src="./images/Comp/Comp 5_00028.jpg" />
-        <img src="./images/Comp/Comp 5_00029.jpg" />
-        <img src="./images/Comp/Comp 5_00030.jpg" />
-        <img src="./images/Comp/Comp 5_00031.jpg" />
-        <img src="./images/Comp/Comp 5_00032.jpg" />
-        <img src="./images/Comp/Comp 5_00033.jpg" />
-        <img src="./images/Comp/Comp 5_00034.jpg" />
-        <img src="./images/Comp/Comp 5_00035.jpg" />
-        <img src="./images/Comp/Comp 5_00036.jpg" />
-        <img src="./images/Comp/Comp 5_00037.jpg" />
-        <img src="./images/Comp/Comp 5_00038.jpg" />
-        <img src="./images/Comp/Comp 5_00039.jpg" />
-        <img src="./images/Comp/Comp 5_00040.jpg" />
-        <img src="./images/Comp/Comp 5_00041.jpg" />
-        <img src="./images/Comp/Comp 5_00042.jpg" />
-        <img src="./images/Comp/Comp 5_00043.jpg" />
-        <img src="./images/Comp/Comp 5_00044.jpg" />
-        <img src="./images/Comp/Comp 5_00045.jpg" />
-        <img src="./images/Comp/Comp 5_00046.jpg" />
-        <img src="./images/Comp/Comp 5_00047.jpg" />
-        <img src="./images/Comp/Comp 5_00048.jpg" />
-        <img src="./images/Comp/Comp 5_00049.jpg" />
-        <img src="./images/Comp/Comp 5_00050.jpg" />
-        <img src="./images/Comp/Comp 5_00051.jpg" />
-        <img src="./images/Comp/Comp 5_00052.jpg" />
-        <img src="./images/Comp/Comp 5_00053.jpg" />
-        <img src="./images/Comp/Comp 5_00054.jpg" />
-        <img src="./images/Comp/Comp 5_00055.jpg" />
-        <img src="./images/Comp/Comp 5_00056.jpg" />
-        <img src="./images/Comp/Comp 5_00057.jpg" />
-        <img src="./images/Comp/Comp 5_00058.jpg" />
-        <img src="./images/Comp/Comp 5_00059.jpg" />
-        <img src="./images/Comp/Comp 5_00060.jpg" />
-        <img src="./images/Comp/Comp 5_00061.jpg" />
-        <img src="./images/Comp/Comp 5_00062.jpg" />
-        <img src="./images/Comp/Comp 5_00063.jpg" />
-        <img src="./images/Comp/Comp 5_00064.jpg" />
-        <img src="./images/Comp/Comp 5_00065.jpg" />
-        <img src="./images/Comp/Comp 5_00066.jpg" />
-        <img src="./images/Comp/Comp 5_00067.jpg" />
-        <img src="./images/Comp/Comp 5_00068.jpg" />
-        <img src="./images/Comp/Comp 5_00069.jpg" />
-        <img src="./images/Comp/Comp 5_00070.jpg" />
-        <img src="./images/Comp/Comp 5_00071.jpg" />
-        <img src="./images/Comp/Comp 5_00072.jpg" />
-        <img src="./images/Comp/Comp 5_00073.jpg" />
-        <img src="./images/Comp/Comp 5_00074.jpg" />
-        <img src="./images/Comp/Comp 5_00075.jpg" />
-        <img src="./images/Comp/Comp 5_00076.jpg" />
-        <img src="./images/Comp/Comp 5_00077.jpg" />
 
-        <img src="./images/mobiles/Comp 6_00001.jpg" />
-        <img src="./images/mobiles/Comp 6_00002.jpg" />
-        <img src="./images/mobiles/Comp 6_00003.jpg" />
-        <img src="./images/mobiles/Comp 6_00004.jpg" />
-        <img src="./images/mobiles/Comp 6_00005.jpg" />
-        <img src="./images/mobiles/Comp 6_00006.jpg" />
-        <img src="./images/mobiles/Comp 6_00007.jpg" />
-        <img src="./images/mobiles/Comp 6_00008.jpg" />
-        <img src="./images/mobiles/Comp 6_00009.jpg" />
-        <img src="./images/mobiles/Comp 6_00010.jpg" />
-        <img src="./images/mobiles/Comp 6_00011.jpg" />
-        <img src="./images/mobiles/Comp 6_00012.jpg" />
-        <img src="./images/mobiles/Comp 6_00013.jpg" />
-        <img src="./images/mobiles/Comp 6_00014.jpg" />
-        <img src="./images/mobiles/Comp 6_00015.jpg" />
-        <img src="./images/mobiles/Comp 6_00016.jpg" />
-        <img src="./images/mobiles/Comp 6_00017.jpg" />
-        <img src="./images/mobiles/Comp 6_00018.jpg" />
-        <img src="./images/mobiles/Comp 6_00019.jpg" />
-        <img src="./images/mobiles/Comp 6_00020.jpg" />
-        <img src="./images/mobiles/Comp 6_00021.jpg" />
-        <img src="./images/mobiles/Comp 6_00022.jpg" />
-        <img src="./images/mobiles/Comp 6_00023.jpg" />
-        <img src="./images/mobiles/Comp 6_00024.jpg" />
-        <img src="./images/mobiles/Comp 6_00025.jpg" />
-        <img src="./images/mobiles/Comp 6_00026.jpg" />
-        <img src="./images/mobiles/Comp 6_00027.jpg" />
-        <img src="./images/mobiles/Comp 6_00028.jpg" />
-        <img src="./images/mobiles/Comp 6_00029.jpg" />
-        <img src="./images/mobiles/Comp 6_00030.jpg" />
-        <img src="./images/mobiles/Comp 6_00031.jpg" />
-        <img src="./images/mobiles/Comp 6_00032.jpg" />
-        <img src="./images/mobiles/Comp 6_00033.jpg" />
-        <img src="./images/mobiles/Comp 6_00034.jpg" />
-        <img src="./images/mobiles/Comp 6_00035.jpg" />
-        <img src="./images/mobiles/Comp 6_00036.jpg" />
-        <img src="./images/mobiles/Comp 6_00037.jpg" />
-        <img src="./images/mobiles/Comp 6_00038.jpg" />
-        <img src="./images/mobiles/Comp 6_00039.jpg" />
-        <img src="./images/mobiles/Comp 6_00040.jpg" />
-        <img src="./images/mobiles/Comp 6_00041.jpg" />
-        <img src="./images/mobiles/Comp 6_00042.jpg" />
-        <img src="./images/mobiles/Comp 6_00043.jpg" />
-        <img src="./images/mobiles/Comp 6_00044.jpg" />
-        <img src="./images/mobiles/Comp 6_00045.jpg" />
-        <img src="./images/mobiles/Comp 6_00046.jpg" />
-        <img src="./images/mobiles/Comp 6_00047.jpg" />
-        <img src="./images/mobiles/Comp 6_00048.jpg" />
-        <img src="./images/mobiles/Comp 6_00049.jpg" />
-        <img src="./images/mobiles/Comp 6_00050.jpg" />
-        <img src="./images/mobiles/Comp 6_00051.jpg" />
-        <img src="./images/mobiles/Comp 6_00052.jpg" />
-        <img src="./images/mobiles/Comp 6_00053.jpg" />
-        <img src="./images/mobiles/Comp 6_00054.jpg" />
-        <img src="./images/mobiles/Comp 6_00055.jpg" />
-        <img src="./images/mobiles/Comp 6_00056.jpg" />
-        <img src="./images/mobiles/Comp 6_00057.jpg" />
-        <img src="./images/mobiles/Comp 6_00058.jpg" />
-        <img src="./images/mobiles/Comp 6_00059.jpg" />
-        <img src="./images/mobiles/Comp 6_00060.jpg" />
-        <img src="./images/mobiles/Comp 6_00061.jpg" />
-        <img src="./images/mobiles/Comp 6_00062.jpg" />
-        <img src="./images/mobiles/Comp 6_00063.jpg" />
-        <img src="./images/mobiles/Comp 6_00064.jpg" />
-        <img src="./images/mobiles/Comp 6_00065.jpg" />
-        <img src="./images/mobiles/Comp 6_00066.jpg" />
-        <img src="./images/mobiles/Comp 6_00067.jpg" />
-        <img src="./images/mobiles/Comp 6_00068.jpg" />
-        <img src="./images/mobiles/Comp 6_00069.jpg" />
-        <img src="./images/mobiles/Comp 6_00070.jpg" />
-        <img src="./images/mobiles/Comp 6_00071.jpg" />
-        <img src="./images/mobiles/Comp 6_00072.jpg" />
-        <img src="./images/mobiles/Comp 6_00073.jpg" />
-        <img src="./images/mobiles/Comp 6_00074.jpg" />
-        <img src="./images/mobiles/Comp 6_00075.jpg" />
-        <img src="./images/mobiles/Comp 6_00076.jpg" />
-        <img src="./images/mobiles/Comp 6_00077.jpg" />
-        <!-- ---------------- Tab view ------------------------------>
-
-        <img src="./images/Tab/Comp 7_00000.jpg" />
-        <img src="./images/Tab/Comp 7_00001.jpg" />
-        <img src="./images/Tab/Comp 7_00002.jpg" />
-        <img src="./images/Tab/Comp 7_00003.jpg" />
-        <img src="./images/Tab/Comp 7_00004.jpg" />
-        <img src="./images/Tab/Comp 7_00005.jpg" />
-        <img src="./images/Tab/Comp 7_00006.jpg" />
-        <img src="./images/Tab/Comp 7_00007.jpg" />
-        <img src="./images/Tab/Comp 7_00008.jpg" />
-        <img src="./images/Tab/Comp 7_00009.jpg" />
-        <img src="./images/Tab/Comp 7_00010.jpg" />
-        <img src="./images/Tab/Comp 7_00011.jpg" />
-        <img src="./images/Tab/Comp 7_00012.jpg" />
-        <img src="./images/Tab/Comp 7_00013.jpg" />
-        <img src="./images/Tab/Comp 7_00014.jpg" />
-        <img src="./images/Tab/Comp 7_00015.jpg" />
-        <img src="./images/Tab/Comp 7_00016.jpg" />
-        <img src="./images/Tab/Comp 7_00017.jpg" />
-        <img src="./images/Tab/Comp 7_00018.jpg" />
-        <img src="./images/Tab/Comp 7_00019.jpg" />
-        <img src="./images/Tab/Comp 7_00020.jpg" />
-        <img src="./images/Tab/Comp 7_00021.jpg" />
-        <img src="./images/Tab/Comp 7_00022.jpg" />
-        <img src="./images/Tab/Comp 7_00023.jpg" />
-        <img src="./images/Tab/Comp 7_00024.jpg" />
-        <img src="./images/Tab/Comp 7_00025.jpg" />
-        <img src="./images/Tab/Comp 7_00026.jpg" />
-        <img src="./images/Tab/Comp 7_00027.jpg" />
-        <img src="./images/Tab/Comp 7_00028.jpg" />
-        <img src="./images/Tab/Comp 7_00029.jpg" />
-        <img src="./images/Tab/Comp 7_00030.jpg" />
-        <img src="./images/Tab/Comp 7_00031.jpg" />
-        <img src="./images/Tab/Comp 7_00032.jpg" />
-        <img src="./images/Tab/Comp 7_00033.jpg" />
-        <img src="./images/Tab/Comp 7_00034.jpg" />
-        <img src="./images/Tab/Comp 7_00035.jpg" />
-        <img src="./images/Tab/Comp 7_00036.jpg" />
-        <img src="./images/Tab/Comp 7_00037.jpg" />
-        <img src="./images/Tab/Comp 7_00038.jpg" />
-        <img src="./images/Tab/Comp 7_00039.jpg" />
-        <img src="./images/Tab/Comp 7_00040.jpg" />
-        <img src="./images/Tab/Comp 7_00041.jpg" />
-        <img src="./images/Tab/Comp 7_00042.jpg" />
-        <img src="./images/Tab/Comp 7_00043.jpg" />
-        <img src="./images/Tab/Comp 7_00044.jpg" />
-        <img src="./images/Tab/Comp 7_00045.jpg" />
-        <img src="./images/Tab/Comp 7_00046.jpg" />
-        <img src="./images/Tab/Comp 7_00047.jpg" />
-        <img src="./images/Tab/Comp 7_00048.jpg" />
-        <img src="./images/Tab/Comp 7_00049.jpg" />
-        <img src="./images/Tab/Comp 7_00050.jpg" />
-        <img src="./images/Tab/Comp 7_00051.jpg" />
-        <img src="./images/Tab/Comp 7_00052.jpg" />
-        <img src="./images/Tab/Comp 7_00053.jpg" />
-        <img src="./images/Tab/Comp 7_00054.jpg" />
-        <img src="./images/Tab/Comp 7_00055.jpg" />
-        <img src="./images/Tab/Comp 7_00056.jpg" />
-        <img src="./images/Tab/Comp 7_00057.jpg" />
-        <img src="./images/Tab/Comp 7_00058.jpg" />
-        <img src="./images/Tab/Comp 7_00059.jpg" />
-        <img src="./images/Tab/Comp 7_00060.jpg" />
-        <img src="./images/Tab/Comp 7_00061.jpg" />
-        <img src="./images/Tab/Comp 7_00062.jpg" />
-        <img src="./images/Tab/Comp 7_00063.jpg" />
-        <img src="./images/Tab/Comp 7_00064.jpg" />
-        <img src="./images/Tab/Comp 7_00065.jpg" />
-        <img src="./images/Tab/Comp 7_00066.jpg" />
-        <img src="./images/Tab/Comp 7_00067.jpg" />
-        <img src="./images/Tab/Comp 7_00068.jpg" />
-        <img src="./images/Tab/Comp 7_00069.jpg" />
-        <img src="./images/Tab/Comp 7_00070.jpg" />
-        <img src="./images/Tab/Comp 7_00071.jpg" />
-        <img src="./images/Tab/Comp 7_00072.jpg" />
-        <img src="./images/Tab/Comp 7_00073.jpg" />
-        <img src="./images/Tab/Comp 7_00074.jpg" />
-        <img src="./images/Tab/Comp 7_00075.jpg" />
-        <img src="./images/Tab/Comp 7_00076.jpg" />
-        <img src="./images/Tab/Comp 7_00077.jpg" />
-      </div>
     </div>
-
-
 
 
 
@@ -1439,7 +1222,7 @@
             <div class="company-info-left">
               <h6>ZustPe Payment </h6>
               <div class="company-logo">
-                <img src="./images/ourCompany/Zustpe Payments Logo.png" alt="Company Two Logo" />
+                <img src="./images/ourCompany/ZustpePaymentsLogo.png" alt="ZustpePayments Logo" />
 
               </div>
             </div>
@@ -1463,7 +1246,7 @@
             <div class="company-info-left">
               <h6>ZustPe Technologies</h6>
               <div class="company-logo">
-                <img src="./images/ourCompany/Zustpe Logo.png" alt="Company One Logo" />
+                <img src="./images/ourCompany/ZustpeTechnologies.png" alt=" ZustpeTechnologies Logo" />
               </div>
             </div>
             <div class="line"></div>
@@ -1487,7 +1270,7 @@
             <div class="company-info-left">
               <h6>ZustPe Achievers Foundation</h6>
               <div class="company-logo">
-                <img src="./images/ourCompany/Zustpe Green.png" alt="Company Three Logo" />
+                <img src="./images/ourCompany/ZustpeAchivers.png" alt="Zustpe Achivers Foundation Logo" />
               </div>
             </div>
             <div class="line"></div>
@@ -1821,7 +1604,7 @@
                   </div>
                 </div>
               </div>
-           
+
               <div class="cardT" style="transform: rotateY(300deg) translateZ(460px);">
                 <div class="card-innerT">
                   <div class="logo-boxT">
@@ -1934,83 +1717,6 @@
 
     <!-- 6 cards end -->
 
-      <!-- 5 cards -->
-    <!-- <script>
-      const carouselT = document.getElementById("carouselT");
-      const prevBtnT = document.getElementById("prevT");
-      const nextBtnT = document.getElementById("nextT");
-
-      let currentAngle = 0;
-
-      function initCarousel() {
-        const cards = Array.from(document.querySelectorAll(".cardT"));
-        const numCards = cards.length;
-        if (numCards === 0) return;
-
-        const angleStepT = 360 / numCards;
-
-        const cardRect = cards[0].getBoundingClientRect();
-        const cardWidth = cardRect.width;
-        const radius = (cardWidth / 2) / Math.tan(Math.PI / numCards)+60;
-
-        cards.forEach((card, i) => {
-          const baseAngle = i * angleStepT;
-          card.style.transform = `rotateY(${baseAngle}deg) translateZ(${radius}px)`;
-        });
-
-        function setCenterAndBackCards() {
-          let centerCard = null;
-          let backCard = null;
-          let minDiff = Infinity;
-          let maxDiff = -Infinity;
-
-          cards.forEach((card, i) => {
-            const baseAngle = i * angleStepT;
-            let angle = (baseAngle + currentAngle) % 360;
-            if (angle > 180) angle -= 360;
-            const diff = Math.abs(angle);
-
-            if (diff < minDiff) {
-              minDiff = diff;
-              centerCard = card;
-            }
-            if (diff > maxDiff) {
-              maxDiff = diff;
-              backCard = card;
-            }
-          });
-
-          cards.forEach((c) => c.classList.remove("is-center", "is-back"));
-          if (centerCard) centerCard.classList.add("is-center");
-          if (backCard && maxDiff > 90) backCard.classList.add("is-back");
-        }
-
-        function updateCarousel() {
-          carouselT.style.transform = `rotateY(${currentAngle}deg)`;
-          requestAnimationFrame(setCenterAndBackCards);
-        }
-
-        nextBtnT.addEventListener("click", () => {
-          currentAngle -= angleStepT;
-          updateCarousel();
-        });
-
-        prevBtnT.addEventListener("click", () => {
-          currentAngle += angleStepT;
-          updateCarousel();
-        });
-
-        updateCarousel();
-        setCenterAndBackCards();
-      }
-
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", initCarousel);
-      } else {
-        initCarousel();
-      }
-    </script> -->
-
 
 
     <!-- Testimonial Script End -->
@@ -2030,15 +1736,7 @@
       </h2>
       <div class="cta-buttons">
         <button class="btn-outline">Contact</button>
-        <!-- <button class="btn-filled">Get Started <span>↗</span></button> -->
-        <!-- <img src="./images/Link.png" alt="Zustpe Logo" class="header-right" /> -->
 
-        <!-- <a href="#" class="get-started-button1">
-          <span class="button-text">Get Started</span>
-          <span class="arrow-circle1">
-            <img src="./images/arrow2.png" alt="Arrow" class="arrow-img" />
-          </span>
-        </a> -->
       </div>
     </section>
 
@@ -2075,10 +1773,10 @@
         <div class="footer-column">
           <h4>Socials</h4>
           <ul>
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>LinkedIn</li>
-            <li>YouTube</li>
+            <li> <a href="https://www.facebook.com/zustpepayment/">FaceBook</a></li>
+            <li><a href="https://www.instagram.com/zustpe/">Instagram</a></li>
+            <li><a href="https://in.linkedin.com/company/zustpe">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/@zustpe">YouTube</a></li>
           </ul>
         </div>
       </div>
@@ -2093,7 +1791,7 @@
     </footer>
   </div>
   <script src="script.js"></script>
-  <script>
+  <!-- <script>
     const section = document.querySelector("#card-section");
     const articles = section.querySelectorAll("article");
     let currentIndex = 0;
@@ -2127,18 +1825,17 @@
       if (isScrolling) return;
       const delta = e.deltaY;
 
-      // Only block scrolling if we're within card range
       if (
         (delta > 0 && currentIndex < articles.length - 1) ||
         (delta < 0 && currentIndex > 0)
       ) {
-        e.preventDefault(); // prevent page scroll ONLY if we can move between cards
+        e.preventDefault(); 
         isScrolling = true;
 
         if (delta > 0 && currentIndex < articles.length - 1) {
-          currentIndex++; // move down
+          currentIndex++; 
         } else if (delta < 0 && currentIndex > 0) {
-          currentIndex--; // move up
+          currentIndex--; 
         }
 
         updateCards();
@@ -2147,26 +1844,23 @@
           isScrolling = false;
         }, 400);
       }
-      // else → let the page scroll normally
     }
 
     section.addEventListener("wheel", handleScroll, { passive: false });
     updateCards();
-    // -------------------------- this is background load--------------------
 
- 
+
 
     const bg = document.querySelector(".bgimg");
     const images = [];
     let i = 0;
 
     const sequences = [
-      { path: "./images/bgimg/bala_", count: 78, pad: 5 }, // bala_00000 → bala_00077
-      { path: "./images/mobiles/Comp 6_", count: 77, pad: 5 }, // Comp 6_00001 → Comp 6_00077
-      { path: "./images/Tab/Comp 7_", count: 78, pad: 5 }, // Comp 7_00000 → Comp 7_00077
+      { path: "./images/bgimg/bala_", count: 78, pad: 5 }, 
+      { path: "./images/mobiles/Comp 6_", count: 77, pad: 5 },
+      { path: "./images/Tab/Comp 7_", count: 78, pad: 5 }, 
     ];
 
-    // Preload all sequences
     function preloadImages(callback) {
       let loaded = 0;
       let total = sequences.reduce((sum, seq) => sum + seq.count, 0);
@@ -2184,17 +1878,14 @@
       });
     }
 
-    // Animate background cycling through all loaded images
     function animate() {
       bg.style.backgroundImage = `url('${images[i].src}')`;
       i = (i + 1) % images.length;
-      setTimeout(animate, 50); // 20fps
+      setTimeout(animate, 50); 
     }
 
-    // Start
     preloadImages(animate);
 
-    // -------------------------------------
 
     document.addEventListener("DOMContentLoaded", () => {
       const sections = document.querySelectorAll(".container1");
@@ -2208,17 +1899,16 @@
                   ".circle"
                 );
               circles.forEach((c) => c.classList.add("animate"));
-              // Uncomment this if you want animation only once per section
-              // observer.unobserve(entry.target);
+             
             }
           });
         },
-        { threshold: 0.5 } // run when 50% of section is visible
+        { threshold: 0.5 } 
       );
 
       sections.forEach((section) => observer.observe(section));
     });
-  </script>
+  </script> -->
 </body>
 
 </html>
