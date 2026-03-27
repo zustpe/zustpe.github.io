@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    (function () {
+      const path = window.location.pathname;
+
+      // Match /profile/<id>
+      const match = path.match(/^\/profile\/([^\/]+)$/);
+
+      if (match) {
+        const id = match[1];
+        const target = "https://www.zustpe.directory/slug=" + encodeURIComponent(id);
+
+        window.location.replace(target);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
