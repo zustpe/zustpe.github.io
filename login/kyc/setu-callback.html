@@ -1,35 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
     <meta charset="UTF-8">
     <title>Redirecting...</title>
- 
+
     <meta http-equiv="Cache-Control" content="no-store" />
- 
+
     <script>
         (function () {
             const params = new URLSearchParams(window.location.search);
- 
+
             const code = params.get('code');
             const state = params.get('state');
- 
+
             if (!code || !state) {
                 document.body.innerHTML = 'Invalid redirect parameters.';
                 return;
             }
+
+            let baseUrl;
+
+            switch (state.toLowerCase()) {
+                case 'devkaamrade':
+                    baseUrl = 'https://dev.kaamrade.com/candidate/verifykyc';
+                    break;
+
+                case 'kaamrade':
+                    baseUrl = 'https://www.kaamrade.com/candidate/verifykyc';
+                    break;
+
+                default:
+                    document.body.innerHTML = 'Invalid state parameter.';
+                    return;
+            }
+
             const targetUrl =
-                'http://localhost:3000/candidate/verifykyc' +
+                baseUrl +
                 '?code=' + encodeURIComponent(code) +
                 '&state=' + encodeURIComponent(state);
- 
+
             window.location.replace(targetUrl);
         })();
     </script>
 </head>
- 
+
 <body>
     <p>Redirecting...</p>
 </body>
- 
+
 </html>
