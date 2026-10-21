@@ -4,43 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Redirecting...</title>
-
     <meta http-equiv="Cache-Control" content="no-store" />
 
     <script>
         (function () {
-            const params = new URLSearchParams(window.location.search);
+            try {
+                const params = new URLSearchParams(window.location.search);
 
-            const code = params.get('code');
-            const state = params.get('state');
+                const code = params.get('code');
+                const state = params.get('state');
 
-            if (!code || !state) {
-                document.body.innerHTML = 'Invalid redirect parameters.';
-                return;
-            }
+                console.log('Received code:', code);
+                console.log('Received state:', state);
 
-            let baseUrl;
-
-            switch (state.toLowerCase()) {
-                case 'devkaamrade':
-                    baseUrl = 'https://dev.kaamrade.com/candidate/verifykyc';
-                    break;
-
-                case 'kaamrade':
-                    baseUrl = 'https://www.kaamrade.com/candidate/verifykyc';
-                    break;
-
-                default:
-                    document.body.innerHTML = 'Invalid state parameter.';
+                if (!code || !state) {
+                    document.body.innerHTML =
+                        '<h3>Invalid request. Missing code or state.</h3>';
                     return;
+                }
+
+                let targetBaseUrl = '';
+
+                const stateValue = state.toLowerCase().trim();
+
+                if (stateValue.includes('devkaamrade')) {
+                    targetBaseUrl =
+                        'https://dev.kaamrade.com/candidate/verifykyc';
+                } else if (stateValue.includes('kaamrade')) {
+                    targetBaseUrl =
+                        'https://www.kaamrade.com/candidate/verifykyc';
+                } else {
+                    document.body.innerHTML =
+                        '<h3>Unknown state: ' + state + '</h3>';
+                    return;
+                }
+
+                const redirectUrl =
+                    `${targetBaseUrl}?code=${encodeURIComponent(code)}&state=${encodeURIComponent(state)}`;
+
+                console.log('Redirecting to:', redirectUrl);
+
+                window.location.href = redirectUrl;
+
+            } catch (error) {
+                console.error(error);
+
+                document.body.innerHTML =
+                    '<h3>An error occurred during redirection.</h3>';
             }
-
-            const targetUrl =
-                baseUrl +
-                '?code=' + encodeURIComponent(code) +
-                '&state=' + encodeURIComponent(state);
-
-            window.location.replace(targetUrl);
         })();
     </script>
 </head>
